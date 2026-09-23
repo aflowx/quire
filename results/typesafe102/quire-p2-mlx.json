@@ -1,0 +1,44 @@
+{
+  "_provenance": {
+    "model": "mlx-community/Qwen3.5-4B-MLX-8bit",
+    "share_state": false,
+    "rows_sha256": "734bfa7c56a1e461",
+    "n_rows": 102,
+    "n_cases": 20,
+    "label_note": "reference = argmax of the mean of released model answers; not human labels",
+    "generated": "2026-09-23T03:22:10.951098+00:00"
+  },
+  "ours": {
+    "p2 (r2-test prompt, 2 orderings)": {
+      "equal_case_agreement": 0.7984615384615384,
+      "ci_low": 0.7134615384615385,
+      "ci_high": 0.8800000000000001,
+      "row_accuracy": 0.803921568627451,
+      "seconds": 105.74343645898625,
+      "vs_jev": {
+        "mean_difference": -0.0784313725490196,
+        "p_value": 0.057373046875,
+        "n": 102,
+        "a_better": 3,
+        "b_better": 11,
+        "ties": 88,
+        "holm_p": 0.057373046875
+      }
+    }
+  },
+  "published": {
+    "typesafe": {
+      "equal_case_agreement": 0.8831410256410257,
+      "n": 102
+    },
+    "opus": {
+      "equal_case_agreement": 0.9123076923076923,
+      "n": 102
+    },
+    "sol": {
+      "equal_case_agreement": 0.9064743589743589,
+      "n": 101
+    }
+  },
+  "semif_published_direct": 0.8453
+}

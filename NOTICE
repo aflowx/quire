@@ -1,0 +1,20 @@
+Quire
+Copyright (c) 2026 aflowx. MIT License.
+
+Third-party work this project builds on:
+
+- Qwen3.5-4B (huggingface.co/Qwen/Qwen3.5-4B), Apache-2.0. The released
+  configuration uses these weights unmodified. No weights are distributed here.
+
+- JevBench (github.com/fstandhartinger/jevbench), MIT. bench/jevbench reads its
+  public items from a local checkout and uses its scoring formulas; no JevBench
+  data is redistributed here beyond per-item predictions keyed by item id.
+
+- Decision Index (github.com/apolinario/decision-index), MIT.
+  src/quire/adapters/decision_index.py implements its engine interface.
+
+- kev (github.com/jaredpalmer/kev), Apache-2.0. bench/wide and the adapter
+  experiments use its decision suites, read from a local checkout.
+
+Quire is independent. It is not affiliated with or endorsed by TypeSafe AI.
+"Jev" is TypeSafe AI's product name and is used here only to refer to it.

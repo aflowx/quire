@@ -1,0 +1,59 @@
+{
+ "_provenance": {
+  "model": "mlx-community/Qwen3.5-4B-MLX-8bit",
+  "rows_sha256": "734bfa7c56a1e461",
+  "n_rows": 102,
+  "n_cases": 20,
+  "label_note": "reference = argmax of the mean of released model answers; not human labels",
+  "generated": "2026-09-21T02:05:28.284703+00:00"
+ },
+ "ours": {
+  "direct": {
+   "equal_case_agreement": 0.8144871794871795,
+   "ci_low": 0.7378205128205129,
+   "ci_high": 0.8866666666666667,
+   "row_accuracy": 0.8333333333333334,
+   "seconds": 95.12067904201103,
+   "vs_jev": {
+    "mean_difference": -0.049019607843137254,
+    "p_value": 0.3017578125,
+    "n": 102,
+    "a_better": 5,
+    "b_better": 10,
+    "ties": 87,
+    "holm_p": 0.603515625
+   }
+  },
+  "debias + ensemble": {
+   "equal_case_agreement": 0.8078205128205129,
+   "ci_low": 0.7267948717948718,
+   "ci_high": 0.8844871794871795,
+   "row_accuracy": 0.8431372549019608,
+   "seconds": 143.2722357919847,
+   "vs_jev": {
+    "mean_difference": -0.0392156862745098,
+    "p_value": 0.454498291015625,
+    "n": 102,
+    "a_better": 6,
+    "b_better": 10,
+    "ties": 86,
+    "holm_p": 0.603515625
+   }
+  }
+ },
+ "published": {
+  "typesafe": {
+   "equal_case_agreement": 0.8831410256410257,
+   "n": 102
+  },
+  "opus": {
+   "equal_case_agreement": 0.9123076923076923,
+   "n": 102
+  },
+  "sol": {
+   "equal_case_agreement": 0.9064743589743589,
+   "n": 101
+  }
+ },
+ "semif_published_direct": 0.8453
+}

@@ -1,0 +1,2 @@
+dbpedia14 (14 options, n=116): letter 0.905 (129 ms)  wide 0.897 (830 ms)  diff -0.009 p=1.000  wins/losses 3/4
+banking77 (77 options, n=116): wide 0.422 (4253 ms/item, chance 0.013)
