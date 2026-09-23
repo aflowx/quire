@@ -52,7 +52,10 @@ SemIf is the closest comparison: the same frozen model with a different prompt a
 | configuration | at judge = 0.85 | at judge = 0.95 |
 |---|---|---|
 | v0.1.0 (no map; submitted to JevBench) | 74.3 | 75.3 |
-| **v0.1.1 (with the per-type map)** | **74.9** | **75.9** |
+| v0.1.1 (with the per-type map) | 74.9 | 75.9 |
+| **v0.1.2 (question text shared across orderings: 789 → 758 tokens per decision)** | **75.1** | **76.0** |
+
+The v0.1.2 row changes only the Cost axis. Its accuracy and calibration are v0.1.1's, not re-measured on CUDA. On MLX, 230 of 231 public answers are identical (the one flip is a near-tie; `results/checks/share-question-mlx.json`).
 
 For reference, on 22 Sep 2026 the published v1.3 scores were Jev 74.4, SemIf 73.1 and djev 73.0. This is a projection from public items, not a score.
 

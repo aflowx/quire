@@ -1,0 +1,2093 @@
+{
+ "summary": {
+  "items": 231,
+  "argmax_flips": 1,
+  "max_abs_dp": 0.044391414773708227,
+  "flip_margins": [
+   0.048241208563946536
+  ],
+  "tokens_per_item_old": 788.8398268398269,
+  "tokens_per_item_new": 757.7186147186147
+ },
+ "rows": [
+  {
+   "id": "easy-intent-00",
+   "tier": "easy",
+   "max_abs_dp": 1.745428289501305e-05,
+   "flip": 0,
+   "old_margin": 0.9978026363624413,
+   "tokens_old": 268,
+   "tokens_new": 247
+  },
+  {
+   "id": "easy-intent-01",
+   "tier": "easy",
+   "max_abs_dp": 7.984415461659289e-05,
+   "flip": 0,
+   "old_margin": 0.9990507937187847,
+   "tokens_old": 268,
+   "tokens_new": 247
+  },
+  {
+   "id": "easy-intent-02",
+   "tier": "easy",
+   "max_abs_dp": 0.00013196042208796221,
+   "flip": 0,
+   "old_margin": 0.9974198838630616,
+   "tokens_old": 271,
+   "tokens_new": 250
+  },
+  {
+   "id": "easy-intent-03",
+   "tier": "easy",
+   "max_abs_dp": 1.7846077738470356e-05,
+   "flip": 0,
+   "old_margin": 0.9991977739757971,
+   "tokens_old": 260,
+   "tokens_new": 239
+  },
+  {
+   "id": "easy-intent-04",
+   "tier": "easy",
+   "max_abs_dp": 5.800550698809026e-05,
+   "flip": 0,
+   "old_margin": 0.9982542766316906,
+   "tokens_old": 265,
+   "tokens_new": 244
+  },
+  {
+   "id": "easy-intent-05",
+   "tier": "easy",
+   "max_abs_dp": 0.0001465825560199585,
+   "flip": 0,
+   "old_margin": 0.9980133082235624,
+   "tokens_old": 264,
+   "tokens_new": 243
+  },
+  {
+   "id": "easy-intent-06",
+   "tier": "easy",
+   "max_abs_dp": 0.00010551718549689504,
+   "flip": 0,
+   "old_margin": 0.9978513410514095,
+   "tokens_old": 249,
+   "tokens_new": 228
+  },
+  {
+   "id": "easy-intent-07",
+   "tier": "easy",
+   "max_abs_dp": 2.190316481078203e-05,
+   "flip": 0,
+   "old_margin": 0.9990429635473095,
+   "tokens_old": 242,
+   "tokens_new": 221
+  },
+  {
+   "id": "easy-intent-08",
+   "tier": "easy",
+   "max_abs_dp": 6.969483669760912e-05,
+   "flip": 0,
+   "old_margin": 0.9970033706866985,
+   "tokens_old": 244,
+   "tokens_new": 223
+  },
+  {
+   "id": "easy-intent-09",
+   "tier": "easy",
+   "max_abs_dp": 0.0010559572017729835,
+   "flip": 0,
+   "old_margin": 0.9932010817756829,
+   "tokens_old": 247,
+   "tokens_new": 226
+  },
+  {
+   "id": "easy-intent-10",
+   "tier": "easy",
+   "max_abs_dp": 2.1717690390721245e-05,
+   "flip": 0,
+   "old_margin": 0.9992216412921177,
+   "tokens_old": 245,
+   "tokens_new": 224
+  },
+  {
+   "id": "easy-intent-11",
+   "tier": "easy",
+   "max_abs_dp": 2.1084275099614302e-05,
+   "flip": 0,
+   "old_margin": 0.9992831429757107,
+   "tokens_old": 245,
+   "tokens_new": 224
+  },
+  {
+   "id": "easy-fact-00",
+   "tier": "easy",
+   "max_abs_dp": 0.0013225082836834292,
+   "flip": 0,
+   "old_margin": 0.9720904053894803,
+   "tokens_old": 196,
+   "tokens_new": 168
+  },
+  {
+   "id": "easy-fact-01",
+   "tier": "easy",
+   "max_abs_dp": 0.004311236594812251,
+   "flip": 0,
+   "old_margin": 0.9322417734797745,
+   "tokens_old": 194,
+   "tokens_new": 166
+  },
+  {
+   "id": "easy-fact-02",
+   "tier": "easy",
+   "max_abs_dp": 0.00011073209451218854,
+   "flip": 0,
+   "old_margin": 0.9814358161015461,
+   "tokens_old": 201,
+   "tokens_new": 174
+  },
+  {
+   "id": "easy-fact-03",
+   "tier": "easy",
+   "max_abs_dp": 0.0019612914594230417,
+   "flip": 0,
+   "old_margin": 0.9700299812449398,
+   "tokens_old": 204,
+   "tokens_new": 177
+  },
+  {
+   "id": "easy-fact-04",
+   "tier": "easy",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.9629590030467289,
+   "tokens_old": 195,
+   "tokens_new": 166
+  },
+  {
+   "id": "easy-fact-05",
+   "tier": "easy",
+   "max_abs_dp": 0.0006663889343123675,
+   "flip": 0,
+   "old_margin": 0.41023727780539787,
+   "tokens_old": 196,
+   "tokens_new": 167
+  },
+  {
+   "id": "easy-fact-06",
+   "tier": "easy",
+   "max_abs_dp": 5.788704667325506e-05,
+   "flip": 0,
+   "old_margin": 0.9950163565875337,
+   "tokens_old": 229,
+   "tokens_new": 187
+  },
+  {
+   "id": "easy-fact-07",
+   "tier": "easy",
+   "max_abs_dp": 0.017135020672539136,
+   "flip": 0,
+   "old_margin": 0.7218290084789241,
+   "tokens_old": 192,
+   "tokens_new": 162
+  },
+  {
+   "id": "easy-fact-08",
+   "tier": "easy",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.9955022947403016,
+   "tokens_old": 186,
+   "tokens_new": 158
+  },
+  {
+   "id": "easy-fact-09",
+   "tier": "easy",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.9438486450411356,
+   "tokens_old": 186,
+   "tokens_new": 158
+  },
+  {
+   "id": "easy-fact-10",
+   "tier": "easy",
+   "max_abs_dp": 0.0008159880950298279,
+   "flip": 0,
+   "old_margin": 0.9700299812449398,
+   "tokens_old": 199,
+   "tokens_new": 167
+  },
+  {
+   "id": "easy-fact-11",
+   "tier": "easy",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.9011644500687308,
+   "tokens_old": 200,
+   "tokens_new": 168
+  },
+  {
+   "id": "easy-extraction-00",
+   "tier": "easy",
+   "max_abs_dp": 2.431373855071861e-05,
+   "flip": 0,
+   "old_margin": 0.9947302345573843,
+   "tokens_old": 190,
+   "tokens_new": 170
+  },
+  {
+   "id": "easy-extraction-01",
+   "tier": "easy",
+   "max_abs_dp": 0.00017926263772483075,
+   "flip": 0,
+   "old_margin": 0.9925624001103992,
+   "tokens_old": 192,
+   "tokens_new": 172
+  },
+  {
+   "id": "easy-extraction-02",
+   "tier": "easy",
+   "max_abs_dp": 0.0003310163531468069,
+   "flip": 0,
+   "old_margin": 0.9918956338535495,
+   "tokens_old": 193,
+   "tokens_new": 173
+  },
+  {
+   "id": "easy-extraction-03",
+   "tier": "easy",
+   "max_abs_dp": 0.0009136773553402424,
+   "flip": 0,
+   "old_margin": 0.9804797198000366,
+   "tokens_old": 187,
+   "tokens_new": 168
+  },
+  {
+   "id": "easy-extraction-04",
+   "tier": "easy",
+   "max_abs_dp": 0.002370253205222772,
+   "flip": 0,
+   "old_margin": 0.9641252733432877,
+   "tokens_old": 185,
+   "tokens_new": 166
+  },
+  {
+   "id": "easy-extraction-05",
+   "tier": "easy",
+   "max_abs_dp": 0.002416222323719741,
+   "flip": 0,
+   "old_margin": 0.9605556920345281,
+   "tokens_old": 185,
+   "tokens_new": 166
+  },
+  {
+   "id": "easy-extraction-06",
+   "tier": "easy",
+   "max_abs_dp": 0.0014446708039996814,
+   "flip": 0,
+   "old_margin": 0.9699422619935631,
+   "tokens_old": 175,
+   "tokens_new": 154
+  },
+  {
+   "id": "easy-extraction-07",
+   "tier": "easy",
+   "max_abs_dp": 0.011433781293437695,
+   "flip": 0,
+   "old_margin": 0.6571688365686774,
+   "tokens_old": 173,
+   "tokens_new": 152
+  },
+  {
+   "id": "easy-extraction-08",
+   "tier": "easy",
+   "max_abs_dp": 0.00012742131945198132,
+   "flip": 0,
+   "old_margin": 0.9967478189355649,
+   "tokens_old": 191,
+   "tokens_new": 169
+  },
+  {
+   "id": "easy-extraction-09",
+   "tier": "easy",
+   "max_abs_dp": 0.000305686631566493,
+   "flip": 0,
+   "old_margin": 0.9910389481838849,
+   "tokens_old": 193,
+   "tokens_new": 171
+  },
+  {
+   "id": "easy-extraction-10",
+   "tier": "easy",
+   "max_abs_dp": 0.0010881649096045054,
+   "flip": 0,
+   "old_margin": 0.99168370335831,
+   "tokens_old": 189,
+   "tokens_new": 167
+  },
+  {
+   "id": "easy-extraction-11",
+   "tier": "easy",
+   "max_abs_dp": 0.000378775356355443,
+   "flip": 0,
+   "old_margin": 0.9943249040498878,
+   "tokens_old": 196,
+   "tokens_new": 176
+  },
+  {
+   "id": "easy-tool_selection-00",
+   "tier": "easy",
+   "max_abs_dp": 6.531120133201895e-05,
+   "flip": 0,
+   "old_margin": 0.99804163649071,
+   "tokens_old": 257,
+   "tokens_new": 234
+  },
+  {
+   "id": "easy-tool_selection-01",
+   "tier": "easy",
+   "max_abs_dp": 5.347617606832333e-05,
+   "flip": 0,
+   "old_margin": 0.9989593740113412,
+   "tokens_old": 258,
+   "tokens_new": 235
+  },
+  {
+   "id": "easy-tool_selection-02",
+   "tier": "easy",
+   "max_abs_dp": 5.04176439055648e-05,
+   "flip": 0,
+   "old_margin": 0.9990432890650511,
+   "tokens_old": 261,
+   "tokens_new": 238
+  },
+  {
+   "id": "easy-tool_selection-03",
+   "tier": "easy",
+   "max_abs_dp": 2.9447565811135945e-05,
+   "flip": 0,
+   "old_margin": 0.9951734590983011,
+   "tokens_old": 259,
+   "tokens_new": 236
+  },
+  {
+   "id": "easy-tool_selection-04",
+   "tier": "easy",
+   "max_abs_dp": 0.0001505455877029993,
+   "flip": 0,
+   "old_margin": 0.9962823935040662,
+   "tokens_old": 255,
+   "tokens_new": 232
+  },
+  {
+   "id": "easy-tool_selection-05",
+   "tier": "easy",
+   "max_abs_dp": 2.2098675547561783e-05,
+   "flip": 0,
+   "old_margin": 0.998766749547145,
+   "tokens_old": 261,
+   "tokens_new": 238
+  },
+  {
+   "id": "easy-tool_selection-06",
+   "tier": "easy",
+   "max_abs_dp": 2.864148712067912e-05,
+   "flip": 0,
+   "old_margin": 0.9983235023267717,
+   "tokens_old": 270,
+   "tokens_new": 247
+  },
+  {
+   "id": "easy-tool_selection-07",
+   "tier": "easy",
+   "max_abs_dp": 3.5266020757984684e-05,
+   "flip": 0,
+   "old_margin": 0.9984699736432531,
+   "tokens_old": 270,
+   "tokens_new": 247
+  },
+  {
+   "id": "easy-tool_selection-08",
+   "tier": "easy",
+   "max_abs_dp": 7.16150902528856e-05,
+   "flip": 0,
+   "old_margin": 0.9988960646307361,
+   "tokens_old": 269,
+   "tokens_new": 246
+  },
+  {
+   "id": "easy-tool_selection-09",
+   "tier": "easy",
+   "max_abs_dp": 2.5044357395365147e-05,
+   "flip": 0,
+   "old_margin": 0.9989343465997216,
+   "tokens_old": 266,
+   "tokens_new": 243
+  },
+  {
+   "id": "easy-tool_selection-10",
+   "tier": "easy",
+   "max_abs_dp": 8.409080124172075e-05,
+   "flip": 0,
+   "old_margin": 0.9988139486427304,
+   "tokens_old": 266,
+   "tokens_new": 243
+  },
+  {
+   "id": "easy-tool_selection-11",
+   "tier": "easy",
+   "max_abs_dp": 1.1969592835670007e-05,
+   "flip": 0,
+   "old_margin": 0.9989176327645309,
+   "tokens_old": 269,
+   "tokens_new": 246
+  },
+  {
+   "id": "original-policy-01-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0009213823342846261,
+   "flip": 0,
+   "old_margin": 0.9743851318067112,
+   "tokens_old": 224,
+   "tokens_new": 192
+  },
+  {
+   "id": "original-policy-01-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0008016415579004121,
+   "flip": 0,
+   "old_margin": 0.9784201874564884,
+   "tokens_old": 227,
+   "tokens_new": 195
+  },
+  {
+   "id": "original-policy-02-0",
+   "tier": "standard",
+   "max_abs_dp": 0.013911917254669448,
+   "flip": 0,
+   "old_margin": 0.27184529912946276,
+   "tokens_old": 213,
+   "tokens_new": 181
+  },
+  {
+   "id": "original-policy-02-1",
+   "tier": "standard",
+   "max_abs_dp": 0.013136823126089103,
+   "flip": 0,
+   "old_margin": 0.7189885617704812,
+   "tokens_old": 212,
+   "tokens_new": 180
+  },
+  {
+   "id": "original-policy-03-0",
+   "tier": "standard",
+   "max_abs_dp": 0.013911917254669448,
+   "flip": 0,
+   "old_margin": 0.08917836378025612,
+   "tokens_old": 215,
+   "tokens_new": 183
+  },
+  {
+   "id": "original-policy-03-1",
+   "tier": "standard",
+   "max_abs_dp": 0.002052583706031008,
+   "flip": 0,
+   "old_margin": 0.9106011190746361,
+   "tokens_old": 214,
+   "tokens_new": 182
+  },
+  {
+   "id": "original-policy-04-0",
+   "tier": "standard",
+   "max_abs_dp": 0.008234632432436842,
+   "flip": 0,
+   "old_margin": 0.8061713063520806,
+   "tokens_old": 221,
+   "tokens_new": 189
+  },
+  {
+   "id": "original-policy-04-1",
+   "tier": "standard",
+   "max_abs_dp": 0.004620432492888349,
+   "flip": 0,
+   "old_margin": 0.8565951288391274,
+   "tokens_old": 218,
+   "tokens_new": 186
+  },
+  {
+   "id": "original-policy-05-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0012787723057967604,
+   "flip": 0,
+   "old_margin": 0.8614976251931554,
+   "tokens_old": 225,
+   "tokens_new": 193
+  },
+  {
+   "id": "original-policy-05-1",
+   "tier": "standard",
+   "max_abs_dp": 0.004620432492888349,
+   "flip": 0,
+   "old_margin": 0.9038094666360976,
+   "tokens_old": 217,
+   "tokens_new": 185
+  },
+  {
+   "id": "original-policy-06-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.2679615287228093,
+   "tokens_old": 227,
+   "tokens_new": 195
+  },
+  {
+   "id": "original-policy-06-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.2549149868676283,
+   "tokens_old": 217,
+   "tokens_new": 185
+  },
+  {
+   "id": "original-intent-01-0",
+   "tier": "standard",
+   "max_abs_dp": 0.005411413175311464,
+   "flip": 0,
+   "old_margin": 0.6080251275384991,
+   "tokens_old": 231,
+   "tokens_new": 204
+  },
+  {
+   "id": "original-intent-01-1",
+   "tier": "standard",
+   "max_abs_dp": 8.403793372529838e-05,
+   "flip": 0,
+   "old_margin": 0.5339313831217417,
+   "tokens_old": 232,
+   "tokens_new": 205
+  },
+  {
+   "id": "original-intent-02-0",
+   "tier": "standard",
+   "max_abs_dp": 0.011333057548052028,
+   "flip": 0,
+   "old_margin": 0.43411897142239786,
+   "tokens_old": 232,
+   "tokens_new": 205
+  },
+  {
+   "id": "original-intent-02-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0002734282782578257,
+   "flip": 0,
+   "old_margin": 0.956266118931355,
+   "tokens_old": 231,
+   "tokens_new": 204
+  },
+  {
+   "id": "original-intent-03-0",
+   "tier": "standard",
+   "max_abs_dp": 0.011174198858782819,
+   "flip": 0,
+   "old_margin": 0.5822990782607019,
+   "tokens_old": 233,
+   "tokens_new": 206
+  },
+  {
+   "id": "original-intent-03-1",
+   "tier": "standard",
+   "max_abs_dp": 0.006367111975959516,
+   "flip": 0,
+   "old_margin": 0.9035262169275688,
+   "tokens_old": 231,
+   "tokens_new": 204
+  },
+  {
+   "id": "original-intent-04-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0005098133243260543,
+   "flip": 0,
+   "old_margin": 0.5935851576500579,
+   "tokens_old": 236,
+   "tokens_new": 209
+  },
+  {
+   "id": "original-intent-04-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0019918439347898134,
+   "flip": 0,
+   "old_margin": 0.08864405794327435,
+   "tokens_old": 231,
+   "tokens_new": 204
+  },
+  {
+   "id": "original-intent-05-0",
+   "tier": "standard",
+   "max_abs_dp": 0.02432907245488436,
+   "flip": 0,
+   "old_margin": 0.49700656834879564,
+   "tokens_old": 231,
+   "tokens_new": 204
+  },
+  {
+   "id": "original-intent-05-1",
+   "tier": "standard",
+   "max_abs_dp": 0.006726646939009151,
+   "flip": 0,
+   "old_margin": 0.8990728165732931,
+   "tokens_old": 230,
+   "tokens_new": 203
+  },
+  {
+   "id": "original-intent-06-0",
+   "tier": "standard",
+   "max_abs_dp": 0.005746111266096365,
+   "flip": 0,
+   "old_margin": 0.8221476867968844,
+   "tokens_old": 229,
+   "tokens_new": 202
+  },
+  {
+   "id": "original-intent-06-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0023923475389451,
+   "flip": 0,
+   "old_margin": 0.8645415914645749,
+   "tokens_old": 234,
+   "tokens_new": 207
+  },
+  {
+   "id": "original-ordinal-01-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0005036754370881802,
+   "flip": 0,
+   "old_margin": 0.9826696008348536,
+   "tokens_old": 257,
+   "tokens_new": 229
+  },
+  {
+   "id": "original-ordinal-01-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0006280628591783799,
+   "flip": 0,
+   "old_margin": 0.9782006694444516,
+   "tokens_old": 258,
+   "tokens_new": 230
+  },
+  {
+   "id": "original-ordinal-02-0",
+   "tier": "standard",
+   "max_abs_dp": 0.012107503165405487,
+   "flip": 0,
+   "old_margin": 0.5600316976943791,
+   "tokens_old": 261,
+   "tokens_new": 233
+  },
+  {
+   "id": "original-ordinal-02-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0011399043139836765,
+   "flip": 0,
+   "old_margin": 0.8704703866581389,
+   "tokens_old": 262,
+   "tokens_new": 234
+  },
+  {
+   "id": "original-ordinal-03-0",
+   "tier": "standard",
+   "max_abs_dp": 0.010351727549690048,
+   "flip": 0,
+   "old_margin": 0.856052168772102,
+   "tokens_old": 258,
+   "tokens_new": 230
+  },
+  {
+   "id": "original-ordinal-03-1",
+   "tier": "standard",
+   "max_abs_dp": 0.003666511001162484,
+   "flip": 0,
+   "old_margin": 0.7111342792841934,
+   "tokens_old": 260,
+   "tokens_new": 232
+  },
+  {
+   "id": "original-ordinal-04-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0015852418066789123,
+   "flip": 0,
+   "old_margin": 0.9571768114175216,
+   "tokens_old": 260,
+   "tokens_new": 232
+  },
+  {
+   "id": "original-ordinal-04-1",
+   "tier": "standard",
+   "max_abs_dp": 0.004927945337056296,
+   "flip": 0,
+   "old_margin": 0.9478228254540362,
+   "tokens_old": 259,
+   "tokens_new": 231
+  },
+  {
+   "id": "original-ordinal-05-0",
+   "tier": "standard",
+   "max_abs_dp": 0.015541346829135438,
+   "flip": 0,
+   "old_margin": 0.523618381979541,
+   "tokens_old": 263,
+   "tokens_new": 235
+  },
+  {
+   "id": "original-ordinal-05-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0016271258679573727,
+   "flip": 0,
+   "old_margin": 0.860730443356673,
+   "tokens_old": 262,
+   "tokens_new": 234
+  },
+  {
+   "id": "original-ordinal-06-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0035230842059946754,
+   "flip": 0,
+   "old_margin": 0.9081123025011322,
+   "tokens_old": 263,
+   "tokens_new": 235
+  },
+  {
+   "id": "original-ordinal-06-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0027986395212469574,
+   "flip": 0,
+   "old_margin": 0.9737587559878954,
+   "tokens_old": 270,
+   "tokens_new": 242
+  },
+  {
+   "id": "original-extraction-01-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0054964196966816314,
+   "flip": 0,
+   "old_margin": 0.6261326695437133,
+   "tokens_old": 212,
+   "tokens_new": 177
+  },
+  {
+   "id": "original-extraction-01-1",
+   "tier": "standard",
+   "max_abs_dp": 0.016111787898122842,
+   "flip": 0,
+   "old_margin": 0.6822814647038131,
+   "tokens_old": 214,
+   "tokens_new": 179
+  },
+  {
+   "id": "original-extraction-02-0",
+   "tier": "standard",
+   "max_abs_dp": 0.000822439858957965,
+   "flip": 0,
+   "old_margin": 0.9676997044567807,
+   "tokens_old": 215,
+   "tokens_new": 180
+  },
+  {
+   "id": "original-extraction-02-1",
+   "tier": "standard",
+   "max_abs_dp": 8.780854899016917e-05,
+   "flip": 0,
+   "old_margin": 0.996008144524025,
+   "tokens_old": 214,
+   "tokens_new": 179
+  },
+  {
+   "id": "original-extraction-03-0",
+   "tier": "standard",
+   "max_abs_dp": 0.011014356661483649,
+   "flip": 0,
+   "old_margin": 0.4874224981844477,
+   "tokens_old": 218,
+   "tokens_new": 183
+  },
+  {
+   "id": "original-extraction-03-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0012310970105846274,
+   "flip": 0,
+   "old_margin": 0.9756091637530137,
+   "tokens_old": 217,
+   "tokens_new": 182
+  },
+  {
+   "id": "original-extraction-04-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0014319307862850073,
+   "flip": 0,
+   "old_margin": 0.9737719172269321,
+   "tokens_old": 215,
+   "tokens_new": 180
+  },
+  {
+   "id": "original-extraction-04-1",
+   "tier": "standard",
+   "max_abs_dp": 0.003817655131851838,
+   "flip": 0,
+   "old_margin": 0.9185592391221764,
+   "tokens_old": 212,
+   "tokens_new": 177
+  },
+  {
+   "id": "original-extraction-05-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0001234610052786092,
+   "flip": 0,
+   "old_margin": 0.9931946130462476,
+   "tokens_old": 215,
+   "tokens_new": 180
+  },
+  {
+   "id": "original-extraction-05-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0008111255141707296,
+   "flip": 0,
+   "old_margin": 0.9800909982105854,
+   "tokens_old": 211,
+   "tokens_new": 176
+  },
+  {
+   "id": "original-extraction-06-0",
+   "tier": "standard",
+   "max_abs_dp": 0.00038007709712331843,
+   "flip": 0,
+   "old_margin": 0.9838560917577516,
+   "tokens_old": 215,
+   "tokens_new": 180
+  },
+  {
+   "id": "original-extraction-06-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0014556387873322224,
+   "flip": 0,
+   "old_margin": 0.8099317365539878,
+   "tokens_old": 214,
+   "tokens_new": 179
+  },
+  {
+   "id": "original-adequacy-01-0",
+   "tier": "standard",
+   "max_abs_dp": 0.006880659087855845,
+   "flip": 0,
+   "old_margin": 0.7340715196043414,
+   "tokens_old": 200,
+   "tokens_new": 173
+  },
+  {
+   "id": "original-adequacy-01-1",
+   "tier": "standard",
+   "max_abs_dp": 0.01263677539649688,
+   "flip": 0,
+   "old_margin": 0.35713989250306544,
+   "tokens_old": 196,
+   "tokens_new": 169
+  },
+  {
+   "id": "original-adequacy-02-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0012100945645849986,
+   "flip": 0,
+   "old_margin": 0.7741064840322311,
+   "tokens_old": 197,
+   "tokens_new": 170
+  },
+  {
+   "id": "original-adequacy-02-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0034850607260038004,
+   "flip": 0,
+   "old_margin": 0.9454806212311953,
+   "tokens_old": 198,
+   "tokens_new": 171
+  },
+  {
+   "id": "original-adequacy-03-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0028131901391554026,
+   "flip": 0,
+   "old_margin": 0.6846102359958143,
+   "tokens_old": 200,
+   "tokens_new": 173
+  },
+  {
+   "id": "original-adequacy-03-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.02979273124778481,
+   "tokens_old": 204,
+   "tokens_new": 177
+  },
+  {
+   "id": "original-adequacy-04-0",
+   "tier": "standard",
+   "max_abs_dp": 0.012636775396496824,
+   "flip": 0,
+   "old_margin": 0.572820787639182,
+   "tokens_old": 204,
+   "tokens_new": 177
+  },
+  {
+   "id": "original-adequacy-04-1",
+   "tier": "standard",
+   "max_abs_dp": 0.013303164330809247,
+   "flip": 0,
+   "old_margin": 0.3016380303772475,
+   "tokens_old": 201,
+   "tokens_new": 174
+  },
+  {
+   "id": "original-adequacy-05-0",
+   "tier": "standard",
+   "max_abs_dp": 0.026048144969343157,
+   "flip": 0,
+   "old_margin": 0.27729986117469113,
+   "tokens_old": 193,
+   "tokens_new": 166
+  },
+  {
+   "id": "original-adequacy-05-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.08917836378025612,
+   "tokens_old": 194,
+   "tokens_new": 167
+  },
+  {
+   "id": "original-adequacy-06-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0036935716863748524,
+   "flip": 0,
+   "old_margin": 0.5903985239710652,
+   "tokens_old": 209,
+   "tokens_new": 182
+  },
+  {
+   "id": "original-adequacy-06-1",
+   "tier": "standard",
+   "max_abs_dp": 0.01444776673209991,
+   "flip": 0,
+   "old_margin": 0.1513548646660543,
+   "tokens_old": 211,
+   "tokens_new": 184
+  },
+  {
+   "id": "original-routing-01-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0006765530806778219,
+   "flip": 0,
+   "old_margin": 0.9050849122365568,
+   "tokens_old": 291,
+   "tokens_new": 256
+  },
+  {
+   "id": "original-routing-01-1",
+   "tier": "standard",
+   "max_abs_dp": 0.006696760812815783,
+   "flip": 0,
+   "old_margin": 0.8733155227309843,
+   "tokens_old": 287,
+   "tokens_new": 252
+  },
+  {
+   "id": "original-routing-02-0",
+   "tier": "standard",
+   "max_abs_dp": 0.0010388821362298838,
+   "flip": 0,
+   "old_margin": 0.536145288211697,
+   "tokens_old": 292,
+   "tokens_new": 257
+  },
+  {
+   "id": "original-routing-02-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0006147389263320216,
+   "flip": 0,
+   "old_margin": 0.8567970760542335,
+   "tokens_old": 286,
+   "tokens_new": 251
+  },
+  {
+   "id": "original-routing-03-0",
+   "tier": "standard",
+   "max_abs_dp": 0.003322012594919599,
+   "flip": 0,
+   "old_margin": 0.9227268337121245,
+   "tokens_old": 291,
+   "tokens_new": 256
+  },
+  {
+   "id": "original-routing-03-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0003616896332816477,
+   "flip": 0,
+   "old_margin": 0.946348013451421,
+   "tokens_old": 293,
+   "tokens_new": 258
+  },
+  {
+   "id": "original-routing-04-0",
+   "tier": "standard",
+   "max_abs_dp": 0.017429948600612533,
+   "flip": 0,
+   "old_margin": 0.6146179099152369,
+   "tokens_old": 287,
+   "tokens_new": 252
+  },
+  {
+   "id": "original-routing-04-1",
+   "tier": "standard",
+   "max_abs_dp": 0.018946068786600517,
+   "flip": 0,
+   "old_margin": 0.5069533021914501,
+   "tokens_old": 286,
+   "tokens_new": 251
+  },
+  {
+   "id": "original-routing-05-0",
+   "tier": "standard",
+   "max_abs_dp": 0.011575917760742072,
+   "flip": 0,
+   "old_margin": 0.8114484662531355,
+   "tokens_old": 288,
+   "tokens_new": 253
+  },
+  {
+   "id": "original-routing-05-1",
+   "tier": "standard",
+   "max_abs_dp": 0.002876113520369622,
+   "flip": 0,
+   "old_margin": 0.9066940314299086,
+   "tokens_old": 288,
+   "tokens_new": 253
+  },
+  {
+   "id": "original-routing-06-0",
+   "tier": "standard",
+   "max_abs_dp": 0.00195610284788561,
+   "flip": 0,
+   "old_margin": 0.9269492863715041,
+   "tokens_old": 287,
+   "tokens_new": 252
+  },
+  {
+   "id": "original-routing-06-1",
+   "tier": "standard",
+   "max_abs_dp": 0.0024842533277411594,
+   "flip": 0,
+   "old_margin": 0.9394478373575983,
+   "tokens_old": 286,
+   "tokens_new": 251
+  },
+  {
+   "id": "hard-opus-a-long_policy-01",
+   "tier": "hard",
+   "max_abs_dp": 0.00729181545753306,
+   "flip": 0,
+   "old_margin": 0.7733603583414846,
+   "tokens_old": 4227,
+   "tokens_new": 4167
+  },
+  {
+   "id": "hard-opus-a-long_policy-04",
+   "tier": "hard",
+   "max_abs_dp": 0.010386132779797719,
+   "flip": 0,
+   "old_margin": 0.6071828692037624,
+   "tokens_old": 2879,
+   "tokens_new": 2839
+  },
+  {
+   "id": "hard-opus-a-long_policy-08",
+   "tier": "hard",
+   "max_abs_dp": 0.001989401615023076,
+   "flip": 0,
+   "old_margin": 0.8563420351738109,
+   "tokens_old": 2597,
+   "tokens_new": 2550
+  },
+  {
+   "id": "hard-opus-a-long_policy-09",
+   "tier": "hard",
+   "max_abs_dp": 0.0007127672633111051,
+   "flip": 0,
+   "old_margin": 0.844632964852175,
+   "tokens_old": 2716,
+   "tokens_new": 2666
+  },
+  {
+   "id": "hard-opus-a-long_policy-11",
+   "tier": "hard",
+   "max_abs_dp": 0.014896365623892516,
+   "flip": 0,
+   "old_margin": 0.2738141958679088,
+   "tokens_old": 2502,
+   "tokens_new": 2455
+  },
+  {
+   "id": "hard-opus-a-long_policy-13",
+   "tier": "hard",
+   "max_abs_dp": 0.006256164038233203,
+   "flip": 0,
+   "old_margin": 0.59909443389136,
+   "tokens_old": 2580,
+   "tokens_new": 2525
+  },
+  {
+   "id": "hard-opus-a-long_policy-17",
+   "tier": "hard",
+   "max_abs_dp": 0.0069766219788416906,
+   "flip": 0,
+   "old_margin": 0.3273093515142326,
+   "tokens_old": 2538,
+   "tokens_new": 2500
+  },
+  {
+   "id": "hard-opus-a-long_policy-19",
+   "tier": "hard",
+   "max_abs_dp": 0.008063207769948177,
+   "flip": 0,
+   "old_margin": 0.3358263864284144,
+   "tokens_old": 2470,
+   "tokens_new": 2423
+  },
+  {
+   "id": "hard-opus-a-probability-03",
+   "tier": "hard",
+   "max_abs_dp": 0.015245049534135802,
+   "flip": 0,
+   "old_margin": 0.215123360288893,
+   "tokens_old": 558,
+   "tokens_new": 510
+  },
+  {
+   "id": "hard-opus-a-probability-04",
+   "tier": "hard",
+   "max_abs_dp": 0.014016981789062966,
+   "flip": 0,
+   "old_margin": 0.5958421789427637,
+   "tokens_old": 1231,
+   "tokens_new": 1189
+  },
+  {
+   "id": "hard-opus-a-probability-07",
+   "tier": "hard",
+   "max_abs_dp": 0.003935509567658202,
+   "flip": 0,
+   "old_margin": 0.0022898309173796094,
+   "tokens_old": 1340,
+   "tokens_new": 1303
+  },
+  {
+   "id": "hard-opus-a-probability-08",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.025273550792993704,
+   "tokens_old": 506,
+   "tokens_new": 466
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-03",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.17457565446325501,
+   "tokens_old": 618,
+   "tokens_new": 576
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-06",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.16261348865130132,
+   "tokens_old": 667,
+   "tokens_new": 629
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-07",
+   "tier": "hard",
+   "max_abs_dp": 0.015041185711887839,
+   "flip": 0,
+   "old_margin": 0.15322290733930916,
+   "tokens_old": 1460,
+   "tokens_new": 1435
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-09",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.3085092345484473,
+   "tokens_old": 666,
+   "tokens_new": 626
+  },
+  {
+   "id": "hard-opus-a-temporal_numeric-12",
+   "tier": "hard",
+   "max_abs_dp": 0.005269390457883327,
+   "flip": 0,
+   "old_margin": 0.8426460257436486,
+   "tokens_old": 730,
+   "tokens_new": 681
+  },
+  {
+   "id": "hard-opus-b-ambiguous-02",
+   "tier": "hard",
+   "max_abs_dp": 0.005784876986815922,
+   "flip": 0,
+   "old_margin": 0.4278780656542184,
+   "tokens_old": 679,
+   "tokens_new": 648
+  },
+  {
+   "id": "hard-opus-b-ambiguous-03",
+   "tier": "hard",
+   "max_abs_dp": 0.004250501926814587,
+   "flip": 0,
+   "old_margin": 0.03890117054923348,
+   "tokens_old": 648,
+   "tokens_new": 622
+  },
+  {
+   "id": "hard-opus-b-ambiguous-07",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.31174417558387757,
+   "tokens_old": 632,
+   "tokens_new": 597
+  },
+  {
+   "id": "hard-opus-b-ambiguous-09",
+   "tier": "hard",
+   "max_abs_dp": 0.008245549684169018,
+   "flip": 0,
+   "old_margin": 0.3605477913140155,
+   "tokens_old": 770,
+   "tokens_new": 737
+  },
+  {
+   "id": "hard-opus-b-ambiguous-10",
+   "tier": "hard",
+   "max_abs_dp": 0.02953001359467189,
+   "flip": 1,
+   "old_margin": 0.048241208563946536,
+   "tokens_old": 693,
+   "tokens_new": 665
+  },
+  {
+   "id": "hard-opus-b-ambiguous-11",
+   "tier": "hard",
+   "max_abs_dp": 0.00293617163271076,
+   "flip": 0,
+   "old_margin": 0.9655211083106944,
+   "tokens_old": 601,
+   "tokens_new": 574
+  },
+  {
+   "id": "hard-opus-b-ambiguous-13",
+   "tier": "hard",
+   "max_abs_dp": 0.006179486666525763,
+   "flip": 0,
+   "old_margin": 0.8612908961934229,
+   "tokens_old": 779,
+   "tokens_new": 739
+  },
+  {
+   "id": "hard-opus-b-multi_hop-03",
+   "tier": "hard",
+   "max_abs_dp": 0.026148273842989234,
+   "flip": 0,
+   "old_margin": 0.387628909272115,
+   "tokens_old": 3117,
+   "tokens_new": 3080
+  },
+  {
+   "id": "hard-opus-b-multi_hop-04",
+   "tier": "hard",
+   "max_abs_dp": 0.014489899159717878,
+   "flip": 0,
+   "old_margin": 0.03646161710499268,
+   "tokens_old": 2500,
+   "tokens_new": 2466
+  },
+  {
+   "id": "hard-opus-b-multi_hop-05",
+   "tier": "hard",
+   "max_abs_dp": 0.023521957295757623,
+   "flip": 0,
+   "old_margin": 0.11007538319510862,
+   "tokens_old": 2761,
+   "tokens_new": 2718
+  },
+  {
+   "id": "hard-opus-b-multi_hop-07",
+   "tier": "hard",
+   "max_abs_dp": 0.011991894819151583,
+   "flip": 0,
+   "old_margin": 0.17306391734373383,
+   "tokens_old": 2855,
+   "tokens_new": 2790
+  },
+  {
+   "id": "hard-opus-b-multi_hop-08",
+   "tier": "hard",
+   "max_abs_dp": 0.030728613290156748,
+   "flip": 0,
+   "old_margin": 0.41200645135163866,
+   "tokens_old": 2471,
+   "tokens_new": 2421
+  },
+  {
+   "id": "hard-opus-b-probability-01",
+   "tier": "hard",
+   "max_abs_dp": 0.00767541931115262,
+   "flip": 0,
+   "old_margin": 0.3118067481903711,
+   "tokens_old": 2061,
+   "tokens_new": 2020
+  },
+  {
+   "id": "hard-opus-b-probability-02",
+   "tier": "hard",
+   "max_abs_dp": 0.0014068470003539835,
+   "flip": 0,
+   "old_margin": 0.9679619918415836,
+   "tokens_old": 630,
+   "tokens_new": 589
+  },
+  {
+   "id": "hard-opus-b-probability-03",
+   "tier": "hard",
+   "max_abs_dp": 0.006256164038233203,
+   "flip": 0,
+   "old_margin": 0.021591548938630967,
+   "tokens_old": 1338,
+   "tokens_new": 1298
+  },
+  {
+   "id": "hard-opus-b-probability-04",
+   "tier": "hard",
+   "max_abs_dp": 0.013242112355271313,
+   "flip": 0,
+   "old_margin": 0.45889393853861976,
+   "tokens_old": 758,
+   "tokens_new": 698
+  },
+  {
+   "id": "hard-opus-b-probability-06",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.18978711279317195,
+   "tokens_old": 1144,
+   "tokens_new": 1104
+  },
+  {
+   "id": "hard-opus-b-tradeoff-01",
+   "tier": "hard",
+   "max_abs_dp": 0.0102227805547076,
+   "flip": 0,
+   "old_margin": 0.23056681568996962,
+   "tokens_old": 1035,
+   "tokens_new": 996
+  },
+  {
+   "id": "hard-opus-b-tradeoff-03",
+   "tier": "hard",
+   "max_abs_dp": 0.020400367950919707,
+   "flip": 0,
+   "old_margin": 0.38208485648949264,
+   "tokens_old": 919,
+   "tokens_new": 880
+  },
+  {
+   "id": "hard-opus-b-tradeoff-06",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.6501395797079317,
+   "tokens_old": 939,
+   "tokens_new": 904
+  },
+  {
+   "id": "hard-opus-b-tradeoff-07",
+   "tier": "hard",
+   "max_abs_dp": 0.0030289534661069872,
+   "flip": 0,
+   "old_margin": 0.1414635869787162,
+   "tokens_old": 918,
+   "tokens_new": 882
+  },
+  {
+   "id": "hard-opus-b-tradeoff-08",
+   "tier": "hard",
+   "max_abs_dp": 0.000797282802036059,
+   "flip": 0,
+   "old_margin": 0.060282830316056524,
+   "tokens_old": 751,
+   "tokens_new": 700
+  },
+  {
+   "id": "hard-opus-b-tradeoff-12",
+   "tier": "hard",
+   "max_abs_dp": 8.645128724948936e-05,
+   "flip": 0,
+   "old_margin": 0.9985360735011738,
+   "tokens_old": 759,
+   "tokens_new": 728
+  },
+  {
+   "id": "hard-opus-c-long_policy-02",
+   "tier": "hard",
+   "max_abs_dp": 0.0010602291987774903,
+   "flip": 0,
+   "old_margin": 0.5309394694409306,
+   "tokens_old": 3820,
+   "tokens_new": 3767
+  },
+  {
+   "id": "hard-opus-c-long_policy-03",
+   "tier": "hard",
+   "max_abs_dp": 0.010438043662279933,
+   "flip": 0,
+   "old_margin": 0.27134641987541475,
+   "tokens_old": 3704,
+   "tokens_new": 3663
+  },
+  {
+   "id": "hard-opus-c-long_policy-04",
+   "tier": "hard",
+   "max_abs_dp": 0.0025988191110643544,
+   "flip": 0,
+   "old_margin": 0.954781377536829,
+   "tokens_old": 3467,
+   "tokens_new": 3424
+  },
+  {
+   "id": "hard-opus-c-long_policy-05",
+   "tier": "hard",
+   "max_abs_dp": 0.017306808780130495,
+   "flip": 0,
+   "old_margin": 0.19852361870177176,
+   "tokens_old": 3413,
+   "tokens_new": 3366
+  },
+  {
+   "id": "hard-opus-c-long_policy-08",
+   "tier": "hard",
+   "max_abs_dp": 0.012088924389095923,
+   "flip": 0,
+   "old_margin": 0.2206272562189573,
+   "tokens_old": 3420,
+   "tokens_new": 3346
+  },
+  {
+   "id": "hard-opus-c-long_policy-10",
+   "tier": "hard",
+   "max_abs_dp": 0.016622011046856178,
+   "flip": 0,
+   "old_margin": 0.21486743841768957,
+   "tokens_old": 3814,
+   "tokens_new": 3773
+  },
+  {
+   "id": "hard-opus-c-long_policy-11",
+   "tier": "hard",
+   "max_abs_dp": 0.0016774367767797838,
+   "flip": 0,
+   "old_margin": 0.7513425039768943,
+   "tokens_old": 3538,
+   "tokens_new": 3494
+  },
+  {
+   "id": "hard-opus-c-probability-03",
+   "tier": "hard",
+   "max_abs_dp": 0.005075439471098675,
+   "flip": 0,
+   "old_margin": 0.5929393644215968,
+   "tokens_old": 701,
+   "tokens_new": 659
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-02",
+   "tier": "hard",
+   "max_abs_dp": 0.005670564523270971,
+   "flip": 0,
+   "old_margin": 0.4859760060084185,
+   "tokens_old": 1110,
+   "tokens_new": 1058
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-03",
+   "tier": "hard",
+   "max_abs_dp": 0.0081894074862498,
+   "flip": 0,
+   "old_margin": 0.18516925629225853,
+   "tokens_old": 1072,
+   "tokens_new": 1036
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-04",
+   "tier": "hard",
+   "max_abs_dp": 0.014457024544008545,
+   "flip": 0,
+   "old_margin": 0.12686400600328634,
+   "tokens_old": 1028,
+   "tokens_new": 990
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-06",
+   "tier": "hard",
+   "max_abs_dp": 0.009347715886128871,
+   "flip": 0,
+   "old_margin": 0.07247411100257622,
+   "tokens_old": 1239,
+   "tokens_new": 1207
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-08",
+   "tier": "hard",
+   "max_abs_dp": 0.017786202640418747,
+   "flip": 0,
+   "old_margin": 0.028796685156449425,
+   "tokens_old": 1202,
+   "tokens_new": 1169
+  },
+  {
+   "id": "hard-opus-c-temporal_numeric-12",
+   "tier": "hard",
+   "max_abs_dp": 0.013652787855804177,
+   "flip": 0,
+   "old_margin": 0.5932572342763069,
+   "tokens_old": 990,
+   "tokens_new": 954
+  },
+  {
+   "id": "hard-sol-a-adversarial-01",
+   "tier": "hard",
+   "max_abs_dp": 0.01247649853865418,
+   "flip": 0,
+   "old_margin": 0.803112363396182,
+   "tokens_old": 405,
+   "tokens_new": 387
+  },
+  {
+   "id": "hard-sol-a-adversarial-06",
+   "tier": "hard",
+   "max_abs_dp": 0.003730020482810792,
+   "flip": 0,
+   "old_margin": 0.8903655809447519,
+   "tokens_old": 351,
+   "tokens_new": 329
+  },
+  {
+   "id": "hard-sol-a-adversarial-07",
+   "tier": "hard",
+   "max_abs_dp": 0.002181577805717927,
+   "flip": 0,
+   "old_margin": 0.880641712766572,
+   "tokens_old": 436,
+   "tokens_new": 419
+  },
+  {
+   "id": "hard-sol-a-adversarial-08",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.6157612539332649,
+   "tokens_old": 319,
+   "tokens_new": 299
+  },
+  {
+   "id": "hard-sol-a-adversarial-09",
+   "tier": "hard",
+   "max_abs_dp": 0.010888813759809546,
+   "flip": 0,
+   "old_margin": 0.6760453358942042,
+   "tokens_old": 344,
+   "tokens_new": 324
+  },
+  {
+   "id": "hard-sol-a-adversarial-11",
+   "tier": "hard",
+   "max_abs_dp": 0.0033065118337544785,
+   "flip": 0,
+   "old_margin": 0.9684993130887146,
+   "tokens_old": 438,
+   "tokens_new": 422
+  },
+  {
+   "id": "hard-sol-a-multi_hop-01",
+   "tier": "hard",
+   "max_abs_dp": 0.001997956123397142,
+   "flip": 0,
+   "old_margin": 0.33590944765734587,
+   "tokens_old": 2847,
+   "tokens_new": 2825
+  },
+  {
+   "id": "hard-sol-a-multi_hop-02",
+   "tier": "hard",
+   "max_abs_dp": 0.011622389704660785,
+   "flip": 0,
+   "old_margin": 0.47682644675795927,
+   "tokens_old": 2885,
+   "tokens_new": 2863
+  },
+  {
+   "id": "hard-sol-a-multi_hop-05",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.7543930566971774,
+   "tokens_old": 2797,
+   "tokens_new": 2775
+  },
+  {
+   "id": "hard-sol-a-multi_hop-07",
+   "tier": "hard",
+   "max_abs_dp": 0.01813559410622695,
+   "flip": 0,
+   "old_margin": 0.15604679498211255,
+   "tokens_old": 2780,
+   "tokens_new": 2757
+  },
+  {
+   "id": "hard-sol-a-multi_hop-08",
+   "tier": "hard",
+   "max_abs_dp": 0.030857982518501692,
+   "flip": 0,
+   "old_margin": 0.20026278072979542,
+   "tokens_old": 2757,
+   "tokens_new": 2734
+  },
+  {
+   "id": "hard-sol-a-multi_hop-09",
+   "tier": "hard",
+   "max_abs_dp": 0.003820387662602176,
+   "flip": 0,
+   "old_margin": 0.35948881891410134,
+   "tokens_old": 2772,
+   "tokens_new": 2749
+  },
+  {
+   "id": "hard-sol-a-multi_hop-10",
+   "tier": "hard",
+   "max_abs_dp": 0.011328865304007452,
+   "flip": 0,
+   "old_margin": 0.13559603924028202,
+   "tokens_old": 2834,
+   "tokens_new": 2811
+  },
+  {
+   "id": "hard-sol-a-multi_hop-12",
+   "tier": "hard",
+   "max_abs_dp": 0.0012408003720114635,
+   "flip": 0,
+   "old_margin": 0.5424343320311037,
+   "tokens_old": 2781,
+   "tokens_new": 2758
+  },
+  {
+   "id": "hard-sol-a-trap-02",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.9679501629946629,
+   "tokens_old": 400,
+   "tokens_new": 376
+  },
+  {
+   "id": "hard-sol-a-trap-04",
+   "tier": "hard",
+   "max_abs_dp": 0.008954530454896692,
+   "flip": 0,
+   "old_margin": 0.7401340722043274,
+   "tokens_old": 302,
+   "tokens_new": 282
+  },
+  {
+   "id": "hard-sol-a-trap-05",
+   "tier": "hard",
+   "max_abs_dp": 0.015619390766585028,
+   "flip": 0,
+   "old_margin": 0.13526468533495054,
+   "tokens_old": 460,
+   "tokens_new": 439
+  },
+  {
+   "id": "hard-sol-a-trap-06",
+   "tier": "hard",
+   "max_abs_dp": 0.00011450368871289104,
+   "flip": 0,
+   "old_margin": 0.9975117136875215,
+   "tokens_old": 486,
+   "tokens_new": 468
+  },
+  {
+   "id": "hard-sol-a-trap-08",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.93825815222095,
+   "tokens_old": 410,
+   "tokens_new": 391
+  },
+  {
+   "id": "hard-sol-a-trap-10",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.7938627664798835,
+   "tokens_old": 335,
+   "tokens_new": 314
+  },
+  {
+   "id": "hard-sol-a-trap-13",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.5157687372562033,
+   "tokens_old": 316,
+   "tokens_new": 294
+  },
+  {
+   "id": "hard-sol-a-trap-15",
+   "tier": "hard",
+   "max_abs_dp": 0.044391414773708227,
+   "flip": 0,
+   "old_margin": 0.20578502783701125,
+   "tokens_old": 420,
+   "tokens_new": 396
+  },
+  {
+   "id": "hard-sol-b-judge_hard-01",
+   "tier": "hard",
+   "max_abs_dp": 0.014447766732099854,
+   "flip": 0,
+   "old_margin": 0.5033076666343648,
+   "tokens_old": 415,
+   "tokens_new": 393
+  },
+  {
+   "id": "hard-sol-b-judge_hard-02",
+   "tier": "hard",
+   "max_abs_dp": 0.020886286380542685,
+   "flip": 0,
+   "old_margin": 0.5531017646072494,
+   "tokens_old": 339,
+   "tokens_new": 317
+  },
+  {
+   "id": "hard-sol-b-judge_hard-05",
+   "tier": "hard",
+   "max_abs_dp": 0.0025195626132881177,
+   "flip": 0,
+   "old_margin": 0.37737431806948285,
+   "tokens_old": 359,
+   "tokens_new": 337
+  },
+  {
+   "id": "hard-sol-b-judge_hard-08",
+   "tier": "hard",
+   "max_abs_dp": 0.006256164038233258,
+   "flip": 0,
+   "old_margin": 0.7741064840322311,
+   "tokens_old": 341,
+   "tokens_new": 319
+  },
+  {
+   "id": "hard-sol-b-judge_hard-10",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.061457226580313495,
+   "tokens_old": 360,
+   "tokens_new": 338
+  },
+  {
+   "id": "hard-sol-b-judge_hard-14",
+   "tier": "hard",
+   "max_abs_dp": 0.007794282577018613,
+   "flip": 0,
+   "old_margin": 0.8728132270773609,
+   "tokens_old": 377,
+   "tokens_new": 355
+  },
+  {
+   "id": "hard-sol-b-judge_hard-15",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.7162806150813192,
+   "tokens_old": 333,
+   "tokens_new": 311
+  },
+  {
+   "id": "hard-sol-b-judge_hard-18",
+   "tier": "hard",
+   "max_abs_dp": 0.006880659087855845,
+   "flip": 0,
+   "old_margin": 0.5321519426439366,
+   "tokens_old": 301,
+   "tokens_new": 279
+  },
+  {
+   "id": "hard-sol-b-long_policy-01",
+   "tier": "hard",
+   "max_abs_dp": 0.013796708435201643,
+   "flip": 0,
+   "old_margin": 0.30338262600345517,
+   "tokens_old": 2895,
+   "tokens_new": 2867
+  },
+  {
+   "id": "hard-sol-b-long_policy-02",
+   "tier": "hard",
+   "max_abs_dp": 0.004256221169429739,
+   "flip": 0,
+   "old_margin": 0.05878461738291474,
+   "tokens_old": 2742,
+   "tokens_new": 2715
+  },
+  {
+   "id": "hard-sol-b-long_policy-05",
+   "tier": "hard",
+   "max_abs_dp": 0.013118860971818413,
+   "flip": 0,
+   "old_margin": 0.1330003492999594,
+   "tokens_old": 2712,
+   "tokens_new": 2684
+  },
+  {
+   "id": "hard-sol-b-long_policy-06",
+   "tier": "hard",
+   "max_abs_dp": 0.02495975666888478,
+   "flip": 0,
+   "old_margin": 0.1821702795096515,
+   "tokens_old": 2783,
+   "tokens_new": 2756
+  },
+  {
+   "id": "hard-sol-b-routing_hard-01",
+   "tier": "hard",
+   "max_abs_dp": 0.001097240851913317,
+   "flip": 0,
+   "old_margin": 0.9858874703754271,
+   "tokens_old": 513,
+   "tokens_new": 492
+  },
+  {
+   "id": "hard-sol-b-routing_hard-02",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.9837001852674163,
+   "tokens_old": 481,
+   "tokens_new": 460
+  },
+  {
+   "id": "hard-sol-b-routing_hard-03",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.7675869362970478,
+   "tokens_old": 477,
+   "tokens_new": 456
+  },
+  {
+   "id": "hard-sol-b-routing_hard-07",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.9845319457126702,
+   "tokens_old": 458,
+   "tokens_new": 437
+  },
+  {
+   "id": "hard-sol-b-routing_hard-09",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.9634318400710817,
+   "tokens_old": 467,
+   "tokens_new": 446
+  },
+  {
+   "id": "hard-sol-b-temporal_numeric-01",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.28732875762617727,
+   "tokens_old": 450,
+   "tokens_new": 418
+  },
+  {
+   "id": "hard-sol-b-temporal_numeric-02",
+   "tier": "hard",
+   "max_abs_dp": 0.00399061824686664,
+   "flip": 0,
+   "old_margin": 0.7167896227129076,
+   "tokens_old": 471,
+   "tokens_new": 439
+  },
+  {
+   "id": "hard-sol-b-temporal_numeric-03",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.113163970520818,
+   "tokens_old": 401,
+   "tokens_new": 367
+  },
+  {
+   "id": "hard-sol-b-temporal_numeric-04",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.17883107963520528,
+   "tokens_old": 379,
+   "tokens_new": 347
+  },
+  {
+   "id": "hard-sol-c-judge_hard-03",
+   "tier": "hard",
+   "max_abs_dp": 0.028359683986769246,
+   "flip": 0,
+   "old_margin": 0.08332569663515671,
+   "tokens_old": 533,
+   "tokens_new": 487
+  },
+  {
+   "id": "hard-sol-c-judge_hard-05",
+   "tier": "hard",
+   "max_abs_dp": 0.015483563756021002,
+   "flip": 0,
+   "old_margin": 0.215123360288893,
+   "tokens_old": 495,
+   "tokens_new": 449
+  },
+  {
+   "id": "hard-sol-c-judge_hard-07",
+   "tier": "hard",
+   "max_abs_dp": 0.020168081292902595,
+   "flip": 0,
+   "old_margin": 0.24195454138829453,
+   "tokens_old": 459,
+   "tokens_new": 413
+  },
+  {
+   "id": "hard-sol-c-judge_hard-08",
+   "tier": "hard",
+   "max_abs_dp": 0.0019837131358577675,
+   "flip": 0,
+   "old_margin": 0.0797037139639507,
+   "tokens_old": 454,
+   "tokens_new": 408
+  },
+  {
+   "id": "hard-sol-c-judge_hard-09",
+   "tier": "hard",
+   "max_abs_dp": 0.00969384922701122,
+   "flip": 0,
+   "old_margin": 0.4102410761477134,
+   "tokens_old": 484,
+   "tokens_new": 438
+  },
+  {
+   "id": "hard-sol-c-judge_hard-10",
+   "tier": "hard",
+   "max_abs_dp": 0.0023804202857447,
+   "flip": 0,
+   "old_margin": 0.7754867482780248,
+   "tokens_old": 513,
+   "tokens_new": 467
+  },
+  {
+   "id": "hard-sol-c-judge_hard-11",
+   "tier": "hard",
+   "max_abs_dp": 0.0002239210301085981,
+   "flip": 0,
+   "old_margin": 0.9700299812449398,
+   "tokens_old": 484,
+   "tokens_new": 438
+  },
+  {
+   "id": "hard-sol-c-judge_hard-13",
+   "tier": "hard",
+   "max_abs_dp": 0.01119243715353141,
+   "flip": 0,
+   "old_margin": 0.0432717908719929,
+   "tokens_old": 474,
+   "tokens_new": 428
+  },
+  {
+   "id": "hard-sol-c-judge_hard-15",
+   "tier": "hard",
+   "max_abs_dp": 0.0,
+   "flip": 0,
+   "old_margin": 0.8774030143425341,
+   "tokens_old": 429,
+   "tokens_new": 383
+  },
+  {
+   "id": "hard-sol-c-multi_hop-07",
+   "tier": "hard",
+   "max_abs_dp": 0.007585878159146908,
+   "flip": 0,
+   "old_margin": 0.5462570913740008,
+   "tokens_old": 2669,
+   "tokens_new": 2631
+  },
+  {
+   "id": "hard-sol-c-multi_hop-09",
+   "tier": "hard",
+   "max_abs_dp": 0.002262733390318239,
+   "flip": 0,
+   "old_margin": 0.9401620553316712,
+   "tokens_old": 2698,
+   "tokens_new": 2661
+  },
+  {
+   "id": "hard-sol-c-multi_hop-11",
+   "tier": "hard",
+   "max_abs_dp": 0.005853494023379202,
+   "flip": 0,
+   "old_margin": 0.6849859471366546,
+   "tokens_old": 2773,
+   "tokens_new": 2733
+  },
+  {
+   "id": "hard-sol-c-multi_hop-12",
+   "tier": "hard",
+   "max_abs_dp": 0.02538195178817848,
+   "flip": 0,
+   "old_margin": 0.3094063492859399,
+   "tokens_old": 689,
+   "tokens_new": 651
+  },
+  {
+   "id": "hard-sol-c-multi_hop-13",
+   "tier": "hard",
+   "max_abs_dp": 0.0006785583148414265,
+   "flip": 0,
+   "old_margin": 0.9919718567798446,
+   "tokens_old": 2737,
+   "tokens_new": 2699
+  }
+ ]
+}

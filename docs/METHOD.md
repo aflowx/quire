@@ -37,6 +37,8 @@ Measured on MLX (M5 Max), one 1,431-token document and 40 eight-token questions:
 
 The token count a request reports (`usage.input_tokens`) is the state once plus every suffix, which is what was computed.
 
+**One question, several orderings (from v0.1.2).** When a request holds one question, its orderings' suffixes share their first tokens: the test text, up to the first option line. Those shared tokens are prefilled once with the state, and only the ordering-specific remainders (option lines and chat tail) run as a batch. The split is taken on the already-tokenised suffixes, so every sequence the model reads is token-for-token the one it read before. Only the compute and the reported count change: on JevBench's 231 public items (one question each) the mean drops from 789 to 758 tokens per decision. With the same model on MLX, 230 of 231 answers are unchanged. The one that flips had a top-two margin of 0.048, and the largest probability change is 0.044: rounding from splitting the recurrent prefill at a different point. The CUDA code path is checked against the old path on a small random-weight model of the same architecture (`tests/test_torch_share.py`). Requests with several questions are unchanged. `share_question=False` restores the old path.
+
 ## Order averaging (`ensemble.py`)
 
 A small model's letter probabilities depend on which letter an option gets. Every question is read under `n` cyclic rotations of its options (default 2), each distribution is mapped back to option order, and the mean is returned. Averaging costs one extra suffix per question, not a second read of the state. Two by-products come out of the spread across orderings:

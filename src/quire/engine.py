@@ -18,6 +18,7 @@ from .ensemble import combine
 from .fanout import batch_fanout
 from .labels import build_label_pool, label_token_ids, pick_labels
 from . import wide
+from .prefix import common_prefix_len
 from .prompt import WORD_LABELS, first_token_style, question_suffix, rotate, state_prefix
 from .schema import Answer, Question
 
@@ -72,6 +73,13 @@ class Engine:
     # Default True on hygiene, not evidence: on kev's transfer-v4 (764 items)
     # it is +0.0092 accuracy with p = 0.30 and ECE unchanged.
     single_turn: bool = True
+    # One question with several option orderings: the tokens its suffixes
+    # share (the question text) join the prefill once, and only the
+    # ordering-specific remainders are batched. The split is taken on the
+    # already-tokenised suffixes, so every sequence the model reads is
+    # token-for-token what it read before; only the compute (and the reported
+    # token count) drops.
+    share_question: bool = True
 
     model: object = field(init=False)
     tokenizer: object = field(init=False)
@@ -116,6 +124,11 @@ class Engine:
         questions_in, questions = questions, flat
 
         plans = [self._plan(q) for q in questions]
+        if self.share_question and len(plans) == 1 and len(plans[0]["suffix_ids"]) > 1:
+            seqs = plans[0]["suffix_ids"]
+            n = common_prefix_len(seqs)
+            state_ids = state_ids + seqs[0][:n]
+            plans[0]["suffix_ids"] = [s[n:] for s in seqs]
         suffixes = [s for plan in plans for s in plan["suffix_ids"]]
         logit_rows = batch_fanout(
             self.model, state_ids, suffixes, batch_size=self.batch_size
