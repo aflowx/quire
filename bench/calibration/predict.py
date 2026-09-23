@@ -31,13 +31,16 @@ def main() -> None:
     ap.add_argument("--permutations", type=int, default=2)
     ap.add_argument("--suite", action="append", required=True, help="suite:split")
     ap.add_argument("--out", type=pathlib.Path, required=True)
+    ap.add_argument("--adapter", default=None, help="LoRA adapter (torch backend)")
+    ap.add_argument("--adapter-scale", type=float, default=1.0)
     ap.add_argument("--max-options", type=int, default=26,
                     help="skip wider choices; they take the per-option path, not the letter readout")
     args = ap.parse_args()
     if args.backend == "torch":
         from quire.torch_engine import TorchEngine
         engine = TorchEngine(model_repo=args.model or "Qwen/Qwen3.5-4B", revision=args.revision,
-                             n_permutations=args.permutations)
+                             n_permutations=args.permutations,
+                             adapter=args.adapter, adapter_scale=args.adapter_scale)
     else:
         from quire.engine import Engine
         engine = Engine(model_repo=args.model or "mlx-community/Qwen3.5-4B-MLX-8bit",
