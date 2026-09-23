@@ -18,6 +18,9 @@ import json
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from tasks import harness_labels  # noqa: E402
+
 
 def ece(records, bins=10):
     tot = 0.0
@@ -65,7 +68,7 @@ def main() -> None:
         tiers[tier] = sum(max(r["probs"], key=r["probs"].get) == r["expected"] for r in sub) / len(sub)
     hard = [r for r in recs if r["tier"] == "hard"]
     e = ece(hard)
-    tvds = [cv.tvd(r["probs"], gold[r["id"]], list(gold[r["id"]])) for r in hard if r["id"] in gold]
+    tvds = [cv.tvd(harness_labels(r["probs"]), gold[r["id"]], list(gold[r["id"]])) for r in hard if r["id"] in gold]
     mean_tvd = sum(tvds) / len(tvds)
     calib = cv.calibration(e, mean_tvd)
     print(f"run {run['_provenance'].get('label') or run['_provenance'].get('system', 'run')}: easy {tiers['easy']:.3f}  standard {tiers['standard']:.3f}  "

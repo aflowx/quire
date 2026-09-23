@@ -18,6 +18,15 @@ from dataclasses import dataclass
 
 from quire.schema import Question
 
+# The harness keys a noul's distribution "yes"/"no"; this engine returns "true"/"false".
+HARNESS_KEYS = {"true": "yes", "false": "no"}
+
+
+def harness_labels(probs: dict) -> dict:
+    """A run record's distribution, keyed the way JevBench's gold distributions are."""
+    return {HARNESS_KEYS.get(k, k): v for k, v in probs.items()}
+
+
 TIERS = {"easy": "easy", "standard": "original", "hard": "hard"}
 # jevbench/composite_v12.py: Intelligence is a weighted mean over tiers.
 TIER_WEIGHTS = {"hard": 0.30, "easy": 0.14, "standard": 0.28, "judge": 0.28}

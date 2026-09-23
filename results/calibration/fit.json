@@ -18,16 +18,17 @@
  "predictions": "results/calibration/heldout-predictions.jsonl",
  "confirm_run": "results/jevbench/quire-p2/run.json (the submitted configuration, before the map)",
  "confirm_axis": [
-  73.83389798822087,
-  76.39993068531294
+  78.96004074785691,
+  81.4429698342864
  ],
  "confirm_ece": [
   0.09009875722967825,
   0.06134555449728214
  ],
  "confirm_tvd": [
-  0.3431245257762261,
-  0.34931027729917685
+  0.24060167058350518,
+  0.24844949431970767
  ],
- "adopt": true
+ "adopt": true,
+ "correction": "23 Sep 2026: recomputed after mapping true/false to the gold yes/no keys; first recorded as axis 73.8 -> 76.4, TVD 0.343 -> 0.349"
 }

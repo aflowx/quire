@@ -18,6 +18,9 @@ import pathlib
 import random
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from tasks import harness_labels  # noqa: E402
+
 import os  # noqa: E402
 JEVBENCH = os.environ.get("JEVBENCH") or sys.exit("set JEVBENCH to a checkout of github.com/fstandhartinger/jevbench")
 sys.path.insert(0, JEVBENCH)
@@ -44,7 +47,7 @@ def ece(rs, T, bins=10):
 
 
 def tvd(rs, T, gold):
-    xs = [0.5 * sum(abs(temper(r["probs"], T).get(l, 0) - gold[r["id"]][l]) for l in gold[r["id"]])
+    xs = [0.5 * sum(abs(harness_labels(temper(r["probs"], T)).get(l, 0) - gold[r["id"]][l]) for l in gold[r["id"]])
           for r in rs if r["id"] in gold]
     return sum(xs) / len(xs)
 

@@ -20,7 +20,10 @@ import pathlib
 import random
 import sys
 
-from quire.calibration import TYPES, TypeTemperature
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "jevbench"))
+from tasks import harness_labels  # noqa: E402
+
+from quire.calibration import TYPES, TypeTemperature  # noqa: E402
 
 GRID = [round(0.5 + 0.05 * i, 2) for i in range(51)]
 
@@ -43,15 +46,8 @@ def scored(items, tt):
     return out
 
 
-def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("predictions", type=pathlib.Path)
-    ap.add_argument("--confirm", type=pathlib.Path, help="run.json on JevBench public items (run_public.py)")
-    ap.add_argument("--jevbench", type=pathlib.Path)
-    ap.add_argument("--out", type=pathlib.Path, required=True)
-    args = ap.parse_args()
-
-    rows = [json.loads(l) for l in open(args.predictions) if l.strip()]
+def split_half(rows):
+    """50/50 by item, stratified by source, seed 0 (the pre-registered split)."""
     by_source = collections.defaultdict(list)
     for r in rows:
         by_source[r["source"]].append(r)
@@ -62,18 +58,36 @@ def main() -> None:
         rng.shuffle(items)
         fit += items[: len(items) // 2]
         check += items[len(items) // 2:]
-    print(f"{len(rows)} held-out items: fit {len(fit)}, check {len(check)}")
+    return fit, check
 
+
+def fit_temperatures(fit, log=print):
+    """Per type, the grid T minimising gold NLL; fewer than 100 fit items keeps T = 1."""
     temps = {}
     for t in TYPES:
         sub = [r for r in fit if r["kind"] == t]
         if len(sub) < 100:
             temps[t] = 1.0
-            print(f"  {t:6s} {len(sub):5d} fit items -> T = 1 (fewer than 100)")
+            log(f"  {t:6s} {len(sub):5d} fit items -> T = 1 (fewer than 100)")
             continue
         nll = {T: sum(x[2] for x in scored(sub, TypeTemperature({t: T}))) / len(sub) for T in GRID}
         temps[t] = min(nll, key=nll.get)
-        print(f"  {t:6s} {len(sub):5d} fit items -> T = {temps[t]:.2f}   NLL {nll[1.0]:.4f} -> {nll[temps[t]]:.4f}")
+        log(f"  {t:6s} {len(sub):5d} fit items -> T = {temps[t]:.2f}   NLL {nll[1.0]:.4f} -> {nll[temps[t]]:.4f}")
+    return temps
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("predictions", type=pathlib.Path)
+    ap.add_argument("--confirm", type=pathlib.Path, help="run.json on JevBench public items (run_public.py)")
+    ap.add_argument("--jevbench", type=pathlib.Path)
+    ap.add_argument("--out", type=pathlib.Path, required=True)
+    args = ap.parse_args()
+
+    rows = [json.loads(l) for l in open(args.predictions) if l.strip()]
+    fit, check = split_half(rows)
+    print(f"{len(rows)} held-out items: fit {len(fit)}, check {len(check)}")
+    temps = fit_temperatures(fit)
     tt = TypeTemperature(temps)
 
     base, cal = scored(check, TypeTemperature()), scored(check, tt)
@@ -105,7 +119,7 @@ def main() -> None:
             hard = [r for r in run if r["tier"] == "hard"]
             probs = [m.apply(r["probs"], r["kind"]) for r in hard]
             e = ece([(max(p.values()), float(max(p, key=p.get) == r["expected"])) for p, r in zip(probs, hard)])
-            tv = [0.5 * sum(abs(p.get(l, 0) - gold[r["id"]][l]) for l in gold[r["id"]])
+            tv = [0.5 * sum(abs(harness_labels(p).get(l, 0) - gold[r["id"]][l]) for l in gold[r["id"]])
                   for p, r in zip(probs, hard) if r["id"] in gold]
             return e, sum(tv) / len(tv), cv.calibration(e, sum(tv) / len(tv))
 

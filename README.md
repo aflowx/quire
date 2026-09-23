@@ -64,7 +64,7 @@ answers[0].probabilities   # e.g. {'true': 0.90, 'false': 0.10}
 | benchmark | what | Quire |
 |---|---|---|
 | JevBench v1.3, 231 public items | easy / standard / hard accuracy | 1.000 / 0.903 / 0.658 |
-| JevBench v1.3, hard tier | calibration error (ECE) · Calibration axis | 0.061 · 76.4 |
+| JevBench v1.3, hard tier | calibration error (ECE) · Calibration axis | 0.061 · 81.4 |
 | JevBench, endpoint on 1 × L40 | serial p50 latency, 2 orderings | 122 ms (Speed axis 88.1) |
 | TypeSafe public 102-row subset | agreement with the released models' consensus answer | 0.799 [0.713, 0.880] (Jev: 0.883) |
 | Decision Index 0.1 | index | pending |

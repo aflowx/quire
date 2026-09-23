@@ -10,9 +10,9 @@ JevBench scores 534 decisions on four axes (Intelligence, Calibration, Speed, Co
 
 | configuration (Qwen3.5-4B, frozen, BF16) | easy /48 | standard /72 | hard /111 | hard ECE | fidelity TVD |
 |---|---|---|---|---|---|
-| plain prompt, 2 orderings | 48 | 63 | 72 | 0.102 | 0.376 |
-| quire prompt, 1 ordering | 48 | 64 | 70 | 0.113 | 0.377 |
-| **quire prompt, 2 orderings (released)** | **48** | **65** | **73** | **0.090** | **0.343** |
+| plain prompt, 2 orderings | 48 | 63 | 72 | 0.102 | 0.280 |
+| quire prompt, 1 ordering | 48 | 64 | 70 | 0.113 | 0.312 |
+| **quire prompt, 2 orderings (released)** | **48** | **65** | **73** | **0.090** | **0.241** |
 
 The released configuration measured the same way through JevBench's own harness gives identical results (`results/jevbench/harness-typesafe-adapter/`). Against one ordering, averaging two lowers hard-tier calibration error from 0.113 to 0.090 and adds 3 hard items (9 better / 6 worse, p = 0.61). Against the plain prompt the differences are within two items per tier. (The plain-prompt row was measured before non-string states were rendered as JSON, so it isn't an exact control on the 35 hard items with object states.)
 
@@ -28,8 +28,8 @@ Pre-registered before any prediction. The map was fitted on held-out development
 | held-out check half: pooled ECE (NLL) | 0.092 (0.759) | **0.030** (0.710) |
 | check half by type: choice / yes/no / score ECE | 0.103 / 0.090 / 0.193 | 0.047 / 0.041 / 0.124 |
 | JevBench public hard tier: ECE | 0.090 | **0.061** |
-| JevBench public hard tier: fidelity TVD | 0.343 | 0.349 |
-| JevBench Calibration axis | 73.8 | **76.4** |
+| JevBench public hard tier: fidelity TVD | 0.241 | 0.248 |
+| JevBench Calibration axis | 79.0 | **81.4** |
 
 The map is part of the released configuration from v0.1.1. It doesn't improve fidelity to the gold distributions of the probability items. Those need the model to put the argmax on the right side, which a temperature can't do. Files: `results/calibration/`, `results/jevbench/quire-p2-calibrated/`.
 
@@ -51,10 +51,12 @@ SemIf is the closest comparison: the same frozen model with a different prompt a
 
 | configuration | at judge = 0.85 | at judge = 0.95 |
 |---|---|---|
-| v0.1.0 (no map; submitted to JevBench) | 73.1 | 74.0 |
-| **v0.1.1 (with the per-type map)** | **73.7** | **74.7** |
+| v0.1.0 (no map; submitted to JevBench) | 74.3 | 75.3 |
+| **v0.1.1 (with the per-type map)** | **74.9** | **75.9** |
 
 For reference, on 22 Sep 2026 the published v1.3 scores were Jev 74.4, SemIf 73.1 and djev 73.0. This is a projection from public items, not a score.
+
+*Correction (23 Sep 2026).* Earlier versions of this page reported fidelity TVD 0.343 / 0.349, Calibration axes 73.8 / 76.4 and projections 73.1–74.0 / 73.7–74.7. Our scripts compared yes/no distributions keyed `true`/`false` against gold keyed `yes`/`no`, so the three yes/no probability items always scored TVD 0.5. JevBench's harness receives `yes`/`no` and was not affected. The fixed numbers are above, and the decision to adopt the per-type map is unchanged: the axis still rose.
 
 ### What did not help
 

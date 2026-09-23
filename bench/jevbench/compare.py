@@ -14,6 +14,9 @@ import json
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from tasks import harness_labels  # noqa: E402
+
 from quire.stats import paired_permutation_test
 
 import os
@@ -66,7 +69,7 @@ def main() -> None:
         a = [correct(run[i]) for i in ids]
         b = [correct(ctrl[i]) for i in ids]
         hard = [run[i] for i in ids if run[i]["tier"] == "hard"]
-        tv = [0.5 * sum(abs(run[i]["probs"].get(l, 0) - gold[i][l]) for l in gold[i]) for i in ids if i in gold]
+        tv = [0.5 * sum(abs(harness_labels(run[i]["probs"]).get(l, 0) - gold[i][l]) for l in gold[i]) for i in ids if i in gold]
         test = paired_permutation_test(a, b) if name != ctrl_name else {"p_value": 1.0}
         wins = sum(x > y for x, y in zip(a, b)); losses = sum(x < y for x, y in zip(a, b))
         print(f"{name:16s} {len(ids):4d} {sum(a)/len(a):6.3f} {sum(b)/len(b):6.3f} {(sum(a)-sum(b))/len(a):+6.3f} "
