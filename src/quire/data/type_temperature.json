@@ -10,8 +10,8 @@
   0.029641200930894816
  ],
  "jevbench_public_calibration_axis": [
-  73.83389798822087,
-  76.39993068531294
+  78.96004074785691,
+  81.4429698342864
  ],
  "model": "Qwen/Qwen3.5-4B BF16, quire prompt, 2 orderings"
 }
