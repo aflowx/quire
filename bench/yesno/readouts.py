@@ -56,6 +56,7 @@ def main() -> None:
     ap.add_argument("--out", type=pathlib.Path, required=True)
     ap.add_argument("--suite", action="append", default=None)
     ap.add_argument("--limit", type=int, default=None, help="stop after this many new items (smoke test)")
+    ap.add_argument("--only", default=None, help="comma-separated readouts to compute, e.g. R1,R2,R5")
     args = ap.parse_args()
     eng = Engine(model_repo="mlx-community/Qwen3.5-4B-MLX-8bit")
     tok, model = eng.tokenizer, eng.model
@@ -94,11 +95,13 @@ def main() -> None:
                     "R6": released(yn, tf), "R7": released(yn, ft),
                 }
                 state_ids = tok.encode(state_prefix(tok, it.state, single_turn=eng.single_turn, style="quire"))
-                names = list(suffixes)
+                only = set(args.only.split(",")) if args.only else None
+                names = [k for k in suffixes if only is None or k in only]
                 rows = batch_fanout(model, state_ids, [suffixes[k] for k in names], batch_size=eng.batch_size)
-                cf = batch_fanout(model, cf_ids, [suffixes["R1"], suffixes["R2"]], batch_size=eng.batch_size)
+                cf = ([] if only is not None and not only & {"C1", "C2"} else
+                      batch_fanout(model, cf_ids, [suffixes["R1"], suffixes["R2"]], batch_size=eng.batch_size))
                 rec = {"uid": it.uid, "suite": suite, "source": it.source, "gold": it.option_ids[it.label]}
-                for k, row in zip(names + ["C1", "C2"], list(rows) + list(cf)):
+                for k, row in zip(names + ["C1", "C2"][: len(cf)], list(rows) + list(cf)):
                     z = np.array(row.astype(mx.float32), dtype=float)
                     if k == "R5":
                         pair = [float(np.logaddexp.reduce(z[YES])), float(np.logaddexp.reduce(z[NO]))]

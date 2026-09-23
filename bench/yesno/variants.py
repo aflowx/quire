@@ -26,6 +26,7 @@ from quire.stats import paired_permutation_test  # noqa: E402
 ELIGIBLE = ["Va", "Vb", "Vc1", "Vd", "Ve"]
 REPORTED = ["V0", "Va", "Va4", "Vb", "Vc", "Vc1", "Vd", "Ve"]
 MIN_N = 20
+ADEQUACY_SOURCES = {"adequacy", "helpsteer2"}   # the judge tier's question type
 
 
 def sig(x):
@@ -43,17 +44,20 @@ def p_of(r, k):
 
 
 def base_variants(r):
-    p = {k: p_of(r, k) for k in ("R1", "R2", "R3", "R4", "R5", "R6", "R7")}
-    cf = [sig((r["R1"][0] - r["R1"][1]) - (r["C1"][0] - r["C1"][1])),
-          sig((r["R2"][0] - r["R2"][1]) - (r["C2"][0] - r["C2"][1]))]
-    return {
-        "V0": (p["R1"] + p["R2"]) / 2,
-        "Va": (p["R1"] + 1 - p["R4"]) / 2,
-        "Va4": (p["R1"] + p["R2"] + 2 - p["R3"] - p["R4"]) / 4,
-        "Vb": p["R5"],
-        "Vd": sum(cf) / 2,
-        "Ve": (p["R6"] + p["R7"]) / 2,
-    }
+    p = {k: p_of(r, k) for k in ("R1", "R2", "R3", "R4", "R5", "R6", "R7") if k in r}
+    v = {"V0": (p["R1"] + p["R2"]) / 2}
+    if "R5" in p:
+        v["Vb"] = p["R5"]
+        v["W"] = (v["V0"] + v["Vb"]) / 2
+    if "R3" in p and "R4" in p:
+        v["Va"] = (p["R1"] + 1 - p["R4"]) / 2
+        v["Va4"] = (p["R1"] + p["R2"] + 2 - p["R3"] - p["R4"]) / 4
+    if "C1" in r:
+        v["Vd"] = (sig((r["R1"][0] - r["R1"][1]) - (r["C1"][0] - r["C1"][1]))
+                   + sig((r["R2"][0] - r["R2"][1]) - (r["C2"][0] - r["C2"][1]))) / 2
+    if "R6" in p:
+        v["Ve"] = (p["R6"] + p["R7"]) / 2
+    return v
 
 
 def fit_intercept(rows):
@@ -79,7 +83,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("readouts", type=pathlib.Path)
     ap.add_argument("--out", type=pathlib.Path, required=True)
+    ap.add_argument("--eligible", default=",".join(ELIGIBLE))
+    ap.add_argument("--reported", default=",".join(REPORTED))
+    ap.add_argument("--adequacy-guard", action="store_true",
+                    help="condition 6 (follow-up study): true-item accuracy on adequacy-type sources not significantly lower")
     args = ap.parse_args()
+    eligible, reported = args.eligible.split(","), args.reported.split(",")
     rows = [json.loads(l) for l in open(args.readouts) if l.strip()]
     for r in rows:
         r["V"] = base_variants(r)
@@ -116,7 +125,7 @@ def main():
     w = {r["uid"]: (1 / (ncls[r["source"]] * cls[(r["source"], r["gold"])] * len(big)) if r["source"] in big else 0.0)
          for r in check}
     base_w = [w[r["uid"]] * correct(r, "V0") for r in check]
-    for v in REPORTED:
+    for v in reported:
         macro = sum(bal([r for r in check if r["source"] == s], v) for s in big) / len(big)
         ok = [correct(r, v) for r in check]
         t = paired_permutation_test(ok, base_ok)["p_value"] if v != "V0" else 1.0
@@ -143,25 +152,32 @@ def main():
               f"  mean p(true) {mean_pt:.3f}  worse: {worse or '-'}")
 
     print("\nper source (check half): accuracy on true items / balanced accuracy")
-    print(f"{'source':24s} {'n':>4s} " + " ".join(f"{v:>11s}" for v in REPORTED))
+    print(f"{'source':24s} {'n':>4s} " + " ".join(f"{v:>11s}" for v in reported))
     for s in sources:
         n = res["variants"]["V0"]["per_source"][s]["n"]
         cells = []
-        for v in REPORTED:
+        for v in reported:
             d = res["variants"][v]["per_source"][s]
             cells.append(f"{(d['acc_true'] or 0):.2f}/{d['bal']:.2f}")
         print(f"{s[:24]:24s} {n:4d} " + " ".join(f"{c:>11s}" for c in cells))
 
     v0 = res["variants"]["V0"]
-    best = max(ELIGIBLE, key=lambda v: res["variants"][v]["macro_balanced"])
+    best = max(eligible, key=lambda v: res["variants"][v]["macro_balanced"])
     b = res["variants"][best]
     conds = {
         "macro_balanced_higher": b["macro_balanced"] > v0["macro_balanced"],
-        "macro_improvement_significant": b["p_macro_vs_V0"] < 0.05 / len(ELIGIBLE),
+        "macro_improvement_significant": b["p_macro_vs_V0"] < 0.05 / len(eligible),
         "accuracy_not_significantly_lower": not (b["accuracy"] < v0["accuracy"] and b["p_accuracy_vs_V0"] < 0.05),
         "no_source_significantly_worse": not b["sources_significantly_worse"],
         "ece_not_worse": b["ece_after_refit"] <= v0["ece_after_refit"] + 0.005,
     }
+    if args.adequacy_guard:
+        sub = [r for r in check if r["source"] in ADEQUACY_SOURCES and r["gold"] == "true"]
+        a, z = [correct(r, best) for r in sub], [correct(r, "V0") for r in sub]
+        pg = paired_permutation_test(a, z)["p_value"] if a != z else 1.0
+        conds["adequacy_true_not_significantly_lower"] = not (sum(a) < sum(z) and pg < 0.05)
+        res["adequacy_true"] = {"n": len(sub), "V0": sum(z) / len(z), best: sum(a) / len(a), "p": pg}
+        print(f"adequacy-type true items (n={len(sub)}): V0 {sum(z)/len(z):.3f}  {best} {sum(a)/len(a):.3f}  p {pg:.3f}")
     res.update({"chosen": best, "conditions": conds, "adopt": all(conds.values())})
     print(f"\nchosen {best}: " + ", ".join(f"{k}={v}" for k, v in conds.items()) + f"  => adopt {res['adopt']}")
     args.out.parent.mkdir(parents=True, exist_ok=True)

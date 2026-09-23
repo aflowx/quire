@@ -37,6 +37,9 @@ SUITES = {
     "synth-v2-medium": (SYNTH_DATA, "synth-v2-medium"),
     # written by training/helpsteer2.py from nvidia/HelpSteer2 (CC BY 4.0)
     "helpsteer2": (SYNTH_DATA, "helpsteer2"),
+    # fresh evaluation sets, never used for training or selection before 23 Sep
+    "helpsteer2-fresh": (SYNTH_DATA, "helpsteer2-fresh"),
+    "synth-fresh": (SYNTH_DATA, "synth-fresh"),
 }
 
 

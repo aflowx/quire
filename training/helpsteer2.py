@@ -103,13 +103,26 @@ def main():
     p.add_argument("--per-class", type=int, default=1500)
     p.add_argument("--dev-per-class", type=int, default=200)
     p.add_argument("--seed", type=int, default=0)
+    p.add_argument("--exclude", type=pathlib.Path, action="append", default=[],
+                   help="an earlier output's jsonl; its items are never drawn again (fresh evaluation sets)")
+    p.add_argument("--only-split", choices=["train", "dev"], default=None,
+                   help="write just this split (e.g. a fresh set drawn from HelpSteer2's train file)")
     args = p.parse_args()
     banned = jevbench_ngrams(args.jevbench) if args.jevbench else set()
+    old = [json.loads(l) for path in args.exclude for l in open(path) if l.strip()]
+    excluded = {r["_meta"]["id"] for r in old}
+    excluded_prompts = {r["state"]["request"] for r in old}  # a prompt's other response is not fresh either
     args.out.mkdir(parents=True, exist_ok=True)
     manifest = {"source": "nvidia/HelpSteer2 (CC BY 4.0)", "question": QUESTION, "seed": args.seed,
+                "excluded_from": [str(x) for x in args.exclude],
                 "jevbench_filter": bool(banned), "splits": {}}
     for split, src, n in (("train", "train", args.per_class), ("dev", "validation", args.dev_per_class)):
+        if args.only_split and split != args.only_split:
+            continue
         rows = [json.loads(l) for l in gzip.open(args.src / f"{src}.jsonl.gz")]
+        if split == "train" and excluded:
+            # keep row indices stable (they are the item ids); blank excluded rows out
+            rows = [dict(r, helpfulness=2, correctness=2) if f"hs2-{i}" in excluded or r["prompt"] in excluded_prompts else r for i, r in enumerate(rows)]
         out, stats = convert(rows, n, args.seed, banned)
         (args.out / f"{split}.jsonl").write_text("".join(json.dumps(r) + "\n" for r in out))
         manifest["splits"][split] = {"rows": len(out), **stats}
