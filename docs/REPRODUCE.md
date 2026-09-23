@@ -49,6 +49,8 @@ JEVBENCH=$JEVBENCH python bench/jevbench/speed_probe.py
 
 ### The benchmark's own harness
 
+Quire v0.1.0 was submitted to JevBench as [fstandhartinger/jevbench#45](https://github.com/fstandhartinger/jevbench/issues/45); its official score comes only from the maintainers' run.
+
 The maintainers run submissions through JevBench's `typesafe` adapter against a `/v1/systemone` endpoint. To run it that way yourself, on the public items:
 
 ```sh
