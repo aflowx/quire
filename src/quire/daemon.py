@@ -68,7 +68,8 @@ def _criteria_for(question: SystemOneQuestion) -> tuple[dict[str, str], list[str
     raise ValueError(f"unknown question type {question.type!r}")
 
 
-def build_app(engine) -> FastAPI:
+def build_app(engine, calibration=None) -> FastAPI:
+    """`calibration`: an optional quire.calibration.TypeTemperature applied per answer type."""
     app = FastAPI(title="quire")
 
     @app.get("/health")
@@ -132,6 +133,8 @@ def build_app(engine) -> FastAPI:
         for (qid, (_, ids)), answer in zip(prepared.items(), answers):
             kind = request.questions[qid].type
             probabilities = {i: float(answer.probabilities[i]) for i in ids}
+            if calibration is not None:
+                probabilities = calibration.apply(probabilities, kind)
             if kind == "noul":
                 # TypeSafe reports one number: P(the proposition holds).
                 out[qid] = {"type": "noul", "noul": probabilities["true"]}
@@ -173,6 +176,9 @@ def main() -> None:
     ap.add_argument("--style", choices=["quire", "plain"], default="quire")
     ap.add_argument("--adapter", default=None, help="optional LoRA adapter directory (torch backend); not the released config")
     ap.add_argument("--adapter-scale", type=float, default=1.0)
+    ap.add_argument("--calibration", default="default",
+                    help="per-answer-type temperatures: 'default' (the released map), 'off', or a JSON file "
+                         "from bench/calibration/fit.py; it changes no answer, only the probabilities")
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8778)
     args = ap.parse_args()
@@ -191,7 +197,12 @@ def main() -> None:
     engine.decide("warm up", [Question(instructions="ready?", criteria={"a": "yes", "b": "no"})])
     print(f"quire ready on {args.host}:{args.port}  backend={args.backend} model={engine.model_repo} "
           f"orderings={args.permutations} style={args.style} adapter={args.adapter}", flush=True)
-    uvicorn.run(build_app(engine), host=args.host, port=args.port, log_level="warning")
+    from .calibration import TypeTemperature
+    calibration = (None if args.calibration == "off" else TypeTemperature.default() if args.calibration == "default"
+                   else TypeTemperature.load(args.calibration))
+    if calibration:
+        print(f"calibration: {calibration.temperatures} ({args.calibration})", flush=True)
+    uvicorn.run(build_app(engine, calibration), host=args.host, port=args.port, log_level="warning")
 
 
 if __name__ == "__main__":

@@ -63,6 +63,18 @@ python -m jevbench.cli run --tasks datasets/public/original.jsonl \
 python -m jevbench.cli summarize --tasks datasets/public/original.jsonl --results RUN/results.jsonl
 ```
 
+## Per-answer-type temperature
+
+```sh
+export KEV_DATA=$PWD/kev/evals SYNTH_DATA=$PWD/data/synth
+python training/synth/build.py --seed 1 --out $SYNTH_DATA/synth-v1          # and the two v2 sets, see training/README.md
+python bench/calibration/predict.py --backend torch --suite synth-v1:dev --suite synth-v2-easy:dev \
+    --suite synth-v2-medium:dev --suite decision-v7:development --out runs/calibration/predictions.jsonl
+python bench/jevbench/run_public.py --jevbench $JEVBENCH --backend torch --calibration off --out runs/quire-p2
+python bench/calibration/fit.py runs/calibration/predictions.jsonl --confirm runs/quire-p2/run.json \
+    --jevbench $JEVBENCH --out runs/calibration/fit.json
+```
+
 ## Forgetting control and wide choices (kev's suites)
 
 ```sh

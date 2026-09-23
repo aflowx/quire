@@ -1,6 +1,6 @@
 [project]
 name = "quire"
-version = "0.1.0"
+version = "0.1.1"
 description = "Typed decisions from a frozen language model: one read of the state, every question answered from it."
 readme = "README.md"
 requires-python = ">=3.10"

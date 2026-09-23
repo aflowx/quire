@@ -1,0 +1,33 @@
+{
+ "temperatures": {
+  "choice": 1.4,
+  "noul": 1.7,
+  "score": 1.4
+ },
+ "fit_items": 1464,
+ "check_items": 1466,
+ "check_ece": [
+  0.09200593594354955,
+  0.029641200930894816
+ ],
+ "check_nll": [
+  0.7588824865126989,
+  0.7099877793067624
+ ],
+ "check_passed": true,
+ "predictions": "results/calibration/heldout-predictions.jsonl",
+ "confirm_run": "results/jevbench/quire-p2/run.json (the submitted configuration, before the map)",
+ "confirm_axis": [
+  73.83389798822087,
+  76.39993068531294
+ ],
+ "confirm_ece": [
+  0.09009875722967825,
+  0.06134555449728214
+ ],
+ "confirm_tvd": [
+  0.3431245257762261,
+  0.34931027729917685
+ ],
+ "adopt": true
+}

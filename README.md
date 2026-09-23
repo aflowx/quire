@@ -13,7 +13,7 @@ Quire is independent and not affiliated with TypeSafe AI.
 - **One read, many questions.** The state is prefilled once, and every question, plus every ordering of its options, is a short suffix batched over that prefilled cache. On a 1,431-token document with 40 questions that is 0.64 s, **20.7× faster** than asking the questions one at a time (MLX, M5 Max). The more questions share a state, the bigger the win.
 - **Any number of options, none refused.** Choices with more options than the 26-letter label pool are answered by asking one yes/no sub-question per option in the same fan-out and normalising the answers into one distribution, a two-stage "score independently, then choose" design. Nothing is truncated or filtered. Where both paths apply they are equally accurate (dbpedia14, 14 options: 0.905 letter readout vs 0.897, p = 1.0); above 26 options the letter readout has no answer at all.
 - **A frozen model, deliberately.** The released configuration trains nothing. An adapter fine-tuned on short classification data gained binary-judgement items but lost 13 of JevBench's hard items and tripled its calibration error. The details are in [`docs/RESULTS.md`](docs/RESULTS.md).
-- **Order-averaged probabilities.** Each question is read with its options in two orders and the distributions are averaged. On JevBench's hard tier that lowers calibration error from 0.113 to 0.090 without fitting a temperature. (Fitted temperatures made held-out calibration worse.)
+- **Probabilities that mean what they say.** Each question is read with its options in two orders and the distributions are averaged. Then one temperature per answer type (choice, yes/no, score), fitted on held-out data and never on benchmark items, softens an over-confident 4B. On JevBench's public hard tier, calibration error goes from 0.113 (one ordering) to 0.090 (two) to 0.061 (with the map), and no answer changes.
 
 ## How it compares
 
@@ -64,6 +64,7 @@ answers[0].probabilities   # e.g. {'true': 0.90, 'false': 0.10}
 | benchmark | what | Quire |
 |---|---|---|
 | JevBench v1.3, 231 public items | easy / standard / hard accuracy | 1.000 / 0.903 / 0.658 |
+| JevBench v1.3, hard tier | calibration error (ECE) · Calibration axis | 0.061 · 76.4 |
 | JevBench, endpoint on 1 × L40 | serial p50 latency, 2 orderings | 122 ms (Speed axis 88.1) |
 | TypeSafe public 102-row subset | agreement with the released models' consensus answer | 0.799 [0.713, 0.880] (Jev: 0.883) |
 | Decision Index 0.1 | index | pending |

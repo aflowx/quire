@@ -20,6 +20,10 @@ Reproduce: `python bench/jevbench/run_public.py --jevbench <checkout> --backend 
 
 `input_tokens` counts the state once plus every suffix in the `8819722` files (mean 789 per decision across the 231 items, as reported by the endpoint). The `eecbe37` files predate that fix and count the state only, so don't use them for pricing.
 
+## Per-answer-type temperature (`results/calibration/`, `results/jevbench/quire-p2-calibrated/`)
+
+`heldout-predictions.jsonl`: the released configuration's full distributions on 2,930 held-out development items (synth-v1, synth-v2-easy, synth-v2-medium, kev decision-v7), 1 × L40, BF16, from `bench/calibration/predict.py`. `fit.json`: the output of `bench/calibration/fit.py` (fitted temperatures, check-half ECE, the one-time JevBench confirmation). `quire-p2-calibrated/run.json` is `quire-p2/run.json` with the map applied to every distribution; answers are identical by construction. The procedure was pre-registered before any prediction.
+
 ## Endpoint speed
 
 `quire-serve --backend torch`, L40, serial requests over the 72 public standard items, HTTP included, three repeats each (`bench/jevbench/speed_probe.py`):

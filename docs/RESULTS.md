@@ -18,6 +18,21 @@ The released configuration measured the same way through JevBench's own harness 
 
 The quire prompt was chosen from three candidate wordings using held-out synthetic policy and adequacy items (`quire`: 381/482, the others 375 and 369), not JevBench items.
 
+### Per-answer-type temperature
+
+Pre-registered before any prediction. The map was fitted on held-out development items (Quire's synthetic suites and kev's decision-v7; 1,464 to fit, 1,466 to check, choices over 26 options excluded), checked there, then confirmed once on JevBench's public items. It changes no answer.
+
+| | before | with the map |
+|---|---|---|
+| fitted temperatures | — | choice 1.40 · yes/no 1.70 · score 1.40 |
+| held-out check half: pooled ECE (NLL) | 0.092 (0.759) | **0.030** (0.710) |
+| check half by type: choice / yes/no / score ECE | 0.103 / 0.090 / 0.193 | 0.047 / 0.041 / 0.124 |
+| JevBench public hard tier: ECE | 0.090 | **0.061** |
+| JevBench public hard tier: fidelity TVD | 0.343 | 0.349 |
+| JevBench Calibration axis | 73.8 | **76.4** |
+
+The map is part of the released configuration from v0.1.1. It doesn't improve fidelity to the gold distributions of the probability items. Those need the model to put the argmax on the right side, which a temperature can't do. Files: `results/calibration/`, `results/jevbench/quire-p2-calibrated/`.
+
 ### Against other systems, on the same items
 
 JevBench publishes each system's per-item outcomes on the public items, from the maintainers' own runs. `bench/jevbench/public_standing.py --versus` pairs a run against any of them:
@@ -36,13 +51,14 @@ SemIf is the closest comparison: the same frozen model with a different prompt a
 
 | configuration | at judge = 0.85 | at judge = 0.95 |
 |---|---|---|
-| released | 73.1 | 74.0 |
+| v0.1.0 (no map; submitted to JevBench) | 73.1 | 74.0 |
+| **v0.1.1 (with the per-type map)** | **73.7** | **74.7** |
 
 For reference, on 22 Sep 2026 the published v1.3 scores were Jev 74.4, SemIf 73.1 and djev 73.0. This is a projection from public items, not a score.
 
 ### What did not help
 
-**Temperature scaling.** Fitted on one random half of the public hard items and scored on the other, over 10 splits (`bench/jevbench/fit_hard_temperature.py`), held-out calibration got worse: 71.3 → 68.4 for the released configuration. The best temperature for all 111 items at once is 1.1, but that fits the test set itself. None is applied.
+**One temperature fitted on public items.** Fitted on one random half of the public hard items and scored on the other, over 10 splits (`bench/jevbench/fit_hard_temperature.py`), held-out calibration got worse: 71.3 → 68.4. 55 items are too few, and one temperature can't serve three answer types that need different ones. The per-type map above is fitted on 1,464 held-out items instead.
 
 **Thinking before answering.** Qwen3.5-4B never closed its thought within 256, 512 or 1,024 tokens on the probability items (0 of 10 at every budget). It works through the evidence row by row. Accuracy went 5 → 3 → 3 → 5 of 10.
 

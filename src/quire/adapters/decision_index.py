@@ -27,6 +27,8 @@ class QuireEngine(Engine):
 
     def __init__(self, model="mlx-community/Qwen3.5-4B-MLX-8bit", permutations=2, style="quire", **options):
         super().__init__(model=model, permutations=permutations, style=style, **options)
+        from ..calibration import TypeTemperature
+        self.calibration = TypeTemperature.default()
         self.decider = Decider(model_repo=model, n_permutations=int(permutations), use_debias=False,
                                prompt_style=style)
         self.provenance = {
@@ -53,6 +55,7 @@ class QuireEngine(Engine):
             probs = {o: float(p) for o, p in a.probabilities.items()}
             total = sum(probs.values())
             probs = {o: p / total for o, p in probs.items()}
+            probs = self.calibration.apply(probs, "choice")   # every Decision Index question is a choice
             out[k] = {"type": "choice", "choice": max(probs, key=probs.get), "probabilities": probs}
             used += a.suffix_tokens
         response = {"model": "quire", "answers": out, "usage": {"input_tokens": used, "output_tokens": 0}}
@@ -71,6 +74,8 @@ class QuireTorchEngine(QuireEngine):
     def __init__(self, model="Qwen/Qwen3.5-4B", permutations=2, style="quire", revision=None, **options):
         from ..torch_engine import TorchEngine
         Engine.__init__(self, model=model, permutations=permutations, style=style, revision=revision, **options)
+        from ..calibration import TypeTemperature
+        self.calibration = TypeTemperature.default()
         self.decider = TorchEngine(model_repo=model, revision=revision, n_permutations=int(permutations),
                                    prompt_style=style)
         self.provenance = {

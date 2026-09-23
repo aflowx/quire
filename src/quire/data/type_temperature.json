@@ -1,0 +1,17 @@
+{
+ "temperatures": {
+  "choice": 1.4,
+  "noul": 1.7,
+  "score": 1.4
+ },
+ "fitted_on": "held-out development splits of synth-v1, synth-v2-easy, synth-v2-medium and kev decision-v7 (1,464 fit items, 1,466 check items); no JevBench item",
+ "check_ece": [
+  0.09200593594354955,
+  0.029641200930894816
+ ],
+ "jevbench_public_calibration_axis": [
+  73.83389798822087,
+  76.39993068531294
+ ],
+ "model": "Qwen/Qwen3.5-4B BF16, quire prompt, 2 orderings"
+}

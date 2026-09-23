@@ -35,6 +35,8 @@ def main() -> None:
     ap.add_argument("--tier", action="append", default=None, help="restrict to these tiers")
     ap.add_argument("--adapter", default=None, help="optional LoRA (torch); not the released config")
     ap.add_argument("--adapter-scale", type=float, default=1.0)
+    ap.add_argument("--calibration", default="default",
+                    help="'default' (the released map), 'off', or a JSON file from bench/calibration/fit.py")
     ap.add_argument("--out", type=pathlib.Path, required=True)
     args = ap.parse_args()
     if (args.out / "run.json").exists():
@@ -55,16 +57,22 @@ def main() -> None:
         items = [t for t in items if t.tier in args.tier]
     engine.decide(items[0].state, [items[0].to_question()])  # warm-up, not timed
 
+    from quire.calibration import TypeTemperature
+    calibration = (None if args.calibration == "off" else TypeTemperature.default() if args.calibration == "default"
+                   else TypeTemperature.load(args.calibration))
     records = []
     for k, task in enumerate(items):
         t0 = time.perf_counter()
         answer = engine.decide(task.state, [task.to_question()])[0]
         latency = time.perf_counter() - t0
+        probs = {o: float(p) for o, p in answer.probabilities.items()}
+        if calibration:
+            probs = calibration.apply(probs, task.kind)
         records.append({
             "id": task.id, "tier": task.tier, "family": task.family, "kind": task.kind,
             "expected": task.expected, "n_options": len(task.option_ids),
-            "probs": {o: float(p) for o, p in answer.probabilities.items()},
-            "harness_probs": to_harness_probs(task.kind, answer.probabilities),
+            "probs": probs,
+            "harness_probs": to_harness_probs(task.kind, probs),
             "latency_s": latency, "margin": answer.margin, "epistemic": answer.epistemic,
             "input_tokens": answer.state_tokens + answer.suffix_tokens,
         })
@@ -79,7 +87,7 @@ def main() -> None:
     provenance = {
         "system": "quire", "backend": args.backend, "model": engine.model_repo, "revision": args.revision,
         "permutations": args.permutations, "prompt_style": args.style, "adapter": args.adapter,
-        "adapter_scale": args.adapter_scale if args.adapter else None, "n_tasks": len(records),
+        "adapter_scale": args.adapter_scale if args.adapter else None, "calibration": args.calibration, "n_tasks": len(records),
         "tiers": sorted({r["tier"] for r in records}), "git_commit": commit,
         "public_subset_only": True, "held_out": "the judge tier (146) and 109 hard items are not public",
         "generated": datetime.datetime.now(datetime.UTC).isoformat(),

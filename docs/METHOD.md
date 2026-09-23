@@ -44,7 +44,11 @@ A small model's letter probabilities depend on which letter an option gets. Ever
 - `epistemic`: disagreement between orderings (the model is unsure *which* answer, not just how sure)
 - `aleatoric`: the normalised entropy of the mean distribution
 
-On JevBench's public hard tier, two orderings reduced calibration error from 0.113 to 0.090 and added 3 items (9 better / 6 worse, not significant). We fitted temperatures on held-out splits too. They made calibration worse on the other half, so none is applied.
+On JevBench's public hard tier, two orderings reduced calibration error from 0.113 to 0.090 and added 3 items (9 better / 6 worse, not significant).
+
+## Per-answer-type temperature (`calibration.py`)
+
+The averaged distribution is then rescaled by one temperature per answer type, p'(o) ∝ p(o)^(1/T). This divides log-probabilities by a positive number, so it can't change the top answer. The released temperatures are choice 1.40, yes/no 1.70, score 1.40 (`src/quire/data/type_temperature.json`), all above 1: the frozen 4B is over-confident on every type. They were fitted by gold-label NLL on 1,464 held-out items (development splits of Quire's synthetic suites and kev's decision-v7) and checked on another 1,466, where pooled calibration error fell from 0.092 to 0.030. No benchmark item was used. `quire-serve --calibration off` returns the raw distributions. An earlier attempt fitted one temperature on halves of JevBench's 111 public hard items and failed on the other half; too few items, and one temperature for three answer types that need different ones.
 
 ## More options than labels (`wide.py`)
 
@@ -57,6 +61,6 @@ This costs one suffix per option. On kev's dbpedia14 (14 options), where both pa
 - **No training.** The weights are `Qwen/Qwen3.5-4B` as published.
 - **No per-benchmark prompts.** One rendering for every request.
 - **No thinking.** The 4B's thoughts don't close within 1,024 tokens on hard items, and cutting them short measured worse than not thinking.
-- **No calibration file.** See above.
+- **No calibration fitted on benchmark items.** The per-type map is fitted on held-out development data only.
 
 LoRA adapters can be loaded on the torch backend (`--adapter`, `--adapter-scale`) for experiments. None is part of the released configuration; see [`RESULTS.md`](RESULTS.md) for why.
