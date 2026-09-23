@@ -16,7 +16,10 @@ dependencies = [
 # Apple Silicon
 mlx = ["mlx>=0.32.2", "mlx-lm>=0.31.3"]
 # NVIDIA GPUs
-torch = ["torch>=2.6", "transformers>=5.0", "accelerate>=1.0"]
+torch = ["torch>=2.6", "transformers>=5.0", "accelerate>=1.0",
+         # Gated DeltaNet kernels; without them transformers falls back to a slow reference path.
+         # causal-conv1d is optional (needs nvcc to build) and measured no faster here.
+         "flash-linear-attention>=0.5"]
 # optional LoRA loading on the torch backend (not the released configuration)
 lora = ["peft>=0.21"]
 # training/: adapter training and synthetic data

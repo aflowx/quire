@@ -3,10 +3,10 @@ __pycache__/
 .venv/
 .pytest_cache/
 # benchmark checkouts and data, fetched locally, never committed
-jevbench/
-kev-data/
-decision-index/
-work/
-suite/
-runs/
+/jevbench/
+/kev-data/
+/decision-index/
+/work/
+/suite/
+/runs/
 .DS_Store

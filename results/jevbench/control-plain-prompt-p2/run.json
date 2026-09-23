@@ -1,0 +1,5420 @@
+{
+  "_provenance": {
+    "model": "Qwen/Qwen3.5-4B",
+    "dtype": "bf16",
+    "backend": "torch/cuda",
+    "device": "NVIDIA L40",
+    "permutations": 2,
+    "debias": false,
+    "single_turn": true,
+    "close_thinking": false,
+    "label": "torch-4b-frozen-p2",
+    "n_tasks": 231,
+    "accuracy": 0.7922077922077922,
+    "p50_latency_s": 0.11455062701134011,
+    "p95_latency_s": 0.5211849320330657,
+    "mean_input_tokens": 545.1818181818181,
+    "thinking_budget": 0,
+    "adapter": null,
+    "mean_thought_tokens": 0.0,
+    "wall_seconds": 43.058904568024445,
+    "public_subset_only": true,
+    "generated": "2026-09-22T08:01:43.067417+00:00"
+  },
+  "records": [
+    {
+      "id": "easy-intent-00",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "track_order",
+      "n_options": 5,
+      "probs": {
+        "billing_question": 0.002805885742418468,
+        "cancel_order": 0.004315359401516616,
+        "change_address": 0.003809875692240894,
+        "report_damage": 0.006362162064760923,
+        "track_order": 0.9827067255973816
+      },
+      "latency_s": 0.11482334602624178,
+      "margin": 0.9763445635326207,
+      "epistemic": 0.0013712887793121394,
+      "input_tokens": 29,
+      "harness_probs": {
+        "billing_question": 0.002805885742418468,
+        "cancel_order": 0.004315359401516616,
+        "change_address": 0.003809875692240894,
+        "report_damage": 0.006362162064760923,
+        "track_order": 0.9827067255973816
+      }
+    },
+    {
+      "id": "easy-intent-01",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "cancel_order",
+      "n_options": 5,
+      "probs": {
+        "billing_question": 0.0020948114106431603,
+        "cancel_order": 0.9912499785423279,
+        "change_address": 0.0022740400163456798,
+        "report_damage": 0.002609065151773393,
+        "track_order": 0.0017721561016514897
+      },
+      "latency_s": 0.11363877699477598,
+      "margin": 0.9886409133905545,
+      "epistemic": 0.0010515274700536442,
+      "input_tokens": 29,
+      "harness_probs": {
+        "billing_question": 0.0020948114106431603,
+        "cancel_order": 0.9912499785423279,
+        "change_address": 0.0022740400163456798,
+        "report_damage": 0.002609065151773393,
+        "track_order": 0.0017721561016514897
+      }
+    },
+    {
+      "id": "easy-intent-02",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "change_address",
+      "n_options": 5,
+      "probs": {
+        "billing_question": 0.0031573441810905933,
+        "cancel_order": 0.002971164765767753,
+        "change_address": 0.9851588308811188,
+        "report_damage": 0.0022247382439672947,
+        "track_order": 0.006488030659966171
+      },
+      "latency_s": 0.11469705001218244,
+      "margin": 0.9786708002211526,
+      "epistemic": 0.0006410551355014266,
+      "input_tokens": 32,
+      "harness_probs": {
+        "billing_question": 0.0031573441810905933,
+        "cancel_order": 0.002971164765767753,
+        "change_address": 0.9851588308811188,
+        "report_damage": 0.0022247382439672947,
+        "track_order": 0.006488030659966171
+      }
+    },
+    {
+      "id": "easy-intent-03",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "report_damage",
+      "n_options": 5,
+      "probs": {
+        "billing_question": 0.004148688167333603,
+        "cancel_order": 0.003824993735179305,
+        "change_address": 0.0017854635952971876,
+        "report_damage": 0.9889287650585175,
+        "track_order": 0.0013120913063175976
+      },
+      "latency_s": 0.11392637202516198,
+      "margin": 0.9847800768911839,
+      "epistemic": 0.0010501750442303795,
+      "input_tokens": 21,
+      "harness_probs": {
+        "billing_question": 0.004148688167333603,
+        "cancel_order": 0.003824993735179305,
+        "change_address": 0.0017854635952971876,
+        "report_damage": 0.9889287650585175,
+        "track_order": 0.0013120913063175976
+      }
+    },
+    {
+      "id": "easy-intent-04",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "billing_question",
+      "n_options": 5,
+      "probs": {
+        "billing_question": 0.9894295334815979,
+        "cancel_order": 0.0027835362125188112,
+        "change_address": 0.0018584695644676685,
+        "report_damage": 0.0038615106022916734,
+        "track_order": 0.0020669177174568176
+      },
+      "latency_s": 0.1142802219837904,
+      "margin": 0.9855680228793062,
+      "epistemic": 0.0013602155589307783,
+      "input_tokens": 26,
+      "harness_probs": {
+        "billing_question": 0.9894295334815979,
+        "cancel_order": 0.0027835362125188112,
+        "change_address": 0.0018584695644676685,
+        "report_damage": 0.0038615106022916734,
+        "track_order": 0.0020669177174568176
+      }
+    },
+    {
+      "id": "easy-intent-05",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "track_order",
+      "n_options": 5,
+      "probs": {
+        "billing_question": 0.003306645347038284,
+        "cancel_order": 0.005178123712539673,
+        "change_address": 0.0050044795498251915,
+        "report_damage": 0.008389330934733152,
+        "track_order": 0.9781213998794556
+      },
+      "latency_s": 0.11369194503640756,
+      "margin": 0.9697320689447224,
+      "epistemic": 0.0016228957118464313,
+      "input_tokens": 25,
+      "harness_probs": {
+        "billing_question": 0.003306645347038284,
+        "cancel_order": 0.005178123712539673,
+        "change_address": 0.0050044795498251915,
+        "report_damage": 0.008389330934733152,
+        "track_order": 0.9781213998794556
+      }
+    },
+    {
+      "id": "easy-intent-06",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "set_alarm",
+      "n_options": 5,
+      "probs": {
+        "play_music": 0.0042047976749017835,
+        "send_message": 0.004341600579209626,
+        "set_alarm": 0.9874409735202789,
+        "turn_off_lights": 0.002317209669854492,
+        "weather": 0.001695416634902358
+      },
+      "latency_s": 0.11507142102345824,
+      "margin": 0.9830993729410693,
+      "epistemic": 0.0007884922333299823,
+      "input_tokens": 24,
+      "harness_probs": {
+        "play_music": 0.0042047976749017835,
+        "send_message": 0.004341600579209626,
+        "set_alarm": 0.9874409735202789,
+        "turn_off_lights": 0.002317209669854492,
+        "weather": 0.001695416634902358
+      }
+    },
+    {
+      "id": "easy-intent-07",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "play_music",
+      "n_options": 5,
+      "probs": {
+        "play_music": 0.990361213684082,
+        "send_message": 0.0035977145889773965,
+        "set_alarm": 0.0018059013527818024,
+        "turn_off_lights": 0.0022617983049713075,
+        "weather": 0.0019733725930564106
+      },
+      "latency_s": 0.11336208798456937,
+      "margin": 0.9867634990951046,
+      "epistemic": 0.00017509655195521685,
+      "input_tokens": 17,
+      "harness_probs": {
+        "play_music": 0.990361213684082,
+        "send_message": 0.0035977145889773965,
+        "set_alarm": 0.0018059013527818024,
+        "turn_off_lights": 0.0022617983049713075,
+        "weather": 0.0019733725930564106
+      }
+    },
+    {
+      "id": "easy-intent-08",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "weather",
+      "n_options": 5,
+      "probs": {
+        "play_music": 0.0028334722737781703,
+        "send_message": 0.003614948131144047,
+        "set_alarm": 0.001971825025975704,
+        "turn_off_lights": 0.002022499276790768,
+        "weather": 0.9895572662353516
+      },
+      "latency_s": 0.1154144539614208,
+      "margin": 0.9859423181042075,
+      "epistemic": 0.00072135075973693,
+      "input_tokens": 19,
+      "harness_probs": {
+        "play_music": 0.0028334722737781703,
+        "send_message": 0.003614948131144047,
+        "set_alarm": 0.001971825025975704,
+        "turn_off_lights": 0.002022499276790768,
+        "weather": 0.9895572662353516
+      }
+    },
+    {
+      "id": "easy-intent-09",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "send_message",
+      "n_options": 5,
+      "probs": {
+        "play_music": 0.004298770858440548,
+        "send_message": 0.9897444844245911,
+        "set_alarm": 0.0023470314918085933,
+        "turn_off_lights": 0.001968778087757528,
+        "weather": 0.0016408547526225448
+      },
+      "latency_s": 0.1143407950294204,
+      "margin": 0.9854457135661505,
+      "epistemic": 0.0012585424415239579,
+      "input_tokens": 22,
+      "harness_probs": {
+        "play_music": 0.004298770858440548,
+        "send_message": 0.9897444844245911,
+        "set_alarm": 0.0023470314918085933,
+        "turn_off_lights": 0.001968778087757528,
+        "weather": 0.0016408547526225448
+      }
+    },
+    {
+      "id": "easy-intent-10",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "turn_off_lights",
+      "n_options": 5,
+      "probs": {
+        "play_music": 0.00627953396178782,
+        "send_message": 0.004266566131263971,
+        "set_alarm": 0.002316615777090192,
+        "turn_off_lights": 0.9853195250034332,
+        "weather": 0.0018178028403781354
+      },
+      "latency_s": 0.11385345598682761,
+      "margin": 0.9790399910416454,
+      "epistemic": 0.0009221947253774707,
+      "input_tokens": 20,
+      "harness_probs": {
+        "play_music": 0.00627953396178782,
+        "send_message": 0.004266566131263971,
+        "set_alarm": 0.002316615777090192,
+        "turn_off_lights": 0.9853195250034332,
+        "weather": 0.0018178028403781354
+      }
+    },
+    {
+      "id": "easy-intent-11",
+      "tier": "easy",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "set_alarm",
+      "n_options": 5,
+      "probs": {
+        "play_music": 0.0050986193818971515,
+        "send_message": 0.004012362391222268,
+        "set_alarm": 0.9856526851654053,
+        "turn_off_lights": 0.0025517240865156054,
+        "weather": 0.002684597042389214
+      },
+      "latency_s": 0.11370204901322722,
+      "margin": 0.9805540657835081,
+      "epistemic": 0.0005733982091350053,
+      "input_tokens": 20,
+      "harness_probs": {
+        "play_music": 0.0050986193818971515,
+        "send_message": 0.004012362391222268,
+        "set_alarm": 0.9856526851654053,
+        "turn_off_lights": 0.0025517240865156054,
+        "weather": 0.002684597042389214
+      }
+    },
+    {
+      "id": "easy-fact-00",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.9666804075241089,
+        "false": 0.03331955708563328
+      },
+      "latency_s": 0.11455062701134011,
+      "margin": 0.9333608504384756,
+      "epistemic": 0.00036048632069180664,
+      "input_tokens": 31,
+      "harness_probs": {
+        "yes": 0.9666804075241089,
+        "no": 0.03331955708563328
+      }
+    },
+    {
+      "id": "easy-fact-01",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.059163414873182774,
+        "false": 0.9408365786075592
+      },
+      "latency_s": 0.11375095695257187,
+      "margin": 0.8816731637343764,
+      "epistemic": 0.018152964762773872,
+      "input_tokens": 29,
+      "harness_probs": {
+        "yes": 0.059163414873182774,
+        "no": 0.9408365786075592
+      }
+    },
+    {
+      "id": "easy-fact-02",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.9783451557159424,
+        "false": 0.02165486104786396
+      },
+      "latency_s": 0.11361556500196457,
+      "margin": 0.9566902946680784,
+      "epistemic": 5.958789116023096e-05,
+      "input_tokens": 38,
+      "harness_probs": {
+        "yes": 0.9783451557159424,
+        "no": 0.02165486104786396
+      }
+    },
+    {
+      "id": "easy-fact-03",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.03799652215093374,
+        "false": 0.9620034694671631
+      },
+      "latency_s": 0.11552649398799986,
+      "margin": 0.9240069473162293,
+      "epistemic": 0.010238607919135185,
+      "input_tokens": 41,
+      "harness_probs": {
+        "yes": 0.03799652215093374,
+        "no": 0.9620034694671631
+      }
+    },
+    {
+      "id": "easy-fact-04",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.9810551106929779,
+        "false": 0.018944857642054558
+      },
+      "latency_s": 0.11450292897643521,
+      "margin": 0.9621102530509233,
+      "epistemic": 0.004405131269353325,
+      "input_tokens": 28,
+      "harness_probs": {
+        "yes": 0.9810551106929779,
+        "no": 0.018944857642054558
+      }
+    },
+    {
+      "id": "easy-fact-05",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.10895988903939724,
+        "false": 0.8910401165485382
+      },
+      "latency_s": 0.11387942201690748,
+      "margin": 0.782080227509141,
+      "epistemic": 0.02392693329953366,
+      "input_tokens": 29,
+      "harness_probs": {
+        "yes": 0.10895988903939724,
+        "no": 0.8910401165485382
+      }
+    },
+    {
+      "id": "easy-fact-06",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.9791682660579681,
+        "false": 0.02083173394203186
+      },
+      "latency_s": 0.11320944601902738,
+      "margin": 0.9583365321159363,
+      "epistemic": 0.005661776594439564,
+      "input_tokens": 36,
+      "harness_probs": {
+        "yes": 0.9791682660579681,
+        "no": 0.02083173394203186
+      }
+    },
+    {
+      "id": "easy-fact-07",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.04658631794154644,
+        "false": 0.9534136950969696
+      },
+      "latency_s": 0.11353022896219045,
+      "margin": 0.9068273771554232,
+      "epistemic": 0.003000909541532349,
+      "input_tokens": 23,
+      "harness_probs": {
+        "yes": 0.04658631794154644,
+        "no": 0.9534136950969696
+      }
+    },
+    {
+      "id": "easy-fact-08",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.9847165048122406,
+        "false": 0.015283465618267655
+      },
+      "latency_s": 0.11371182097354904,
+      "margin": 0.969433039193973,
+      "epistemic": 0.006015813575703469,
+      "input_tokens": 21,
+      "harness_probs": {
+        "yes": 0.9847165048122406,
+        "no": 0.015283465618267655
+      }
+    },
+    {
+      "id": "easy-fact-09",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.016024918295443058,
+        "false": 0.9839750826358795
+      },
+      "latency_s": 0.11356186895864084,
+      "margin": 0.9679501643404365,
+      "epistemic": 0.0001764091977525582,
+      "input_tokens": 21,
+      "harness_probs": {
+        "yes": 0.016024918295443058,
+        "no": 0.9839750826358795
+      }
+    },
+    {
+      "id": "easy-fact-10",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.8512596487998962,
+        "false": 0.14874034374952316
+      },
+      "latency_s": 0.11350175295956433,
+      "margin": 0.7025193050503731,
+      "epistemic": 0.0014202103653184182,
+      "input_tokens": 26,
+      "harness_probs": {
+        "yes": 0.8512596487998962,
+        "no": 0.14874034374952316
+      }
+    },
+    {
+      "id": "easy-fact-11",
+      "tier": "easy",
+      "family": "fact",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.019194504711776972,
+        "false": 0.9808054566383362
+      },
+      "latency_s": 0.11339776695240289,
+      "margin": 0.9616109519265592,
+      "epistemic": 0.0017899018787069065,
+      "input_tokens": 27,
+      "harness_probs": {
+        "yes": 0.019194504711776972,
+        "no": 0.9808054566383362
+      }
+    },
+    {
+      "id": "easy-extraction-00",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "paypal",
+      "n_options": 4,
+      "probs": {
+        "bank_transfer": 0.005931143648922443,
+        "cash": 0.008732907241210341,
+        "credit_card": 0.007795148529112339,
+        "paypal": 0.9775408506393433
+      },
+      "latency_s": 0.11354956997092813,
+      "margin": 0.9688079433981329,
+      "epistemic": 0.0021396325830583714,
+      "input_tokens": 19,
+      "harness_probs": {
+        "bank_transfer": 0.005931143648922443,
+        "cash": 0.008732907241210341,
+        "credit_card": 0.007795148529112339,
+        "paypal": 0.9775408506393433
+      }
+    },
+    {
+      "id": "easy-extraction-01",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "cash",
+      "n_options": 4,
+      "probs": {
+        "bank_transfer": 0.00500336941331625,
+        "cash": 0.9181941747665405,
+        "credit_card": 0.051919014658778906,
+        "paypal": 0.024883489939384162
+      },
+      "latency_s": 0.11588227795436978,
+      "margin": 0.8662751601077616,
+      "epistemic": 0.023248439287877606,
+      "input_tokens": 21,
+      "harness_probs": {
+        "bank_transfer": 0.00500336941331625,
+        "cash": 0.9181941747665405,
+        "credit_card": 0.051919014658778906,
+        "paypal": 0.024883489939384162
+      }
+    },
+    {
+      "id": "easy-extraction-02",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "bank_transfer",
+      "n_options": 4,
+      "probs": {
+        "bank_transfer": 0.9229187369346619,
+        "cash": 0.023083622567355633,
+        "credit_card": 0.05113627342507243,
+        "paypal": 0.002861391636542976
+      },
+      "latency_s": 0.11488304199883714,
+      "margin": 0.8717824635095894,
+      "epistemic": 0.014910427549223709,
+      "input_tokens": 22,
+      "harness_probs": {
+        "bank_transfer": 0.9229187369346619,
+        "cash": 0.023083622567355633,
+        "credit_card": 0.05113627342507243,
+        "paypal": 0.002861391636542976
+      }
+    },
+    {
+      "id": "easy-extraction-03",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "high",
+      "n_options": 4,
+      "probs": {
+        "high": 0.7581590414047241,
+        "low": 0.02154628513380885,
+        "medium": 0.023207430087495595,
+        "urgent": 0.197087281383574
+      },
+      "latency_s": 0.11421301896916702,
+      "margin": 0.5610717600211501,
+      "epistemic": 0.10458135433707146,
+      "input_tokens": 30,
+      "harness_probs": {
+        "high": 0.7581590414047241,
+        "low": 0.02154628513380885,
+        "medium": 0.023207430087495595,
+        "urgent": 0.197087281383574
+      }
+    },
+    {
+      "id": "easy-extraction-04",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "low",
+      "n_options": 4,
+      "probs": {
+        "high": 0.1699245444033295,
+        "low": 0.8028607666492462,
+        "medium": 0.0038127658772282302,
+        "urgent": 0.023401959100738168
+      },
+      "latency_s": 0.11334534699562937,
+      "margin": 0.6329362222459167,
+      "epistemic": 0.09235099314951005,
+      "input_tokens": 28,
+      "harness_probs": {
+        "high": 0.1699245444033295,
+        "low": 0.8028607666492462,
+        "medium": 0.0038127658772282302,
+        "urgent": 0.023401959100738168
+      }
+    },
+    {
+      "id": "easy-extraction-05",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "urgent",
+      "n_options": 4,
+      "probs": {
+        "high": 0.03182554570958018,
+        "low": 0.006830877682659775,
+        "medium": 0.0012260701332706958,
+        "urgent": 0.9601174890995026
+      },
+      "latency_s": 0.11389281903393567,
+      "margin": 0.9282919433899224,
+      "epistemic": 0.007072635394020766,
+      "input_tokens": 28,
+      "harness_probs": {
+        "high": 0.03182554570958018,
+        "low": 0.006830877682659775,
+        "medium": 0.0012260701332706958,
+        "urgent": 0.9601174890995026
+      }
+    },
+    {
+      "id": "easy-extraction-06",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "M",
+      "n_options": 4,
+      "probs": {
+        "L": 0.0409252867102623,
+        "M": 0.9489970207214355,
+        "S": 0.003123359987512231,
+        "XL": 0.006954372744075954
+      },
+      "latency_s": 0.11404548201244324,
+      "margin": 0.9080717340111732,
+      "epistemic": 0.01300511513838539,
+      "input_tokens": 24,
+      "harness_probs": {
+        "L": 0.0409252867102623,
+        "M": 0.9489970207214355,
+        "S": 0.003123359987512231,
+        "XL": 0.006954372744075954
+      }
+    },
+    {
+      "id": "easy-extraction-07",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "XL",
+      "n_options": 4,
+      "probs": {
+        "L": 0.24339720606803894,
+        "M": 0.06686998903751373,
+        "S": 0.16240977495908737,
+        "XL": 0.5273230075836182
+      },
+      "latency_s": 0.11386959097580984,
+      "margin": 0.2839258015155792,
+      "epistemic": 0.016317716564020552,
+      "input_tokens": 22,
+      "harness_probs": {
+        "L": 0.24339720606803894,
+        "M": 0.06686998903751373,
+        "S": 0.16240977495908737,
+        "XL": 0.5273230075836182
+      }
+    },
+    {
+      "id": "easy-extraction-08",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "thursday",
+      "n_options": 5,
+      "probs": {
+        "friday": 0.017272805329412222,
+        "monday": 0.008031991077587008,
+        "thursday": 0.9617438912391663,
+        "tuesday": 0.003009519772604108,
+        "wednesday": 0.009941779542714357
+      },
+      "latency_s": 0.11359262198675424,
+      "margin": 0.944471085909754,
+      "epistemic": 0.00434643350272165,
+      "input_tokens": 22,
+      "harness_probs": {
+        "friday": 0.017272805329412222,
+        "monday": 0.008031991077587008,
+        "thursday": 0.9617438912391663,
+        "tuesday": 0.003009519772604108,
+        "wednesday": 0.009941779542714357
+      }
+    },
+    {
+      "id": "easy-extraction-09",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "monday",
+      "n_options": 5,
+      "probs": {
+        "friday": 0.015019070822745562,
+        "monday": 0.9733673632144928,
+        "thursday": 0.002743305405601859,
+        "tuesday": 0.004831240978091955,
+        "wednesday": 0.004039036692120135
+      },
+      "latency_s": 0.11356247297953814,
+      "margin": 0.9583482923917472,
+      "epistemic": 0.0010563859538749748,
+      "input_tokens": 24,
+      "harness_probs": {
+        "friday": 0.015019070822745562,
+        "monday": 0.9733673632144928,
+        "thursday": 0.002743305405601859,
+        "tuesday": 0.004831240978091955,
+        "wednesday": 0.004039036692120135
+      }
+    },
+    {
+      "id": "easy-extraction-10",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "friday",
+      "n_options": 5,
+      "probs": {
+        "friday": 0.9616906344890594,
+        "monday": 0.01679374650120735,
+        "thursday": 0.0054086141753941774,
+        "tuesday": 0.005058866459876299,
+        "wednesday": 0.011048194719478488
+      },
+      "latency_s": 0.11344632302643731,
+      "margin": 0.9448968879878521,
+      "epistemic": 0.0036329498626397755,
+      "input_tokens": 20,
+      "harness_probs": {
+        "friday": 0.9616906344890594,
+        "monday": 0.01679374650120735,
+        "thursday": 0.0054086141753941774,
+        "tuesday": 0.005058866459876299,
+        "wednesday": 0.011048194719478488
+      }
+    },
+    {
+      "id": "easy-extraction-11",
+      "tier": "easy",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "credit_card",
+      "n_options": 4,
+      "probs": {
+        "bank_transfer": 0.006261402741074562,
+        "cash": 0.009239601902663708,
+        "credit_card": 0.9775870144367218,
+        "paypal": 0.006912002339959145
+      },
+      "latency_s": 0.11440614302409813,
+      "margin": 0.9683474125340581,
+      "epistemic": 0.0014240498442723072,
+      "input_tokens": 25,
+      "harness_probs": {
+        "bank_transfer": 0.006261402741074562,
+        "cash": 0.009239601902663708,
+        "credit_card": 0.9775870144367218,
+        "paypal": 0.006912002339959145
+      }
+    },
+    {
+      "id": "easy-tool_selection-00",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "get_weather",
+      "n_options": 5,
+      "probs": {
+        "convert_currency": 0.0031846616184338927,
+        "create_calendar_event": 0.0034543705405667424,
+        "get_weather": 0.9884592890739441,
+        "send_email": 0.0019229624886065722,
+        "translate_text": 0.00297876272816211
+      },
+      "latency_s": 0.11452606099192053,
+      "margin": 0.9850049185333773,
+      "epistemic": 0.00037652924156395386,
+      "input_tokens": 22,
+      "harness_probs": {
+        "convert_currency": 0.0031846616184338927,
+        "create_calendar_event": 0.0034543705405667424,
+        "get_weather": 0.9884592890739441,
+        "send_email": 0.0019229624886065722,
+        "translate_text": 0.00297876272816211
+      }
+    },
+    {
+      "id": "easy-tool_selection-01",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "send_email",
+      "n_options": 5,
+      "probs": {
+        "convert_currency": 0.005525187822058797,
+        "create_calendar_event": 0.0026519125094637275,
+        "get_weather": 0.00158212473616004,
+        "send_email": 0.9874204099178314,
+        "translate_text": 0.0028204243863001466
+      },
+      "latency_s": 0.11398290802026168,
+      "margin": 0.9818952220957726,
+      "epistemic": 0.0006805602959761629,
+      "input_tokens": 23,
+      "harness_probs": {
+        "convert_currency": 0.005525187822058797,
+        "create_calendar_event": 0.0026519125094637275,
+        "get_weather": 0.00158212473616004,
+        "send_email": 0.9874204099178314,
+        "translate_text": 0.0028204243863001466
+      }
+    },
+    {
+      "id": "easy-tool_selection-02",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "create_calendar_event",
+      "n_options": 5,
+      "probs": {
+        "convert_currency": 0.004010334494523704,
+        "create_calendar_event": 0.9876727163791656,
+        "get_weather": 0.0032452649902552366,
+        "send_email": 0.0035391076235100627,
+        "translate_text": 0.00153262511594221
+      },
+      "latency_s": 0.11395521694794297,
+      "margin": 0.983662381884642,
+      "epistemic": 0.0005192874223605135,
+      "input_tokens": 26,
+      "harness_probs": {
+        "convert_currency": 0.004010334494523704,
+        "create_calendar_event": 0.9876727163791656,
+        "get_weather": 0.0032452649902552366,
+        "send_email": 0.0035391076235100627,
+        "translate_text": 0.00153262511594221
+      }
+    },
+    {
+      "id": "easy-tool_selection-03",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "convert_currency",
+      "n_options": 5,
+      "probs": {
+        "convert_currency": 0.9881640076637268,
+        "create_calendar_event": 0.003766404581256211,
+        "get_weather": 0.0015104173216968775,
+        "send_email": 0.0020160109270364046,
+        "translate_text": 0.004543150425888598
+      },
+      "latency_s": 0.1139607320073992,
+      "margin": 0.9836208572378382,
+      "epistemic": 0.0007222697167646072,
+      "input_tokens": 24,
+      "harness_probs": {
+        "convert_currency": 0.9881640076637268,
+        "create_calendar_event": 0.003766404581256211,
+        "get_weather": 0.0015104173216968775,
+        "send_email": 0.0020160109270364046,
+        "translate_text": 0.004543150425888598
+      }
+    },
+    {
+      "id": "easy-tool_selection-04",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "translate_text",
+      "n_options": 5,
+      "probs": {
+        "convert_currency": 0.003748814226128161,
+        "create_calendar_event": 0.005171912896912545,
+        "get_weather": 0.0016959421336650848,
+        "send_email": 0.0015151579427765682,
+        "translate_text": 0.9878681600093842
+      },
+      "latency_s": 0.11430259002372622,
+      "margin": 0.9826962471124716,
+      "epistemic": 0.0018187354184761588,
+      "input_tokens": 20,
+      "harness_probs": {
+        "convert_currency": 0.003748814226128161,
+        "create_calendar_event": 0.005171912896912545,
+        "get_weather": 0.0016959421336650848,
+        "send_email": 0.0015151579427765682,
+        "translate_text": 0.9878681600093842
+      }
+    },
+    {
+      "id": "easy-tool_selection-05",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "create_calendar_event",
+      "n_options": 5,
+      "probs": {
+        "convert_currency": 0.0034755434608086944,
+        "create_calendar_event": 0.9889836609363556,
+        "get_weather": 0.0035931068705394864,
+        "send_email": 0.0028994500171393156,
+        "translate_text": 0.0010483070800546557
+      },
+      "latency_s": 0.11347362498054281,
+      "margin": 0.9853905540658161,
+      "epistemic": 0.0006346814682005323,
+      "input_tokens": 26,
+      "harness_probs": {
+        "convert_currency": 0.0034755434608086944,
+        "create_calendar_event": 0.9889836609363556,
+        "get_weather": 0.0035931068705394864,
+        "send_email": 0.0028994500171393156,
+        "translate_text": 0.0010483070800546557
+      }
+    },
+    {
+      "id": "easy-tool_selection-06",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "search_flights",
+      "n_options": 5,
+      "probs": {
+        "book_restaurant": 0.005141437286511064,
+        "call_taxi": 0.0035081745591014624,
+        "get_stock_price": 0.002772416453808546,
+        "search_flights": 0.9870487451553345,
+        "set_reminder": 0.0015292480529751629
+      },
+      "latency_s": 0.11480332497740164,
+      "margin": 0.9819073078688234,
+      "epistemic": 0.0002589429388210381,
+      "input_tokens": 25,
+      "harness_probs": {
+        "book_restaurant": 0.005141437286511064,
+        "call_taxi": 0.0035081745591014624,
+        "get_stock_price": 0.002772416453808546,
+        "search_flights": 0.9870487451553345,
+        "set_reminder": 0.0015292480529751629
+      }
+    },
+    {
+      "id": "easy-tool_selection-07",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "book_restaurant",
+      "n_options": 5,
+      "probs": {
+        "book_restaurant": 0.9586846232414246,
+        "call_taxi": 0.011709386482834816,
+        "get_stock_price": 0.005216844496317208,
+        "search_flights": 0.0024253883748315275,
+        "set_reminder": 0.021963735343888402
+      },
+      "latency_s": 0.11364846298238263,
+      "margin": 0.9367208878975362,
+      "epistemic": 0.004203909014668369,
+      "input_tokens": 25,
+      "harness_probs": {
+        "book_restaurant": 0.9586846232414246,
+        "call_taxi": 0.011709386482834816,
+        "get_stock_price": 0.005216844496317208,
+        "search_flights": 0.0024253883748315275,
+        "set_reminder": 0.021963735343888402
+      }
+    },
+    {
+      "id": "easy-tool_selection-08",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "set_reminder",
+      "n_options": 5,
+      "probs": {
+        "book_restaurant": 0.0029227062477730215,
+        "call_taxi": 0.004340208484791219,
+        "get_stock_price": 0.004483676282688975,
+        "search_flights": 0.0036744212557096034,
+        "set_reminder": 0.9845790565013885
+      },
+      "latency_s": 0.11388612096197903,
+      "margin": 0.9800953802186996,
+      "epistemic": 0.002124939285624467,
+      "input_tokens": 24,
+      "harness_probs": {
+        "book_restaurant": 0.0029227062477730215,
+        "call_taxi": 0.004340208484791219,
+        "get_stock_price": 0.004483676282688975,
+        "search_flights": 0.0036744212557096034,
+        "set_reminder": 0.9845790565013885
+      }
+    },
+    {
+      "id": "easy-tool_selection-09",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "get_stock_price",
+      "n_options": 5,
+      "probs": {
+        "book_restaurant": 0.00357638590503484,
+        "call_taxi": 0.005464799120090902,
+        "get_stock_price": 0.9830995798110962,
+        "search_flights": 0.0027424931759014726,
+        "set_reminder": 0.005116791697219014
+      },
+      "latency_s": 0.11470021796412766,
+      "margin": 0.9776347806910053,
+      "epistemic": 0.0009857626876727977,
+      "input_tokens": 21,
+      "harness_probs": {
+        "book_restaurant": 0.00357638590503484,
+        "call_taxi": 0.005464799120090902,
+        "get_stock_price": 0.9830995798110962,
+        "search_flights": 0.0027424931759014726,
+        "set_reminder": 0.005116791697219014
+      }
+    },
+    {
+      "id": "easy-tool_selection-10",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "call_taxi",
+      "n_options": 5,
+      "probs": {
+        "book_restaurant": 0.004156323324423283,
+        "call_taxi": 0.9867042899131775,
+        "get_stock_price": 0.004162033088505268,
+        "search_flights": 0.0035040051443502307,
+        "set_reminder": 0.0014734116848558187
+      },
+      "latency_s": 0.11324441398028284,
+      "margin": 0.9825422568246722,
+      "epistemic": 0.0006132169838048764,
+      "input_tokens": 21,
+      "harness_probs": {
+        "book_restaurant": 0.004156323324423283,
+        "call_taxi": 0.9867042899131775,
+        "get_stock_price": 0.004162033088505268,
+        "search_flights": 0.0035040051443502307,
+        "set_reminder": 0.0014734116848558187
+      }
+    },
+    {
+      "id": "easy-tool_selection-11",
+      "tier": "easy",
+      "family": "tool_selection",
+      "kind": "choice",
+      "expected": "set_reminder",
+      "n_options": 5,
+      "probs": {
+        "book_restaurant": 0.003275215334724635,
+        "call_taxi": 0.004966360691469163,
+        "get_stock_price": 0.0033680835622362792,
+        "search_flights": 0.003318370261695236,
+        "set_reminder": 0.9850719571113586
+      },
+      "latency_s": 0.11409598198952153,
+      "margin": 0.9801055964198895,
+      "epistemic": 0.0022338040120238943,
+      "input_tokens": 24,
+      "harness_probs": {
+        "book_restaurant": 0.003275215334724635,
+        "call_taxi": 0.004966360691469163,
+        "get_stock_price": 0.0033680835622362792,
+        "search_flights": 0.003318370261695236,
+        "set_reminder": 0.9850719571113586
+      }
+    },
+    {
+      "id": "original-policy-01-0",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.019194504711776972,
+        "false": 0.9808054566383362
+      },
+      "latency_s": 0.11396649497328326,
+      "margin": 0.9616109519265592,
+      "epistemic": 0.0017899018787069065,
+      "input_tokens": 43,
+      "harness_probs": {
+        "yes": 0.019194504711776972,
+        "no": 0.9808054566383362
+      }
+    },
+    {
+      "id": "original-policy-01-1",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.042087722569704056,
+        "false": 0.957912266254425
+      },
+      "latency_s": 0.11339933198178187,
+      "margin": 0.915824543684721,
+      "epistemic": 0.0,
+      "input_tokens": 46,
+      "harness_probs": {
+        "yes": 0.042087722569704056,
+        "no": 0.957912266254425
+      }
+    },
+    {
+      "id": "original-policy-02-0",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5283596962690353,
+        "false": 0.47164031863212585
+      },
+      "latency_s": 0.11341020901454613,
+      "margin": 0.056719377636909485,
+      "epistemic": 0.06689867766078708,
+      "input_tokens": 32,
+      "harness_probs": {
+        "yes": 0.5283596962690353,
+        "no": 0.47164031863212585
+      }
+    },
+    {
+      "id": "original-policy-02-1",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.13888749480247498,
+        "false": 0.861112505197525
+      },
+      "latency_s": 0.11357398401014507,
+      "margin": 0.72222501039505,
+      "epistemic": 0.011601582648432083,
+      "input_tokens": 31,
+      "harness_probs": {
+        "yes": 0.13888749480247498,
+        "no": 0.861112505197525
+      }
+    },
+    {
+      "id": "original-policy-03-0",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5139119178056717,
+        "false": 0.4860880970954895
+      },
+      "latency_s": 0.11403976398287341,
+      "margin": 0.02782382071018219,
+      "epistemic": 0.08037921696505268,
+      "input_tokens": 34,
+      "harness_probs": {
+        "yes": 0.5139119178056717,
+        "no": 0.4860880970954895
+      }
+    },
+    {
+      "id": "original-policy-03-1",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.10727619007229805,
+        "false": 0.8927237689495087
+      },
+      "latency_s": 0.11351386504247785,
+      "margin": 0.7854475788772106,
+      "epistemic": 0.0010734213166653044,
+      "input_tokens": 33,
+      "harness_probs": {
+        "yes": 0.10727619007229805,
+        "no": 0.8927237689495087
+      }
+    },
+    {
+      "id": "original-policy-04-0",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.2929353341460228,
+        "false": 0.7070646286010742
+      },
+      "latency_s": 0.11368032201426104,
+      "margin": 0.4141292944550514,
+      "epistemic": 0.07560880666617935,
+      "input_tokens": 40,
+      "harness_probs": {
+        "yes": 0.2929353341460228,
+        "no": 0.7070646286010742
+      }
+    },
+    {
+      "id": "original-policy-04-1",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.05258520692586899,
+        "false": 0.9474147856235504
+      },
+      "latency_s": 0.1148635030258447,
+      "margin": 0.8948295786976814,
+      "epistemic": 0.008106196715110314,
+      "input_tokens": 37,
+      "harness_probs": {
+        "yes": 0.05258520692586899,
+        "no": 0.9474147856235504
+      }
+    },
+    {
+      "id": "original-policy-05-0",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.16050807014107704,
+        "false": 0.8394919037818909
+      },
+      "latency_s": 0.11321320896968246,
+      "margin": 0.6789838336408138,
+      "epistemic": 0.009221093223588004,
+      "input_tokens": 44,
+      "harness_probs": {
+        "yes": 0.16050807014107704,
+        "no": 0.8394919037818909
+      }
+    },
+    {
+      "id": "original-policy-05-1",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.054817209020256996,
+        "false": 0.9451827704906464
+      },
+      "latency_s": 0.11428727000020444,
+      "margin": 0.8903655614703894,
+      "epistemic": 0.002275565010653042,
+      "input_tokens": 36,
+      "harness_probs": {
+        "yes": 0.054817209020256996,
+        "no": 0.9451827704906464
+      }
+    },
+    {
+      "id": "original-policy-06-0",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6466175615787506,
+        "false": 0.3533824384212494
+      },
+      "latency_s": 0.11319543200079352,
+      "margin": 0.2932351231575012,
+      "epistemic": 0.02267368971670286,
+      "input_tokens": 46,
+      "harness_probs": {
+        "yes": 0.6466175615787506,
+        "no": 0.3533824384212494
+      }
+    },
+    {
+      "id": "original-policy-06-1",
+      "tier": "standard",
+      "family": "policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.4543750435113907,
+        "false": 0.5456250011920929
+      },
+      "latency_s": 0.11371923802653328,
+      "margin": 0.09124995768070221,
+      "epistemic": 0.017248164551464894,
+      "input_tokens": 36,
+      "harness_probs": {
+        "yes": 0.4543750435113907,
+        "no": 0.5456250011920929
+      }
+    },
+    {
+      "id": "original-intent-01-0",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "refund",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.030280048958957195,
+        "change_address": 0.003908052342012525,
+        "other": 0.11492033302783966,
+        "refund": 0.8468858301639557,
+        "status": 0.004005732829682529
+      },
+      "latency_s": 0.11445173405809328,
+      "margin": 0.731965497136116,
+      "epistemic": 0.0066583582813071925,
+      "input_tokens": 24,
+      "harness_probs": {
+        "cancel": 0.030280048958957195,
+        "change_address": 0.003908052342012525,
+        "other": 0.11492033302783966,
+        "refund": 0.8468858301639557,
+        "status": 0.004005732829682529
+      }
+    },
+    {
+      "id": "original-intent-01-1",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "refund",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.037862369790673256,
+        "change_address": 0.005118372617289424,
+        "other": 0.1570843979716301,
+        "refund": 0.7977404594421387,
+        "status": 0.002194428292568773
+      },
+      "latency_s": 0.11371715302811936,
+      "margin": 0.6406560614705086,
+      "epistemic": 0.0032320462420719117,
+      "input_tokens": 25,
+      "harness_probs": {
+        "cancel": 0.037862369790673256,
+        "change_address": 0.005118372617289424,
+        "other": 0.1570843979716301,
+        "refund": 0.7977404594421387,
+        "status": 0.002194428292568773
+      }
+    },
+    {
+      "id": "original-intent-02-0",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "status",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.005057300382759422,
+        "change_address": 0.01353011280298233,
+        "other": 0.13834715634584427,
+        "refund": 0.005986991571262479,
+        "status": 0.8370784223079681
+      },
+      "latency_s": 0.11362470500171185,
+      "margin": 0.6987312659621239,
+      "epistemic": 0.0027217190299794808,
+      "input_tokens": 25,
+      "harness_probs": {
+        "cancel": 0.005057300382759422,
+        "change_address": 0.01353011280298233,
+        "other": 0.13834715634584427,
+        "refund": 0.005986991571262479,
+        "status": 0.8370784223079681
+      }
+    },
+    {
+      "id": "original-intent-02-1",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "status",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.0020273494883440435,
+        "change_address": 0.002909673552494496,
+        "other": 0.037928637117147446,
+        "refund": 0.0020546321175061166,
+        "status": 0.9550797939300537
+      },
+      "latency_s": 0.11342141701607034,
+      "margin": 0.9171511568129063,
+      "epistemic": 0.0027346959582196864,
+      "input_tokens": 24,
+      "harness_probs": {
+        "cancel": 0.0020273494883440435,
+        "change_address": 0.002909673552494496,
+        "other": 0.037928637117147446,
+        "refund": 0.0020546321175061166,
+        "status": 0.9550797939300537
+      }
+    },
+    {
+      "id": "original-intent-03-0",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "change_address",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.004062847408931702,
+        "change_address": 0.9418714046478271,
+        "other": 0.041662197560071945,
+        "refund": 0.006772400578483939,
+        "status": 0.00563110806979239
+      },
+      "latency_s": 0.1149133860017173,
+      "margin": 0.9002092070877552,
+      "epistemic": 0.0007334966683090053,
+      "input_tokens": 26,
+      "harness_probs": {
+        "cancel": 0.004062847408931702,
+        "change_address": 0.9418714046478271,
+        "other": 0.041662197560071945,
+        "refund": 0.006772400578483939,
+        "status": 0.00563110806979239
+      }
+    },
+    {
+      "id": "original-intent-03-1",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "change_address",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.003861153672914952,
+        "change_address": 0.9560571014881134,
+        "other": 0.032926786690950394,
+        "refund": 0.003388226614333689,
+        "status": 0.00376677984604612
+      },
+      "latency_s": 0.1143039440503344,
+      "margin": 0.923130314797163,
+      "epistemic": 0.001529147561867241,
+      "input_tokens": 24,
+      "harness_probs": {
+        "cancel": 0.003861153672914952,
+        "change_address": 0.9560571014881134,
+        "other": 0.032926786690950394,
+        "refund": 0.003388226614333689,
+        "status": 0.00376677984604612
+      }
+    },
+    {
+      "id": "original-intent-04-0",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "cancel",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.8015292584896088,
+        "change_address": 0.0033521733712404966,
+        "other": 0.1673879325389862,
+        "refund": 0.025571249425411224,
+        "status": 0.0021594082354567945
+      },
+      "latency_s": 0.11351947503862903,
+      "margin": 0.6341413259506226,
+      "epistemic": 0.03808416404211411,
+      "input_tokens": 29,
+      "harness_probs": {
+        "cancel": 0.8015292584896088,
+        "change_address": 0.0033521733712404966,
+        "other": 0.1673879325389862,
+        "refund": 0.025571249425411224,
+        "status": 0.0021594082354567945
+      }
+    },
+    {
+      "id": "original-intent-04-1",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "cancel",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.7054502069950104,
+        "change_address": 0.00831626052968204,
+        "other": 0.24870239943265915,
+        "refund": 0.03029339201748371,
+        "status": 0.007237733749207109
+      },
+      "latency_s": 0.11394461704185233,
+      "margin": 0.4567478075623512,
+      "epistemic": 0.05303095173606127,
+      "input_tokens": 24,
+      "harness_probs": {
+        "cancel": 0.7054502069950104,
+        "change_address": 0.00831626052968204,
+        "other": 0.24870239943265915,
+        "refund": 0.03029339201748371,
+        "status": 0.007237733749207109
+      }
+    },
+    {
+      "id": "original-intent-05-0",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "other",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.03363417973741889,
+        "change_address": 0.014990365598350763,
+        "other": 0.5704974234104156,
+        "refund": 0.3686032146215439,
+        "status": 0.012274814886040986
+      },
+      "latency_s": 0.11353373399470001,
+      "margin": 0.20189420878887177,
+      "epistemic": 0.007935809103026064,
+      "input_tokens": 24,
+      "harness_probs": {
+        "cancel": 0.03363417973741889,
+        "change_address": 0.014990365598350763,
+        "other": 0.5704974234104156,
+        "refund": 0.3686032146215439,
+        "status": 0.012274814886040986
+      }
+    },
+    {
+      "id": "original-intent-05-1",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "other",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.03310762858018279,
+        "change_address": 0.011169333476573229,
+        "other": 0.4746057540178299,
+        "refund": 0.47521814703941345,
+        "status": 0.00589913479052484
+      },
+      "latency_s": 0.1138058879878372,
+      "margin": 0.0006123930215835571,
+      "epistemic": 0.006825856951174743,
+      "input_tokens": 23,
+      "harness_probs": {
+        "cancel": 0.03310762858018279,
+        "change_address": 0.011169333476573229,
+        "other": 0.4746057540178299,
+        "refund": 0.47521814703941345,
+        "status": 0.00589913479052484
+      }
+    },
+    {
+      "id": "original-intent-06-0",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "status",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.0060859028017148376,
+        "change_address": 0.007914475863799453,
+        "other": 0.14057808741927147,
+        "refund": 0.014004725497215986,
+        "status": 0.8314167857170105
+      },
+      "latency_s": 0.11337534303311259,
+      "margin": 0.690838698297739,
+      "epistemic": 0.004310543563889002,
+      "input_tokens": 22,
+      "harness_probs": {
+        "cancel": 0.0060859028017148376,
+        "change_address": 0.007914475863799453,
+        "other": 0.14057808741927147,
+        "refund": 0.014004725497215986,
+        "status": 0.8314167857170105
+      }
+    },
+    {
+      "id": "original-intent-06-1",
+      "tier": "standard",
+      "family": "intent",
+      "kind": "choice",
+      "expected": "status",
+      "n_options": 5,
+      "probs": {
+        "cancel": 0.0037777068791911006,
+        "change_address": 0.005295441020280123,
+        "other": 0.11842210963368416,
+        "refund": 0.005515899509191513,
+        "status": 0.8669888377189636
+      },
+      "latency_s": 0.11350050498731434,
+      "margin": 0.7485667280852795,
+      "epistemic": 0.006316552682324092,
+      "input_tokens": 27,
+      "harness_probs": {
+        "cancel": 0.0037777068791911006,
+        "change_address": 0.005295441020280123,
+        "other": 0.11842210963368416,
+        "refund": 0.005515899509191513,
+        "status": 0.8669888377189636
+      }
+    },
+    {
+      "id": "original-ordinal-01-0",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "0",
+      "n_options": 4,
+      "probs": {
+        "0": 0.9657489061355591,
+        "1": 0.031987777445465326,
+        "2": 0.0014867053250782192,
+        "3": 0.0007766218041069806
+      },
+      "latency_s": 0.11373703699791804,
+      "margin": 0.9337611286900938,
+      "epistemic": 0.010915440548958504,
+      "input_tokens": 22,
+      "harness_probs": {
+        "0": 0.9657489061355591,
+        "1": 0.031987777445465326,
+        "2": 0.0014867053250782192,
+        "3": 0.0007766218041069806
+      }
+    },
+    {
+      "id": "original-ordinal-01-1",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "0",
+      "n_options": 4,
+      "probs": {
+        "0": 0.9755662977695465,
+        "1": 0.02280171401798725,
+        "2": 0.001073832856491208,
+        "3": 0.0005581125151365995
+      },
+      "latency_s": 0.11347819503862411,
+      "margin": 0.9527645837515593,
+      "epistemic": 0.0070084507491552225,
+      "input_tokens": 23,
+      "harness_probs": {
+        "0": 0.9755662977695465,
+        "1": 0.02280171401798725,
+        "2": 0.001073832856491208,
+        "3": 0.0005581125151365995
+      }
+    },
+    {
+      "id": "original-ordinal-02-0",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "1",
+      "n_options": 4,
+      "probs": {
+        "0": 0.10547249764204025,
+        "1": 0.7509830892086029,
+        "2": 0.12970160320401192,
+        "3": 0.013842778746038675
+      },
+      "latency_s": 0.11329032696085051,
+      "margin": 0.621281486004591,
+      "epistemic": 0.01221660626501018,
+      "input_tokens": 26,
+      "harness_probs": {
+        "0": 0.10547249764204025,
+        "1": 0.7509830892086029,
+        "2": 0.12970160320401192,
+        "3": 0.013842778746038675
+      }
+    },
+    {
+      "id": "original-ordinal-02-1",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "1",
+      "n_options": 4,
+      "probs": {
+        "0": 0.05802580900490284,
+        "1": 0.8974879086017609,
+        "2": 0.040759164839982986,
+        "3": 0.003727120812982321
+      },
+      "latency_s": 0.11368901102105156,
+      "margin": 0.839462099596858,
+      "epistemic": 0.008218886592461557,
+      "input_tokens": 27,
+      "harness_probs": {
+        "0": 0.05802580900490284,
+        "1": 0.8974879086017609,
+        "2": 0.040759164839982986,
+        "3": 0.003727120812982321
+      }
+    },
+    {
+      "id": "original-ordinal-03-0",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "2",
+      "n_options": 4,
+      "probs": {
+        "0": 0.028912763111293316,
+        "1": 0.046794191002845764,
+        "2": 0.832308292388916,
+        "3": 0.09198471903800964
+      },
+      "latency_s": 0.11327748995972797,
+      "margin": 0.7403235733509064,
+      "epistemic": 0.010092145881694664,
+      "input_tokens": 23,
+      "harness_probs": {
+        "0": 0.028912763111293316,
+        "1": 0.046794191002845764,
+        "2": 0.832308292388916,
+        "3": 0.09198471903800964
+      }
+    },
+    {
+      "id": "original-ordinal-03-1",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "2",
+      "n_options": 4,
+      "probs": {
+        "0": 0.10518571734428406,
+        "1": 0.18451998382806778,
+        "2": 0.527880847454071,
+        "3": 0.18241345137357712
+      },
+      "latency_s": 0.11406793497735634,
+      "margin": 0.34336086362600327,
+      "epistemic": 0.0027696335911159393,
+      "input_tokens": 25,
+      "harness_probs": {
+        "0": 0.10518571734428406,
+        "1": 0.18451998382806778,
+        "2": 0.527880847454071,
+        "3": 0.18241345137357712
+      }
+    },
+    {
+      "id": "original-ordinal-04-0",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "3",
+      "n_options": 4,
+      "probs": {
+        "0": 0.010318455751985312,
+        "1": 0.009931980748660862,
+        "2": 0.007276831544004381,
+        "3": 0.9724727272987366
+      },
+      "latency_s": 0.11357350199250504,
+      "margin": 0.9621542715467513,
+      "epistemic": 0.004025585126820321,
+      "input_tokens": 25,
+      "harness_probs": {
+        "0": 0.010318455751985312,
+        "1": 0.009931980748660862,
+        "2": 0.007276831544004381,
+        "3": 0.9724727272987366
+      }
+    },
+    {
+      "id": "original-ordinal-04-1",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "3",
+      "n_options": 4,
+      "probs": {
+        "0": 0.015581426676362753,
+        "1": 0.015712360618636012,
+        "2": 0.011420683818869293,
+        "3": 0.9572854936122894
+      },
+      "latency_s": 0.11334261199226603,
+      "margin": 0.9415731329936534,
+      "epistemic": 0.007237595609753613,
+      "input_tokens": 24,
+      "harness_probs": {
+        "0": 0.015581426676362753,
+        "1": 0.015712360618636012,
+        "2": 0.011420683818869293,
+        "3": 0.9572854936122894
+      }
+    },
+    {
+      "id": "original-ordinal-05-0",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "0",
+      "n_options": 4,
+      "probs": {
+        "0": 0.79790198802948,
+        "1": 0.10996649786829948,
+        "2": 0.0680369883775711,
+        "3": 0.02409455180168152
+      },
+      "latency_s": 0.11347604199545458,
+      "margin": 0.6879354901611805,
+      "epistemic": 0.008192630373654064,
+      "input_tokens": 28,
+      "harness_probs": {
+        "0": 0.79790198802948,
+        "1": 0.10996649786829948,
+        "2": 0.0680369883775711,
+        "3": 0.02409455180168152
+      }
+    },
+    {
+      "id": "original-ordinal-05-1",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "0",
+      "n_options": 4,
+      "probs": {
+        "0": 0.9444890022277832,
+        "1": 0.046951002441346645,
+        "2": 0.0053282605949789286,
+        "3": 0.003231753478758037
+      },
+      "latency_s": 0.11369752103928477,
+      "margin": 0.8975379997864366,
+      "epistemic": 0.012904572276963622,
+      "input_tokens": 27,
+      "harness_probs": {
+        "0": 0.9444890022277832,
+        "1": 0.046951002441346645,
+        "2": 0.0053282605949789286,
+        "3": 0.003231753478758037
+      }
+    },
+    {
+      "id": "original-ordinal-06-0",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "2",
+      "n_options": 4,
+      "probs": {
+        "0": 0.050780970603227615,
+        "1": 0.1285041607916355,
+        "2": 0.7950967252254486,
+        "3": 0.025618168991059065
+      },
+      "latency_s": 0.11346826702356339,
+      "margin": 0.6665925644338131,
+      "epistemic": 0.009743010279234715,
+      "input_tokens": 28,
+      "harness_probs": {
+        "0": 0.050780970603227615,
+        "1": 0.1285041607916355,
+        "2": 0.7950967252254486,
+        "3": 0.025618168991059065
+      }
+    },
+    {
+      "id": "original-ordinal-06-1",
+      "tier": "standard",
+      "family": "ordinal",
+      "kind": "score",
+      "expected": "2",
+      "n_options": 4,
+      "probs": {
+        "0": 0.011520702857524157,
+        "1": 0.02269770740531385,
+        "2": 0.9391835927963257,
+        "3": 0.02659798599779606
+      },
+      "latency_s": 0.11401876603486016,
+      "margin": 0.9125856067985296,
+      "epistemic": 0.008140441604933534,
+      "input_tokens": 35,
+      "harness_probs": {
+        "0": 0.011520702857524157,
+        "1": 0.02269770740531385,
+        "2": 0.9391835927963257,
+        "3": 0.02659798599779606
+      }
+    },
+    {
+      "id": "original-extraction-01-0",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "pickup",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.29939934611320496,
+        "pickup": 0.5985666662454605,
+        "post": 0.02043624804355204,
+        "unknown": 0.08159768581390381
+      },
+      "latency_s": 0.11398981098318473,
+      "margin": 0.29916732013225555,
+      "epistemic": 0.0811196482774156,
+      "input_tokens": 23,
+      "harness_probs": {
+        "courier": 0.29939934611320496,
+        "pickup": 0.5985666662454605,
+        "post": 0.02043624804355204,
+        "unknown": 0.08159768581390381
+      }
+    },
+    {
+      "id": "original-extraction-01-1",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "pickup",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.2681963387876749,
+        "pickup": 0.5477285757660866,
+        "post": 0.028815135126933455,
+        "unknown": 0.15525990165770054
+      },
+      "latency_s": 0.11351051303790882,
+      "margin": 0.2795322369784117,
+      "epistemic": 0.19365542784953915,
+      "input_tokens": 25,
+      "harness_probs": {
+        "courier": 0.2681963387876749,
+        "pickup": 0.5477285757660866,
+        "post": 0.028815135126933455,
+        "unknown": 0.15525990165770054
+      }
+    },
+    {
+      "id": "original-extraction-02-0",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "unknown",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.0299600251019001,
+        "pickup": 0.018739574123173952,
+        "post": 0.08095476031303406,
+        "unknown": 0.8703456819057465
+      },
+      "latency_s": 0.11359868501313031,
+      "margin": 0.7893909215927124,
+      "epistemic": 0.0025031103931296432,
+      "input_tokens": 26,
+      "harness_probs": {
+        "courier": 0.0299600251019001,
+        "pickup": 0.018739574123173952,
+        "post": 0.08095476031303406,
+        "unknown": 0.8703456819057465
+      }
+    },
+    {
+      "id": "original-extraction-02-1",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "unknown",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.009072714718058705,
+        "pickup": 0.010641682893037796,
+        "post": 0.01385841378942132,
+        "unknown": 0.9664272367954254
+      },
+      "latency_s": 0.11365885398117825,
+      "margin": 0.9525688230060041,
+      "epistemic": 0.002260204939014678,
+      "input_tokens": 25,
+      "harness_probs": {
+        "courier": 0.009072714718058705,
+        "pickup": 0.010641682893037796,
+        "post": 0.01385841378942132,
+        "unknown": 0.9664272367954254
+      }
+    },
+    {
+      "id": "original-extraction-03-0",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "courier",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.6403540223836899,
+        "pickup": 0.09191592037677765,
+        "post": 0.015393412206321955,
+        "unknown": 0.25233667716383934
+      },
+      "latency_s": 0.11334475997136906,
+      "margin": 0.38801734521985054,
+      "epistemic": 0.05740777374348821,
+      "input_tokens": 29,
+      "harness_probs": {
+        "courier": 0.6403540223836899,
+        "pickup": 0.09191592037677765,
+        "post": 0.015393412206321955,
+        "unknown": 0.25233667716383934
+      }
+    },
+    {
+      "id": "original-extraction-03-1",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "courier",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.9551909863948822,
+        "pickup": 0.014802859863266349,
+        "post": 0.0024309228756465018,
+        "unknown": 0.027575290179811418
+      },
+      "latency_s": 0.11332067800685763,
+      "margin": 0.9276156962150708,
+      "epistemic": 0.012224756483734488,
+      "input_tokens": 28,
+      "harness_probs": {
+        "courier": 0.9551909863948822,
+        "pickup": 0.014802859863266349,
+        "post": 0.0024309228756465018,
+        "unknown": 0.027575290179811418
+      }
+    },
+    {
+      "id": "original-extraction-04-0",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "post",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.02458251640200615,
+        "pickup": 0.03529018070548773,
+        "post": 0.8458707332611084,
+        "unknown": 0.09425660222768784
+      },
+      "latency_s": 0.11379312095232308,
+      "margin": 0.7516141310334206,
+      "epistemic": 0.004809665396380777,
+      "input_tokens": 26,
+      "harness_probs": {
+        "courier": 0.02458251640200615,
+        "pickup": 0.03529018070548773,
+        "post": 0.8458707332611084,
+        "unknown": 0.09425660222768784
+      }
+    },
+    {
+      "id": "original-extraction-04-1",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "post",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.027151391841471195,
+        "pickup": 0.022842650301754475,
+        "post": 0.8939534723758698,
+        "unknown": 0.05605248361825943
+      },
+      "latency_s": 0.11340423504589126,
+      "margin": 0.8379009887576103,
+      "epistemic": 0.0022346580367935773,
+      "input_tokens": 23,
+      "harness_probs": {
+        "courier": 0.027151391841471195,
+        "pickup": 0.022842650301754475,
+        "post": 0.8939534723758698,
+        "unknown": 0.05605248361825943
+      }
+    },
+    {
+      "id": "original-extraction-05-0",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "unknown",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.018535041250288486,
+        "pickup": 0.009487770614214242,
+        "post": 0.002801089925924316,
+        "unknown": 0.9691760540008545
+      },
+      "latency_s": 0.11319037602515891,
+      "margin": 0.950641012750566,
+      "epistemic": 0.0029876719896089637,
+      "input_tokens": 26,
+      "harness_probs": {
+        "courier": 0.018535041250288486,
+        "pickup": 0.009487770614214242,
+        "post": 0.002801089925924316,
+        "unknown": 0.9691760540008545
+      }
+    },
+    {
+      "id": "original-extraction-05-1",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "unknown",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.040495309978723526,
+        "pickup": 0.01436982722952962,
+        "post": 0.004815716878511012,
+        "unknown": 0.9403190910816193
+      },
+      "latency_s": 0.11369858100079,
+      "margin": 0.8998237811028957,
+      "epistemic": 0.006677470004576313,
+      "input_tokens": 22,
+      "harness_probs": {
+        "courier": 0.040495309978723526,
+        "pickup": 0.01436982722952962,
+        "post": 0.004815716878511012,
+        "unknown": 0.9403190910816193
+      }
+    },
+    {
+      "id": "original-extraction-06-0",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "courier",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.8923526108264923,
+        "pickup": 0.012102801818400621,
+        "post": 0.014757323078811169,
+        "unknown": 0.08078724064398557
+      },
+      "latency_s": 0.11359795200405642,
+      "margin": 0.8115653701825067,
+      "epistemic": 0.04081546502851749,
+      "input_tokens": 26,
+      "harness_probs": {
+        "courier": 0.8923526108264923,
+        "pickup": 0.012102801818400621,
+        "post": 0.014757323078811169,
+        "unknown": 0.08078724064398557
+      }
+    },
+    {
+      "id": "original-extraction-06-1",
+      "tier": "standard",
+      "family": "extraction",
+      "kind": "choice",
+      "expected": "courier",
+      "n_options": 4,
+      "probs": {
+        "courier": 0.7899695932865143,
+        "pickup": 0.027031274512410164,
+        "post": 0.02475259779021144,
+        "unknown": 0.15824652882292867
+      },
+      "latency_s": 0.11316313204588369,
+      "margin": 0.6317230644635856,
+      "epistemic": 0.07079810401773137,
+      "input_tokens": 25,
+      "harness_probs": {
+        "courier": 0.7899695932865143,
+        "pickup": 0.027031274512410164,
+        "post": 0.02475259779021144,
+        "unknown": 0.15824652882292867
+      }
+    },
+    {
+      "id": "original-adequacy-01-0",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.7743165493011475,
+        "false": 0.22568346560001373
+      },
+      "latency_s": 0.11398719099815935,
+      "margin": 0.5486330837011337,
+      "epistemic": 0.007762358992836932,
+      "input_tokens": 31,
+      "harness_probs": {
+        "yes": 0.7743165493011475,
+        "no": 0.22568346560001373
+      }
+    },
+    {
+      "id": "original-adequacy-01-1",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5604470670223236,
+        "false": 0.4395528957247734
+      },
+      "latency_s": 0.11326020199339837,
+      "margin": 0.1208941712975502,
+      "epistemic": 0.26699472310419575,
+      "input_tokens": 27,
+      "harness_probs": {
+        "yes": 0.5604470670223236,
+        "no": 0.4395528957247734
+      }
+    },
+    {
+      "id": "original-adequacy-02-0",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.1434561349451542,
+        "false": 0.8565438687801361
+      },
+      "latency_s": 0.11289809294976294,
+      "margin": 0.7130877338349819,
+      "epistemic": 0.020501181814392373,
+      "input_tokens": 28,
+      "harness_probs": {
+        "yes": 0.1434561349451542,
+        "no": 0.8565438687801361
+      }
+    },
+    {
+      "id": "original-adequacy-02-1",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.06871859170496464,
+        "false": 0.9312813878059387
+      },
+      "latency_s": 0.11371662595774978,
+      "margin": 0.8625627961009741,
+      "epistemic": 0.008192530955992285,
+      "input_tokens": 29,
+      "harness_probs": {
+        "yes": 0.06871859170496464,
+        "no": 0.9312813878059387
+      }
+    },
+    {
+      "id": "original-adequacy-03-0",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6067657172679901,
+        "false": 0.3932342976331711
+      },
+      "latency_s": 0.11362938402453437,
+      "margin": 0.21353141963481903,
+      "epistemic": 0.006020772346530904,
+      "input_tokens": 31,
+      "harness_probs": {
+        "yes": 0.6067657172679901,
+        "no": 0.3932342976331711
+      }
+    },
+    {
+      "id": "original-adequacy-03-1",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.515604704618454,
+        "false": 0.4843953251838684
+      },
+      "latency_s": 0.11316883901599795,
+      "margin": 0.03120937943458557,
+      "epistemic": 0.0007034105201033305,
+      "input_tokens": 35,
+      "harness_probs": {
+        "yes": 0.515604704618454,
+        "no": 0.4843953251838684
+      }
+    },
+    {
+      "id": "original-adequacy-04-0",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6697382032871246,
+        "false": 0.33026180416345596
+      },
+      "latency_s": 0.11339185998076573,
+      "margin": 0.33947639912366867,
+      "epistemic": 0.038251788031717054,
+      "input_tokens": 35,
+      "harness_probs": {
+        "yes": 0.6697382032871246,
+        "no": 0.33026180416345596
+      }
+    },
+    {
+      "id": "original-adequacy-04-1",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.43806204199790955,
+        "false": 0.5619380176067352
+      },
+      "latency_s": 0.11459266499150544,
+      "margin": 0.12387597560882568,
+      "epistemic": 0.002768864352160138,
+      "input_tokens": 32,
+      "harness_probs": {
+        "yes": 0.43806204199790955,
+        "no": 0.5619380176067352
+      }
+    },
+    {
+      "id": "original-adequacy-05-0",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.3793223798274994,
+        "false": 0.6206776201725006
+      },
+      "latency_s": 0.11347456800285727,
+      "margin": 0.24135524034500122,
+      "epistemic": 0.010517672231599521,
+      "input_tokens": 24,
+      "harness_probs": {
+        "yes": 0.3793223798274994,
+        "no": 0.6206776201725006
+      }
+    },
+    {
+      "id": "original-adequacy-05-1",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5872878432273865,
+        "false": 0.4127121865749359
+      },
+      "latency_s": 0.11376326601020992,
+      "margin": 0.17457565665245056,
+      "epistemic": 0.042256856345086885,
+      "input_tokens": 25,
+      "harness_probs": {
+        "yes": 0.5872878432273865,
+        "no": 0.4127121865749359
+      }
+    },
+    {
+      "id": "original-adequacy-06-0",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6028925180435181,
+        "false": 0.39710748195648193
+      },
+      "latency_s": 0.11334104801062495,
+      "margin": 0.20578503608703613,
+      "epistemic": 0.03218144765314266,
+      "input_tokens": 40,
+      "harness_probs": {
+        "yes": 0.6028925180435181,
+        "no": 0.39710748195648193
+      }
+    },
+    {
+      "id": "original-adequacy-06-1",
+      "tier": "standard",
+      "family": "adequacy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.40768207609653473,
+        "false": 0.5923179388046265
+      },
+      "latency_s": 0.11333235900383443,
+      "margin": 0.18463586270809174,
+      "epistemic": 0.0027158530182188165,
+      "input_tokens": 42,
+      "harness_probs": {
+        "yes": 0.40768207609653473,
+        "no": 0.5923179388046265
+      }
+    },
+    {
+      "id": "original-routing-01-0",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "math",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.019734052941203117,
+        "coding_agent": 0.009245427791029215,
+        "document": 0.001741925865644589,
+        "general": 0.1653076745569706,
+        "math": 0.8014541566371918,
+        "tools": 0.0025167389248963445
+      },
+      "latency_s": 0.11372243898222223,
+      "margin": 0.6361464820802212,
+      "epistemic": 0.007604874297576833,
+      "input_tokens": 26,
+      "harness_probs": {
+        "coding": 0.019734052941203117,
+        "coding_agent": 0.009245427791029215,
+        "document": 0.001741925865644589,
+        "general": 0.1653076745569706,
+        "math": 0.8014541566371918,
+        "tools": 0.0025167389248963445
+      }
+    },
+    {
+      "id": "original-routing-01-1",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "math",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.015414809342473745,
+        "coding_agent": 0.009991917526349425,
+        "document": 0.0015872899093665183,
+        "general": 0.1260172203183174,
+        "math": 0.8437798619270325,
+        "tools": 0.003208901296602562
+      },
+      "latency_s": 0.11354777700034901,
+      "margin": 0.7177626416087151,
+      "epistemic": 0.0056996813394679935,
+      "input_tokens": 22,
+      "harness_probs": {
+        "coding": 0.015414809342473745,
+        "coding_agent": 0.009991917526349425,
+        "document": 0.0015872899093665183,
+        "general": 0.1260172203183174,
+        "math": 0.8437798619270325,
+        "tools": 0.003208901296602562
+      }
+    },
+    {
+      "id": "original-routing-02-0",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "coding",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.8198935985565186,
+        "coding_agent": 0.014025885611772537,
+        "document": 0.0026090919855050743,
+        "general": 0.16166259348392487,
+        "math": 0.000995119393337518,
+        "tools": 0.0008137136173900217
+      },
+      "latency_s": 0.11289522500010207,
+      "margin": 0.6582310050725937,
+      "epistemic": 0.023323074518096756,
+      "input_tokens": 27,
+      "harness_probs": {
+        "coding": 0.8198935985565186,
+        "coding_agent": 0.014025885611772537,
+        "document": 0.0026090919855050743,
+        "general": 0.16166259348392487,
+        "math": 0.000995119393337518,
+        "tools": 0.0008137136173900217
+      }
+    },
+    {
+      "id": "original-routing-02-1",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "coding",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.8180787861347198,
+        "coding_agent": 0.0040484367636963725,
+        "document": 0.0013193806225899607,
+        "general": 0.17580910958349705,
+        "math": 0.00044994989002589136,
+        "tools": 0.00029439362697303295
+      },
+      "latency_s": 0.11365591600770131,
+      "margin": 0.6422696765512228,
+      "epistemic": 0.044679632273966007,
+      "input_tokens": 21,
+      "harness_probs": {
+        "coding": 0.8180787861347198,
+        "coding_agent": 0.0040484367636963725,
+        "document": 0.0013193806225899607,
+        "general": 0.17580910958349705,
+        "math": 0.00044994989002589136,
+        "tools": 0.00029439362697303295
+      }
+    },
+    {
+      "id": "original-routing-03-0",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "coding_agent",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.01817090716212988,
+        "coding_agent": 0.9369550943374634,
+        "document": 0.001281937991734594,
+        "general": 0.03974647028371692,
+        "math": 0.0006680336082354188,
+        "tools": 0.0031775112729519606
+      },
+      "latency_s": 0.11290944501524791,
+      "margin": 0.8972086240537465,
+      "epistemic": 0.006311414592841912,
+      "input_tokens": 26,
+      "harness_probs": {
+        "coding": 0.01817090716212988,
+        "coding_agent": 0.9369550943374634,
+        "document": 0.001281937991734594,
+        "general": 0.03974647028371692,
+        "math": 0.0006680336082354188,
+        "tools": 0.0031775112729519606
+      }
+    },
+    {
+      "id": "original-routing-03-1",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "coding_agent",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.03695514518767595,
+        "coding_agent": 0.9353104829788208,
+        "document": 0.0024684712989255786,
+        "general": 0.021299998741596937,
+        "math": 0.0008047035662457347,
+        "tools": 0.003161190077662468
+      },
+      "latency_s": 0.11390381399542093,
+      "margin": 0.8983553377911448,
+      "epistemic": 0.005242789617954421,
+      "input_tokens": 28,
+      "harness_probs": {
+        "coding": 0.03695514518767595,
+        "coding_agent": 0.9353104829788208,
+        "document": 0.0024684712989255786,
+        "general": 0.021299998741596937,
+        "math": 0.0008047035662457347,
+        "tools": 0.003161190077662468
+      }
+    },
+    {
+      "id": "original-routing-04-0",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "document",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.01093444786965847,
+        "coding_agent": 0.01511002890765667,
+        "document": 0.9102075397968292,
+        "general": 0.034969158470630646,
+        "math": 0.002871305972803384,
+        "tools": 0.0259075288195163
+      },
+      "latency_s": 0.1134250329923816,
+      "margin": 0.8752383813261986,
+      "epistemic": 0.008831943337538636,
+      "input_tokens": 22,
+      "harness_probs": {
+        "coding": 0.01093444786965847,
+        "coding_agent": 0.01511002890765667,
+        "document": 0.9102075397968292,
+        "general": 0.034969158470630646,
+        "math": 0.002871305972803384,
+        "tools": 0.0259075288195163
+      }
+    },
+    {
+      "id": "original-routing-04-1",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "document",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.04173600394278765,
+        "coding_agent": 0.02756454609334469,
+        "document": 0.657307356595993,
+        "general": 0.21195290237665176,
+        "math": 0.0059808577643707395,
+        "tools": 0.05545831238850951
+      },
+      "latency_s": 0.11372682201908901,
+      "margin": 0.4453544542193413,
+      "epistemic": 0.021111431466938578,
+      "input_tokens": 21,
+      "harness_probs": {
+        "coding": 0.04173600394278765,
+        "coding_agent": 0.02756454609334469,
+        "document": 0.657307356595993,
+        "general": 0.21195290237665176,
+        "math": 0.0059808577643707395,
+        "tools": 0.05545831238850951
+      }
+    },
+    {
+      "id": "original-routing-05-0",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "tools",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.0024457628605887294,
+        "coding_agent": 0.004647513502277434,
+        "document": 0.001965625095181167,
+        "general": 0.0616230359300971,
+        "math": 0.000959283352131024,
+        "tools": 0.928358793258667
+      },
+      "latency_s": 0.11292092798976228,
+      "margin": 0.8667357573285699,
+      "epistemic": 0.011530091822224016,
+      "input_tokens": 23,
+      "harness_probs": {
+        "coding": 0.0024457628605887294,
+        "coding_agent": 0.004647513502277434,
+        "document": 0.001965625095181167,
+        "general": 0.0616230359300971,
+        "math": 0.000959283352131024,
+        "tools": 0.928358793258667
+      }
+    },
+    {
+      "id": "original-routing-05-1",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "tools",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.004510885046329349,
+        "coding_agent": 0.009894409100525081,
+        "document": 0.0020689232042059302,
+        "general": 0.19876046106219292,
+        "math": 0.0011239014856982976,
+        "tools": 0.7836413681507111
+      },
+      "latency_s": 0.1129009950091131,
+      "margin": 0.5848809070885181,
+      "epistemic": 0.027613897824061113,
+      "input_tokens": 23,
+      "harness_probs": {
+        "coding": 0.004510885046329349,
+        "coding_agent": 0.009894409100525081,
+        "document": 0.0020689232042059302,
+        "general": 0.19876046106219292,
+        "math": 0.0011239014856982976,
+        "tools": 0.7836413681507111
+      }
+    },
+    {
+      "id": "original-routing-06-0",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "general",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.0303760077804327,
+        "coding_agent": 0.009616854600608349,
+        "document": 0.005101547110825777,
+        "general": 0.9415950179100037,
+        "math": 0.003390887111891061,
+        "tools": 0.009919636184349656
+      },
+      "latency_s": 0.11286431603366509,
+      "margin": 0.911219010129571,
+      "epistemic": 0.003993255132374993,
+      "input_tokens": 22,
+      "harness_probs": {
+        "coding": 0.0303760077804327,
+        "coding_agent": 0.009616854600608349,
+        "document": 0.005101547110825777,
+        "general": 0.9415950179100037,
+        "math": 0.003390887111891061,
+        "tools": 0.009919636184349656
+      }
+    },
+    {
+      "id": "original-routing-06-1",
+      "tier": "standard",
+      "family": "routing",
+      "kind": "choice",
+      "expected": "general",
+      "n_options": 6,
+      "probs": {
+        "coding": 0.0197198623791337,
+        "coding_agent": 0.005837026867084205,
+        "document": 0.001645134121645242,
+        "general": 0.9656697511672974,
+        "math": 0.0023634476237930357,
+        "tools": 0.004764720622915775
+      },
+      "latency_s": 0.1130489069619216,
+      "margin": 0.9459498887881637,
+      "epistemic": 0.0018475852497463665,
+      "input_tokens": 21,
+      "harness_probs": {
+        "coding": 0.0197198623791337,
+        "coding_agent": 0.005837026867084205,
+        "document": 0.001645134121645242,
+        "general": 0.9656697511672974,
+        "math": 0.0023634476237930357,
+        "tools": 0.004764720622915775
+      }
+    },
+    {
+      "id": "hard-opus-a-long_policy-01",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "pay_subject_to_15000_sublimit",
+      "n_options": 5,
+      "probs": {
+        "deny_repeated_seepage": 0.029558892361819744,
+        "deny_vacancy_exclusion": 0.054670244455337524,
+        "pay_full_estimate_less_deductible": 0.020062766037881374,
+        "pay_subject_to_10000_sublimit": 0.3782825767993927,
+        "pay_subject_to_15000_sublimit": 0.5174255818128586
+      },
+      "latency_s": 0.7874976260354742,
+      "margin": 0.13914300501346588,
+      "epistemic": 0.001792001076345486,
+      "input_tokens": 3676,
+      "harness_probs": {
+        "deny_repeated_seepage": 0.029558892361819744,
+        "deny_vacancy_exclusion": 0.054670244455337524,
+        "pay_full_estimate_less_deductible": 0.020062766037881374,
+        "pay_subject_to_10000_sublimit": 0.3782825767993927,
+        "pay_subject_to_15000_sublimit": 0.5174255818128586
+      }
+    },
+    {
+      "id": "hard-opus-a-long_policy-04",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "cfo",
+      "n_options": 5,
+      "probs": {
+        "budget_holder": 0.11726947873830795,
+        "cfo": 0.20787355303764343,
+        "department_head": 0.1515321359038353,
+        "executive_committee": 0.054497865960001945,
+        "vp_and_finance_director": 0.4688269793987274
+      },
+      "latency_s": 0.5025244320277125,
+      "margin": 0.260953426361084,
+      "epistemic": 0.007236433504272445,
+      "input_tokens": 2406,
+      "harness_probs": {
+        "budget_holder": 0.11726947873830795,
+        "cfo": 0.20787355303764343,
+        "department_head": 0.1515321359038353,
+        "executive_committee": 0.054497865960001945,
+        "vp_and_finance_director": 0.4688269793987274
+      }
+    },
+    {
+      "id": "hard-opus-a-long_policy-08",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "parts_covered_labour_charged",
+      "n_options": 4,
+      "probs": {
+        "full_repair_no_charge": 0.06750433333218098,
+        "not_covered": 0.2579880692064762,
+        "parts_covered_labour_charged": 0.6567463278770447,
+        "pro_rata_replacement_credit": 0.017761316616088152
+      },
+      "latency_s": 0.46428152004955336,
+      "margin": 0.39875825867056847,
+      "epistemic": 0.06313693462924465,
+      "input_tokens": 2236,
+      "harness_probs": {
+        "full_repair_no_charge": 0.06750433333218098,
+        "not_covered": 0.2579880692064762,
+        "parts_covered_labour_charged": 0.6567463278770447,
+        "pro_rata_replacement_credit": 0.017761316616088152
+      }
+    },
+    {
+      "id": "hard-opus-a-long_policy-09",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "license_required",
+      "n_options": 4,
+      "probs": {
+        "license_exception_lvs": 0.13529758900403976,
+        "license_required": 0.5061300098896027,
+        "no_license_required": 0.15311318263411522,
+        "shipment_prohibited": 0.20545917749404907
+      },
+      "latency_s": 0.5219941799878143,
+      "margin": 0.3006708323955536,
+      "epistemic": 0.03176996292036634,
+      "input_tokens": 2375,
+      "harness_probs": {
+        "license_exception_lvs": 0.13529758900403976,
+        "license_required": 0.5061300098896027,
+        "no_license_required": 0.15311318263411522,
+        "shipment_prohibited": 0.20545917749404907
+      }
+    },
+    {
+      "id": "hard-opus-a-long_policy-11",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5612296760082245,
+        "false": 0.4387703388929367
+      },
+      "latency_s": 0.4517361610196531,
+      "margin": 0.12245933711528778,
+      "epistemic": 0.011011995228017801,
+      "input_tokens": 2213,
+      "harness_probs": {
+        "yes": 0.5612296760082245,
+        "no": 0.4387703388929367
+      }
+    },
+    {
+      "id": "hard-opus-a-long_policy-13",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.10441121086478233,
+        "false": 0.8955887854099274
+      },
+      "latency_s": 0.4748589829541743,
+      "margin": 0.791177574545145,
+      "epistemic": 0.006361670441950003,
+      "input_tokens": 2319,
+      "harness_probs": {
+        "yes": 0.10441121086478233,
+        "no": 0.8955887854099274
+      }
+    },
+    {
+      "id": "hard-opus-a-long_policy-17",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "database_oncall",
+      "n_options": 5,
+      "probs": {
+        "database_oncall": 0.33209460228681564,
+        "no_page_ticket_only": 0.4953608065843582,
+        "platform_oncall": 0.06907486077398062,
+        "security_incident_response": 0.08807235956192017,
+        "vendor_support": 0.015397352632135153
+      },
+      "latency_s": 0.4611441090237349,
+      "margin": 0.16326620429754257,
+      "epistemic": 0.049297777959070935,
+      "input_tokens": 2219,
+      "harness_probs": {
+        "database_oncall": 0.33209460228681564,
+        "no_page_ticket_only": 0.4953608065843582,
+        "platform_oncall": 0.06907486077398062,
+        "security_incident_response": 0.08807235956192017,
+        "vendor_support": 0.015397352632135153
+      }
+    },
+    {
+      "id": "hard-opus-a-long_policy-19",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.3932342976331711,
+        "false": 0.6067657172679901
+      },
+      "latency_s": 0.4516480609891005,
+      "margin": 0.21353141963481903,
+      "epistemic": 0.006020772346530904,
+      "input_tokens": 2227,
+      "harness_probs": {
+        "yes": 0.3932342976331711,
+        "no": 0.6067657172679901
+      }
+    },
+    {
+      "id": "hard-opus-a-probability-03",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5398518592119217,
+        "false": 0.4601481556892395
+      },
+      "latency_s": 0.11594762001186609,
+      "margin": 0.07970370352268219,
+      "epistemic": 0.10901579128583241,
+      "input_tokens": 347,
+      "harness_probs": {
+        "yes": 0.5398518592119217,
+        "no": 0.4601481556892395
+      }
+    },
+    {
+      "id": "hard-opus-a-probability-04",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "choice",
+      "expected": "on_time",
+      "n_options": 3,
+      "probs": {
+        "early": 0.2581748589873314,
+        "late": 0.5822550654411316,
+        "on_time": 0.15957008302211761
+      },
+      "latency_s": 0.21170690399594605,
+      "margin": 0.3240802064538002,
+      "epistemic": 0.006736303951085371,
+      "input_tokens": 1014,
+      "harness_probs": {
+        "early": 0.2581748589873314,
+        "late": 0.5822550654411316,
+        "on_time": 0.15957008302211761
+      }
+    },
+    {
+      "id": "hard-opus-a-probability-07",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "choice",
+      "expected": "escalated",
+      "n_options": 3,
+      "probs": {
+        "escalated": 0.29168253391981125,
+        "reopened": 0.14604490250349045,
+        "resolved_first_contact": 0.5622725933790207
+      },
+      "latency_s": 0.2363251320202835,
+      "margin": 0.27059005945920944,
+      "epistemic": 0.03748395504043904,
+      "input_tokens": 1133,
+      "harness_probs": {
+        "escalated": 0.29168253391981125,
+        "reopened": 0.14604490250349045,
+        "resolved_first_contact": 0.5622725933790207
+      }
+    },
+    {
+      "id": "hard-opus-a-probability-08",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.48510365188121796,
+        "false": 0.5148963928222656
+      },
+      "latency_s": 0.11526428902288899,
+      "margin": 0.02979274094104767,
+      "epistemic": 0.033676840605650564,
+      "input_tokens": 323,
+      "harness_probs": {
+        "yes": 0.48510365188121796,
+        "no": 0.5148963928222656
+      }
+    },
+    {
+      "id": "hard-opus-a-temporal_numeric-03",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.34145423769950867,
+        "false": 0.6585457623004913
+      },
+      "latency_s": 0.11729579698294401,
+      "margin": 0.31709152460098267,
+      "epistemic": 0.030097981510731675,
+      "input_tokens": 403,
+      "harness_probs": {
+        "yes": 0.34145423769950867,
+        "no": 0.6585457623004913
+      }
+    },
+    {
+      "id": "hard-opus-a-temporal_numeric-06",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.4509394243359566,
+        "false": 0.549060583114624
+      },
+      "latency_s": 0.11969192000105977,
+      "margin": 0.09812115877866745,
+      "epistemic": 0.15787403060882468,
+      "input_tokens": 424,
+      "harness_probs": {
+        "yes": 0.4509394243359566,
+        "no": 0.549060583114624
+      }
+    },
+    {
+      "id": "hard-opus-a-temporal_numeric-07",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "sep_26",
+      "n_options": 5,
+      "probs": {
+        "sep_24": 0.09154804423451424,
+        "sep_25": 0.1564369723200798,
+        "sep_26": 0.4633219987154007,
+        "sep_27": 0.2009117603302002,
+        "sep_28": 0.08778121694922447
+      },
+      "latency_s": 0.23969585401937366,
+      "margin": 0.2624102383852005,
+      "epistemic": 0.02096331397261088,
+      "input_tokens": 1187,
+      "harness_probs": {
+        "sep_24": 0.09154804423451424,
+        "sep_25": 0.1564369723200798,
+        "sep_26": 0.4633219987154007,
+        "sep_27": 0.2009117603302002,
+        "sep_28": 0.08778121694922447
+      }
+    },
+    {
+      "id": "hard-opus-a-temporal_numeric-09",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.39710748195648193,
+        "false": 0.6028925180435181
+      },
+      "latency_s": 0.11857758596306667,
+      "margin": 0.20578503608703613,
+      "epistemic": 0.03218144765314266,
+      "input_tokens": 419,
+      "harness_probs": {
+        "yes": 0.39710748195648193,
+        "no": 0.6028925180435181
+      }
+    },
+    {
+      "id": "hard-opus-a-temporal_numeric-12",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "score",
+      "expected": "1",
+      "n_options": 4,
+      "probs": {
+        "0": 0.07150707580149174,
+        "1": 0.07539104670286179,
+        "2": 0.1850924789905548,
+        "3": 0.6680094301700592
+      },
+      "latency_s": 0.12129435897804797,
+      "margin": 0.4829169511795044,
+      "epistemic": 0.006297122321378641,
+      "input_tokens": 503,
+      "harness_probs": {
+        "0": 0.07150707580149174,
+        "1": 0.07539104670286179,
+        "2": 0.1850924789905548,
+        "3": 0.6680094301700592
+      }
+    },
+    {
+      "id": "hard-opus-b-ambiguous-02",
+      "tier": "hard",
+      "family": "ambiguous",
+      "kind": "choice",
+      "expected": "real_incident",
+      "n_options": 3,
+      "probs": {
+        "cannot_determine": 0.04471006337553263,
+        "false_positive": 0.366586834192276,
+        "real_incident": 0.5887030959129333
+      },
+      "latency_s": 0.11822061403654516,
+      "margin": 0.22211626172065735,
+      "epistemic": 0.02087682247119949,
+      "input_tokens": 438,
+      "harness_probs": {
+        "cannot_determine": 0.04471006337553263,
+        "false_positive": 0.366586834192276,
+        "real_incident": 0.5887030959129333
+      }
+    },
+    {
+      "id": "hard-opus-b-ambiguous-03",
+      "tier": "hard",
+      "family": "ambiguous",
+      "kind": "choice",
+      "expected": "time_barred",
+      "n_options": 3,
+      "probs": {
+        "insufficient_information": 0.10585355944931507,
+        "time_barred": 0.4863227754831314,
+        "within_limitation": 0.40782368928194046
+      },
+      "latency_s": 0.11788987601175904,
+      "margin": 0.07849908620119095,
+      "epistemic": 0.15855751935129028,
+      "input_tokens": 377,
+      "harness_probs": {
+        "insufficient_information": 0.10585355944931507,
+        "time_barred": 0.4863227754831314,
+        "within_limitation": 0.40782368928194046
+      }
+    },
+    {
+      "id": "hard-opus-b-ambiguous-07",
+      "tier": "hard",
+      "family": "ambiguous",
+      "kind": "choice",
+      "expected": "within_policy",
+      "n_options": 3,
+      "probs": {
+        "insufficient_information": 0.05138481268659234,
+        "over_limit": 0.7657271325588226,
+        "within_policy": 0.18288803845643997
+      },
+      "latency_s": 0.11753238004166633,
+      "margin": 0.5828390941023827,
+      "epistemic": 0.0635139646937652,
+      "input_tokens": 399,
+      "harness_probs": {
+        "insufficient_information": 0.05138481268659234,
+        "over_limit": 0.7657271325588226,
+        "within_policy": 0.18288803845643997
+      }
+    },
+    {
+      "id": "hard-opus-b-ambiguous-09",
+      "tier": "hard",
+      "family": "ambiguous",
+      "kind": "choice",
+      "expected": "legitimate",
+      "n_options": 3,
+      "probs": {
+        "compromised": 0.4467584565281868,
+        "inconclusive": 0.026306962361559272,
+        "legitimate": 0.5269345790147781
+      },
+      "latency_s": 0.12175856699468568,
+      "margin": 0.08017612248659134,
+      "epistemic": 0.1265514725954804,
+      "input_tokens": 537,
+      "harness_probs": {
+        "compromised": 0.4467584565281868,
+        "inconclusive": 0.026306962361559272,
+        "legitimate": 0.5269345790147781
+      }
+    },
+    {
+      "id": "hard-opus-b-ambiguous-10",
+      "tier": "hard",
+      "family": "ambiguous",
+      "kind": "choice",
+      "expected": "ask_user_which_alex",
+      "n_options": 3,
+      "probs": {
+        "ask_user_which_alex": 0.738854169845581,
+        "send_to_alex_moreno": 0.18177555128932,
+        "send_to_alexandra_lind": 0.07937023602426052
+      },
+      "latency_s": 0.11620464397128671,
+      "margin": 0.5570786185562611,
+      "epistemic": 0.06568800158830172,
+      "input_tokens": 356,
+      "harness_probs": {
+        "ask_user_which_alex": 0.738854169845581,
+        "send_to_alex_moreno": 0.18177555128932,
+        "send_to_alexandra_lind": 0.07937023602426052
+      }
+    },
+    {
+      "id": "hard-opus-b-ambiguous-11",
+      "tier": "hard",
+      "family": "ambiguous",
+      "kind": "choice",
+      "expected": "cannot_determine",
+      "n_options": 3,
+      "probs": {
+        "cannot_determine": 0.7931869328022003,
+        "grade_correct": 0.022434058599174023,
+        "grade_should_be_higher": 0.18437902186997235
+      },
+      "latency_s": 0.11679964099312201,
+      "margin": 0.608807910932228,
+      "epistemic": 0.13037070451025365,
+      "input_tokens": 364,
+      "harness_probs": {
+        "cannot_determine": 0.7931869328022003,
+        "grade_correct": 0.022434058599174023,
+        "grade_should_be_higher": 0.18437902186997235
+      }
+    },
+    {
+      "id": "hard-opus-b-ambiguous-13",
+      "tier": "hard",
+      "family": "ambiguous",
+      "kind": "choice",
+      "expected": "cannot_determine",
+      "n_options": 4,
+      "probs": {
+        "cannot_determine": 0.8120230138301849,
+        "charge_data_team": 0.015463025076314807,
+        "charge_platform_team": 0.007385923352558166,
+        "split_50_50": 0.16512805595993996
+      },
+      "latency_s": 0.12295499298488721,
+      "margin": 0.646894957870245,
+      "epistemic": 0.04584356598243011,
+      "input_tokens": 462,
+      "harness_probs": {
+        "cannot_determine": 0.8120230138301849,
+        "charge_data_team": 0.015463025076314807,
+        "charge_platform_team": 0.007385923352558166,
+        "split_50_50": 0.16512805595993996
+      }
+    },
+    {
+      "id": "hard-opus-b-multi_hop-03",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "tier3_cfo",
+      "n_options": 4,
+      "probs": {
+        "tier1_team_lead": 0.09261668846011162,
+        "tier2_department_head": 0.19932067394256592,
+        "tier3_cfo": 0.5119931250810623,
+        "tier4_board": 0.19606952369213104
+      },
+      "latency_s": 0.5697737430455163,
+      "margin": 0.3126724511384964,
+      "epistemic": 0.034008470547443076,
+      "input_tokens": 2850,
+      "harness_probs": {
+        "tier1_team_lead": 0.09261668846011162,
+        "tier2_department_head": 0.19932067394256592,
+        "tier3_cfo": 0.5119931250810623,
+        "tier4_board": 0.19606952369213104
+      }
+    },
+    {
+      "id": "hard-opus-b-multi_hop-04",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "bjorn",
+      "n_options": 6,
+      "probs": {
+        "ana": 0.0874522402882576,
+        "bjorn": 0.040201704017817974,
+        "chen": 0.0517607182264328,
+        "dmitri": 0.1769041232764721,
+        "esra": 0.04680981021374464,
+        "no_page_ticket_only": 0.5968714207410812
+      },
+      "latency_s": 0.46889158099656925,
+      "margin": 0.41996729746460915,
+      "epistemic": 0.017926593392300304,
+      "input_tokens": 2237,
+      "harness_probs": {
+        "ana": 0.0874522402882576,
+        "bjorn": 0.040201704017817974,
+        "chen": 0.0517607182264328,
+        "dmitri": 0.1769041232764721,
+        "esra": 0.04680981021374464,
+        "no_page_ticket_only": 0.5968714207410812
+      }
+    },
+    {
+      "id": "hard-opus-b-multi_hop-05",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "score",
+      "expected": "2",
+      "n_options": 5,
+      "probs": {
+        "0": 0.2009061649441719,
+        "1": 0.21063418686389923,
+        "2": 0.1601073443889618,
+        "3": 0.19520560652017593,
+        "4": 0.23314669728279114
+      },
+      "latency_s": 0.4900001100031659,
+      "margin": 0.022512510418891907,
+      "epistemic": 0.04619224577929496,
+      "input_tokens": 2462,
+      "harness_probs": {
+        "0": 0.2009061649441719,
+        "1": 0.21063418686389923,
+        "2": 0.1601073443889618,
+        "3": 0.19520560652017593,
+        "4": 0.23314669728279114
+      }
+    },
+    {
+      "id": "hard-opus-b-multi_hop-07",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "credit_20_percent",
+      "n_options": 6,
+      "probs": {
+        "credit_10_percent": 0.19085718132555485,
+        "credit_20_percent": 0.14295866154134274,
+        "credit_25_percent": 0.3969823718070984,
+        "credit_50_percent": 0.1400759331882,
+        "credit_full_month": 0.03332948684692383,
+        "no_credit": 0.09579634480178356
+      },
+      "latency_s": 0.5172917689778842,
+      "margin": 0.20612519048154354,
+      "epistemic": 0.1009636623596253,
+      "input_tokens": 2470,
+      "harness_probs": {
+        "credit_10_percent": 0.19085718132555485,
+        "credit_20_percent": 0.14295866154134274,
+        "credit_25_percent": 0.3969823718070984,
+        "credit_50_percent": 0.1400759331882,
+        "credit_full_month": 0.03332948684692383,
+        "no_credit": 0.09579634480178356
+      }
+    },
+    {
+      "id": "hard-opus-b-multi_hop-08",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.3381374180316925,
+        "false": 0.6618626117706299
+      },
+      "latency_s": 0.44958187302108854,
+      "margin": 0.3237251937389374,
+      "epistemic": 0.015514889688046155,
+      "input_tokens": 2200,
+      "harness_probs": {
+        "yes": 0.3381374180316925,
+        "no": 0.6618626117706299
+      }
+    },
+    {
+      "id": "hard-opus-b-probability-01",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "choice",
+      "expected": "merchant_wins",
+      "n_options": 3,
+      "probs": {
+        "customer_wins": 0.31065672636032104,
+        "customer_withdraws": 0.21257146447896957,
+        "merchant_wins": 0.4767718017101288
+      },
+      "latency_s": 0.38232034200336784,
+      "margin": 0.16611507534980774,
+      "epistemic": 0.004392564976705061,
+      "input_tokens": 1814,
+      "harness_probs": {
+        "customer_wins": 0.31065672636032104,
+        "customer_withdraws": 0.21257146447896957,
+        "merchant_wins": 0.4767718017101288
+      }
+    },
+    {
+      "id": "hard-opus-b-probability-02",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "choice",
+      "expected": "upstream_provider",
+      "n_options": 3,
+      "probs": {
+        "bad_push": 0.8026771247386932,
+        "database_hardware": 0.16224441304802895,
+        "upstream_provider": 0.03507845802232623
+      },
+      "latency_s": 0.11807312298333272,
+      "margin": 0.6404327116906643,
+      "epistemic": 0.08868594867414045,
+      "input_tokens": 407,
+      "harness_probs": {
+        "bad_push": 0.8026771247386932,
+        "database_hardware": 0.16224441304802895,
+        "upstream_provider": 0.03507845802232623
+      }
+    },
+    {
+      "id": "hard-opus-b-probability-03",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.42691611498594284,
+        "false": 0.5730838477611542
+      },
+      "latency_s": 0.22529025404946879,
+      "margin": 0.14616773277521133,
+      "epistemic": 0.24501518214300894,
+      "input_tokens": 1135,
+      "harness_probs": {
+        "yes": 0.42691611498594284,
+        "no": 0.5730838477611542
+      }
+    },
+    {
+      "id": "hard-opus-b-probability-04",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "choice",
+      "expected": "attended",
+      "n_options": 3,
+      "probs": {
+        "attended": 0.4190779775381088,
+        "late_cancellation": 0.37838639318943024,
+        "no_show": 0.20253562927246094
+      },
+      "latency_s": 0.12576282501686364,
+      "margin": 0.04069158434867859,
+      "epistemic": 0.04918916220781386,
+      "input_tokens": 483,
+      "harness_probs": {
+        "attended": 0.4190779775381088,
+        "late_cancellation": 0.37838639318943024,
+        "no_show": 0.20253562927246094
+      }
+    },
+    {
+      "id": "hard-opus-b-probability-06",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "choice",
+      "expected": "upheld",
+      "n_options": 3,
+      "probs": {
+        "modified": 0.21845515817403793,
+        "overturned": 0.2877134680747986,
+        "upheld": 0.4938313663005829
+      },
+      "latency_s": 0.1996744759962894,
+      "margin": 0.2061178982257843,
+      "epistemic": 0.017397377283705516,
+      "input_tokens": 931,
+      "harness_probs": {
+        "modified": 0.21845515817403793,
+        "overturned": 0.2877134680747986,
+        "upheld": 0.4938313663005829
+      }
+    },
+    {
+      "id": "hard-opus-b-tradeoff-01",
+      "tier": "hard",
+      "family": "tradeoff",
+      "kind": "choice",
+      "expected": "escalate_to_engineering",
+      "n_options": 5,
+      "probs": {
+        "escalate_to_engineering": 0.48973994702100754,
+        "escalate_to_security": 0.3953429590910673,
+        "page_oncall": 0.01829560287296772,
+        "process_refund": 0.04199086036533117,
+        "send_kb_article": 0.054630642756819725
+      },
+      "latency_s": 0.17232339695328847,
+      "margin": 0.09439698792994022,
+      "epistemic": 0.19456704814541292,
+      "input_tokens": 686,
+      "harness_probs": {
+        "escalate_to_engineering": 0.48973994702100754,
+        "escalate_to_security": 0.3953429590910673,
+        "page_oncall": 0.01829560287296772,
+        "process_refund": 0.04199086036533117,
+        "send_kb_article": 0.054630642756819725
+      }
+    },
+    {
+      "id": "hard-opus-b-tradeoff-03",
+      "tier": "hard",
+      "family": "tradeoff",
+      "kind": "choice",
+      "expected": "order_b",
+      "n_options": 4,
+      "probs": {
+        "order_a": 0.19582195207476616,
+        "order_b": 0.34335140883922577,
+        "order_c": 0.38522185385227203,
+        "order_d": 0.07560478150844574
+      },
+      "latency_s": 0.1566402839962393,
+      "margin": 0.041870445013046265,
+      "epistemic": 0.0984490489428624,
+      "input_tokens": 638,
+      "harness_probs": {
+        "order_a": 0.19582195207476616,
+        "order_b": 0.34335140883922577,
+        "order_c": 0.38522185385227203,
+        "order_d": 0.07560478150844574
+      }
+    },
+    {
+      "id": "hard-opus-b-tradeoff-06",
+      "tier": "hard",
+      "family": "tradeoff",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.31131283938884735,
+        "false": 0.6886871755123138
+      },
+      "latency_s": 0.159444960008841,
+      "margin": 0.3773743361234665,
+      "epistemic": 0.014842479177256767,
+      "input_tokens": 688,
+      "harness_probs": {
+        "yes": 0.31131283938884735,
+        "no": 0.6886871755123138
+      }
+    },
+    {
+      "id": "hard-opus-b-tradeoff-07",
+      "tier": "hard",
+      "family": "tradeoff",
+      "kind": "choice",
+      "expected": "p0_fix_24h",
+      "n_options": 5,
+      "probs": {
+        "out_of_scope": 0.012937708757817745,
+        "p0_fix_24h": 0.22113465890288353,
+        "p1_fix_7d": 0.03898587543517351,
+        "p2_fix_30d": 0.7191157937049866,
+        "p3_backlog": 0.007825960405170918
+      },
+      "latency_s": 0.1509799259947613,
+      "margin": 0.49798113480210304,
+      "epistemic": 0.05271960345706496,
+      "input_tokens": 559,
+      "harness_probs": {
+        "out_of_scope": 0.012937708757817745,
+        "p0_fix_24h": 0.22113465890288353,
+        "p1_fix_7d": 0.03898587543517351,
+        "p2_fix_30d": 0.7191157937049866,
+        "p3_backlog": 0.007825960405170918
+      }
+    },
+    {
+      "id": "hard-opus-b-tradeoff-08",
+      "tier": "hard",
+      "family": "tradeoff",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6180051267147064,
+        "false": 0.3819948732852936
+      },
+      "latency_s": 0.12841345299966633,
+      "margin": 0.23601025342941284,
+      "epistemic": 0.10226069723266999,
+      "input_tokens": 498,
+      "harness_probs": {
+        "yes": 0.6180051267147064,
+        "no": 0.3819948732852936
+      }
+    },
+    {
+      "id": "hard-opus-b-tradeoff-12",
+      "tier": "hard",
+      "family": "tradeoff",
+      "kind": "choice",
+      "expected": "refund_now",
+      "n_options": 5,
+      "probs": {
+        "deny_refund": 0.003200635954272002,
+        "escalate_to_fraud_team": 0.006364247761666775,
+        "offer_store_credit": 0.013194953557103872,
+        "refund_now": 0.974048912525177,
+        "wait_for_inspection": 0.0031912261620163918
+      },
+      "latency_s": 0.1271111989626661,
+      "margin": 0.9608539589680731,
+      "epistemic": 0.0016446838420665088,
+      "input_tokens": 468,
+      "harness_probs": {
+        "deny_refund": 0.003200635954272002,
+        "escalate_to_fraud_team": 0.006364247761666775,
+        "offer_store_credit": 0.013194953557103872,
+        "refund_now": 0.974048912525177,
+        "wait_for_inspection": 0.0031912261620163918
+      }
+    },
+    {
+      "id": "hard-opus-c-long_policy-02",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "erase_but_retain_transaction_records",
+      "n_options": 5,
+      "probs": {
+        "erase_all": 0.06175731495022774,
+        "erase_but_retain_transaction_records": 0.654894083738327,
+        "erase_marketing_only": 0.012134904973208904,
+        "reject_unverified_request": 0.08358339220285416,
+        "restrict_all_pending_legal_hold": 0.1876302883028984
+      },
+      "latency_s": 0.7254984230385162,
+      "margin": 0.4672637954354286,
+      "epistemic": 0.00734238036775029,
+      "input_tokens": 3387,
+      "harness_probs": {
+        "erase_all": 0.06175731495022774,
+        "erase_but_retain_transaction_records": 0.654894083738327,
+        "erase_marketing_only": 0.012134904973208904,
+        "reject_unverified_request": 0.08358339220285416,
+        "restrict_all_pending_legal_hold": 0.1876302883028984
+      }
+    },
+    {
+      "id": "hard-opus-c-long_policy-03",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "eur_400",
+      "n_options": 6,
+      "probs": {
+        "eur_0": 0.5999425649642944,
+        "eur_150": 0.036591638810932636,
+        "eur_200": 0.027515694499015808,
+        "eur_300": 0.197812519967556,
+        "eur_400": 0.06430450454354286,
+        "eur_600": 0.07383307628333569
+      },
+      "latency_s": 0.701578282052651,
+      "margin": 0.40213004499673843,
+      "epistemic": 0.0433687715546167,
+      "input_tokens": 3353,
+      "harness_probs": {
+        "eur_0": 0.5999425649642944,
+        "eur_150": 0.036591638810932636,
+        "eur_200": 0.027515694499015808,
+        "eur_300": 0.197812519967556,
+        "eur_400": 0.06430450454354286,
+        "eur_600": 0.07383307628333569
+      }
+    },
+    {
+      "id": "hard-opus-c-long_policy-04",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.7143273949623108,
+        "false": 0.285672627389431
+      },
+      "latency_s": 0.6614087569760159,
+      "margin": 0.4286547675728798,
+      "epistemic": 0.014105732441306649,
+      "input_tokens": 3204,
+      "harness_probs": {
+        "yes": 0.7143273949623108,
+        "no": 0.285672627389431
+      }
+    },
+    {
+      "id": "hard-opus-c-long_policy-05",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "score",
+      "expected": "1",
+      "n_options": 4,
+      "probs": {
+        "0": 0.34321247041225433,
+        "1": 0.17565783113241196,
+        "2": 0.24447041004896164,
+        "3": 0.23665931820869446
+      },
+      "latency_s": 0.6485024589928798,
+      "margin": 0.0987420603632927,
+      "epistemic": 0.04892034921170301,
+      "input_tokens": 3122,
+      "harness_probs": {
+        "0": 0.34321247041225433,
+        "1": 0.17565783113241196,
+        "2": 0.24447041004896164,
+        "3": 0.23665931820869446
+      }
+    },
+    {
+      "id": "hard-opus-c-long_policy-08",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "score",
+      "expected": "1",
+      "n_options": 4,
+      "probs": {
+        "0": 0.07038334850221872,
+        "1": 0.14844466373324394,
+        "2": 0.5797005295753479,
+        "3": 0.20147143304347992
+      },
+      "latency_s": 0.6445169699727558,
+      "margin": 0.378229096531868,
+      "epistemic": 0.04872825510745886,
+      "input_tokens": 3123,
+      "harness_probs": {
+        "0": 0.07038334850221872,
+        "1": 0.14844466373324394,
+        "2": 0.5797005295753479,
+        "3": 0.20147143304347992
+      }
+    },
+    {
+      "id": "hard-opus-c-long_policy-10",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "credit_minus_restocking_fee",
+      "n_options": 4,
+      "probs": {
+        "credit_minus_restocking_fee": 0.3038075268268585,
+        "full_credit": 0.16348154470324516,
+        "reject_return": 0.42484916746616364,
+        "repair_or_replace_only": 0.10786179266870022
+      },
+      "latency_s": 0.7304510450339876,
+      "margin": 0.12104164063930511,
+      "epistemic": 0.045636979772155306,
+      "input_tokens": 3493,
+      "harness_probs": {
+        "credit_minus_restocking_fee": 0.3038075268268585,
+        "full_credit": 0.16348154470324516,
+        "reject_return": 0.42484916746616364,
+        "repair_or_replace_only": 0.10786179266870022
+      }
+    },
+    {
+      "id": "hard-opus-c-long_policy-11",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.7516538202762604,
+        "false": 0.24834615737199783
+      },
+      "latency_s": 0.7064054969814606,
+      "margin": 0.5033076629042625,
+      "epistemic": 0.0397543160573576,
+      "input_tokens": 3307,
+      "harness_probs": {
+        "yes": 0.7516538202762604,
+        "no": 0.24834615737199783
+      }
+    },
+    {
+      "id": "hard-opus-c-probability-03",
+      "tier": "hard",
+      "family": "probability",
+      "kind": "choice",
+      "expected": "kuznets_technik",
+      "n_options": 3,
+      "probs": {
+        "halvorsen_polymer": 0.2805032357573509,
+        "kuznets_technik": 0.5491098016500473,
+        "ortega_seal_works": 0.17038696259260178
+      },
+      "latency_s": 0.11891541199292988,
+      "margin": 0.2686065658926964,
+      "epistemic": 0.08531412574811187,
+      "input_tokens": 436,
+      "harness_probs": {
+        "halvorsen_polymer": 0.2805032357573509,
+        "kuznets_technik": 0.5491098016500473,
+        "ortega_seal_works": 0.17038696259260178
+      }
+    },
+    {
+      "id": "hard-opus-c-temporal_numeric-02",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.3533824384212494,
+        "false": 0.6466175615787506
+      },
+      "latency_s": 0.18834692001109943,
+      "margin": 0.2932351231575012,
+      "epistemic": 0.02267368971670286,
+      "input_tokens": 809,
+      "harness_probs": {
+        "yes": 0.3533824384212494,
+        "no": 0.6466175615787506
+      }
+    },
+    {
+      "id": "hard-opus-c-temporal_numeric-03",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "eur_692_00",
+      "n_options": 5,
+      "probs": {
+        "eur_617_00": 0.10441663861274719,
+        "eur_688_00": 0.16776636615395546,
+        "eur_692_00": 0.3047940880060196,
+        "eur_693_90": 0.2778187096118927,
+        "eur_812_00": 0.14520420134067535
+      },
+      "latency_s": 0.17569870600709692,
+      "margin": 0.026975378394126892,
+      "epistemic": 0.016552105556089845,
+      "input_tokens": 707,
+      "harness_probs": {
+        "eur_617_00": 0.10441663861274719,
+        "eur_688_00": 0.16776636615395546,
+        "eur_692_00": 0.3047940880060196,
+        "eur_693_90": 0.2778187096118927,
+        "eur_812_00": 0.14520420134067535
+      }
+    },
+    {
+      "id": "hard-opus-c-temporal_numeric-04",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "usd_2335_00",
+      "n_options": 5,
+      "probs": {
+        "usd_2222_50": 0.10169396549463272,
+        "usd_2303_01": 0.175453033298254,
+        "usd_2303_33": 0.42418064177036285,
+        "usd_2335_00": 0.15865755081176758,
+        "usd_2340_00": 0.14001480117440224
+      },
+      "latency_s": 0.15717889700317755,
+      "margin": 0.24872760847210884,
+      "epistemic": 0.035249111947140914,
+      "input_tokens": 581,
+      "harness_probs": {
+        "usd_2222_50": 0.10169396549463272,
+        "usd_2303_01": 0.175453033298254,
+        "usd_2303_33": 0.42418064177036285,
+        "usd_2335_00": 0.15865755081176758,
+        "usd_2340_00": 0.14001480117440224
+      }
+    },
+    {
+      "id": "hard-opus-c-temporal_numeric-06",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "sep_18_book_set",
+      "n_options": 6,
+      "probs": {
+        "none_declined": 0.16277283988893032,
+        "sep_15_office_chair": 0.15371708571910858,
+        "sep_16_taxi": 0.2738606333732605,
+        "sep_17_parking": 0.1534709930419922,
+        "sep_18_book_set": 0.07414296269416809,
+        "sep_21_client_dinner": 0.18203552812337875
+      },
+      "latency_s": 0.1983342580497265,
+      "margin": 0.09182510524988174,
+      "epistemic": 0.06092632081631902,
+      "input_tokens": 776,
+      "harness_probs": {
+        "none_declined": 0.16277283988893032,
+        "sep_15_office_chair": 0.15371708571910858,
+        "sep_16_taxi": 0.2738606333732605,
+        "sep_17_parking": 0.1534709930419922,
+        "sep_18_book_set": 0.07414296269416809,
+        "sep_21_client_dinner": 0.18203552812337875
+      }
+    },
+    {
+      "id": "hard-opus-c-temporal_numeric-08",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "eur_498_81",
+      "n_options": 5,
+      "probs": {
+        "eur_497_40": 0.15826845541596413,
+        "eur_498_81": 0.21783865615725517,
+        "eur_506_06": 0.18141892179846764,
+        "eur_513_69": 0.23428478091955185,
+        "eur_532_01": 0.20818915218114853
+      },
+      "latency_s": 0.20540259999688715,
+      "margin": 0.016446124762296677,
+      "epistemic": 0.050219224207163446,
+      "input_tokens": 815,
+      "harness_probs": {
+        "eur_497_40": 0.15826845541596413,
+        "eur_498_81": 0.21783865615725517,
+        "eur_506_06": 0.18141892179846764,
+        "eur_513_69": 0.23428478091955185,
+        "eur_532_01": 0.20818915218114853
+      }
+    },
+    {
+      "id": "hard-opus-c-temporal_numeric-12",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "expired_30_month_cap",
+      "n_options": 3,
+      "probs": {
+        "covered": 0.14667779579758644,
+        "expired_24_month_term": 0.23479871451854706,
+        "expired_30_month_cap": 0.6185234785079956
+      },
+      "latency_s": 0.16079905297374353,
+      "margin": 0.38372476398944855,
+      "epistemic": 0.0593205586554254,
+      "input_tokens": 695,
+      "harness_probs": {
+        "covered": 0.14667779579758644,
+        "expired_24_month_term": 0.23479871451854706,
+        "expired_30_month_cap": 0.6185234785079956
+      }
+    },
+    {
+      "id": "hard-sol-a-adversarial-01",
+      "tier": "hard",
+      "family": "adversarial",
+      "kind": "choice",
+      "expected": "deny_missing_approval",
+      "n_options": 4,
+      "probs": {
+        "deny_inactive_user": 0.022798883728682995,
+        "deny_missing_approval": 0.6290306746959686,
+        "grant_access": 0.0675258431583643,
+        "grant_owner_exception": 0.28064457327127457
+      },
+      "latency_s": 0.11605941597372293,
+      "margin": 0.34838610142469406,
+      "epistemic": 0.022018413580483766,
+      "input_tokens": 200,
+      "harness_probs": {
+        "deny_inactive_user": 0.022798883728682995,
+        "deny_missing_approval": 0.6290306746959686,
+        "grant_access": 0.0675258431583643,
+        "grant_owner_exception": 0.28064457327127457
+      }
+    },
+    {
+      "id": "hard-sol-a-adversarial-06",
+      "tier": "hard",
+      "family": "adversarial",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.04135777987539768,
+        "false": 0.9586422145366669
+      },
+      "latency_s": 0.11491339601343498,
+      "margin": 0.9172844346612692,
+      "epistemic": 0.002676932638151161,
+      "input_tokens": 178,
+      "harness_probs": {
+        "yes": 0.04135777987539768,
+        "no": 0.9586422145366669
+      }
+    },
+    {
+      "id": "hard-sol-a-adversarial-07",
+      "tier": "hard",
+      "family": "adversarial",
+      "kind": "choice",
+      "expected": "retain_until_2031",
+      "n_options": 4,
+      "probs": {
+        "delete_now": 0.19416509196162224,
+        "needs_signature_review": 0.014566128142178059,
+        "retain_indefinitely": 0.015273166820406914,
+        "retain_until_2031": 0.7759955525398254
+      },
+      "latency_s": 0.11573945899726823,
+      "margin": 0.5818304605782032,
+      "epistemic": 0.020943942923003882,
+      "input_tokens": 201,
+      "harness_probs": {
+        "delete_now": 0.19416509196162224,
+        "needs_signature_review": 0.014566128142178059,
+        "retain_indefinitely": 0.015273166820406914,
+        "retain_until_2031": 0.7759955525398254
+      }
+    },
+    {
+      "id": "hard-sol-a-adversarial-08",
+      "tier": "hard",
+      "family": "adversarial",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.8290484547615051,
+        "false": 0.17095152661204338
+      },
+      "latency_s": 0.11469642701558769,
+      "margin": 0.6580969281494617,
+      "epistemic": 0.013810522424976957,
+      "input_tokens": 164,
+      "harness_probs": {
+        "yes": 0.8290484547615051,
+        "no": 0.17095152661204338
+      }
+    },
+    {
+      "id": "hard-sol-a-adversarial-09",
+      "tier": "hard",
+      "family": "adversarial",
+      "kind": "score",
+      "expected": "2",
+      "n_options": 4,
+      "probs": {
+        "0": 0.025210334919393063,
+        "1": 0.1836897786706686,
+        "2": 0.5858859866857529,
+        "3": 0.20521389693021774
+      },
+      "latency_s": 0.11464638798497617,
+      "margin": 0.3806720897555351,
+      "epistemic": 0.061579868324832025,
+      "input_tokens": 167,
+      "harness_probs": {
+        "0": 0.025210334919393063,
+        "1": 0.1836897786706686,
+        "2": 0.5858859866857529,
+        "3": 0.20521389693021774
+      }
+    },
+    {
+      "id": "hard-sol-a-adversarial-11",
+      "tier": "hard",
+      "family": "adversarial",
+      "kind": "choice",
+      "expected": "standard_research",
+      "n_options": 4,
+      "probs": {
+        "ethics_review": 0.07042883895337582,
+        "major_grants": 0.019442736636847258,
+        "manual_hold": 0.014115055557340384,
+        "standard_research": 0.8960133492946625
+      },
+      "latency_s": 0.11576541198883206,
+      "margin": 0.8255845103412867,
+      "epistemic": 0.006936106796935495,
+      "input_tokens": 207,
+      "harness_probs": {
+        "ethics_review": 0.07042883895337582,
+        "major_grants": 0.019442736636847258,
+        "manual_hold": 0.014115055557340384,
+        "standard_research": 0.8960133492946625
+      }
+    },
+    {
+      "id": "hard-sol-a-multi_hop-01",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "accept_s2_dusk",
+      "n_options": 4,
+      "probs": {
+        "accept_s2_dusk": 0.5861012488603592,
+        "reject_cutoff": 0.12916388735175133,
+        "reject_tier": 0.19949515908956528,
+        "reroute_s3": 0.08523975312709808
+      },
+      "latency_s": 0.45464811800047755,
+      "margin": 0.3866060897707939,
+      "epistemic": 0.07728990826221889,
+      "input_tokens": 2284,
+      "harness_probs": {
+        "accept_s2_dusk": 0.5861012488603592,
+        "reject_cutoff": 0.12916388735175133,
+        "reject_tier": 0.19949515908956528,
+        "reroute_s3": 0.08523975312709808
+      }
+    },
+    {
+      "id": "hard-sol-a-multi_hop-02",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "security_primary",
+      "n_options": 4,
+      "probs": {
+        "executive_bridge": 0.08451948501169682,
+        "heron_q2": 0.0662592388689518,
+        "insufficient_information": 0.1893388107419014,
+        "security_primary": 0.6598824560642242
+      },
+      "latency_s": 0.4800251019769348,
+      "margin": 0.47054364532232285,
+      "epistemic": 0.0400321673877096,
+      "input_tokens": 2319,
+      "harness_probs": {
+        "executive_bridge": 0.08451948501169682,
+        "heron_q2": 0.0662592388689518,
+        "insufficient_information": 0.1893388107419014,
+        "security_primary": 0.6598824560642242
+      }
+    },
+    {
+      "id": "hard-sol-a-multi_hop-05",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "require_director",
+      "n_options": 4,
+      "probs": {
+        "pay_manager_approved": 0.25308359041810036,
+        "reject_category": 0.05086650140583515,
+        "require_director": 0.6644490659236908,
+        "require_finance_board": 0.0316008385270834
+      },
+      "latency_s": 0.4715246169944294,
+      "margin": 0.41136547550559044,
+      "epistemic": 0.08004211626527723,
+      "input_tokens": 2238,
+      "harness_probs": {
+        "pay_manager_approved": 0.25308359041810036,
+        "reject_category": 0.05086650140583515,
+        "require_director": 0.6644490659236908,
+        "require_finance_board": 0.0316008385270834
+      }
+    },
+    {
+      "id": "hard-sol-a-multi_hop-07",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "admit",
+      "n_options": 4,
+      "probs": {
+        "admit": 0.2734276168048382,
+        "deny_prerequisite": 0.3952276334166527,
+        "deny_score": 0.2900272235274315,
+        "manual_equivalency": 0.04131749551743269
+      },
+      "latency_s": 0.45626517198979855,
+      "margin": 0.10520040988922119,
+      "epistemic": 0.15718696832885293,
+      "input_tokens": 2227,
+      "harness_probs": {
+        "admit": 0.2734276168048382,
+        "deny_prerequisite": 0.3952276334166527,
+        "deny_score": 0.2900272235274315,
+        "manual_equivalency": 0.04131749551743269
+      }
+    },
+    {
+      "id": "hard-sol-a-multi_hop-08",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "central_engineering",
+      "n_options": 4,
+      "probs": {
+        "central_engineering": 0.17291676066815853,
+        "insufficient_log": 0.03611394576728344,
+        "local_maintenance": 0.730967789888382,
+        "safety_shutdown": 0.060001498088240623
+      },
+      "latency_s": 0.4773609979893081,
+      "margin": 0.5580510292202234,
+      "epistemic": 0.03941523557516496,
+      "input_tokens": 2195,
+      "harness_probs": {
+        "central_engineering": 0.17291676066815853,
+        "insufficient_log": 0.03611394576728344,
+        "local_maintenance": 0.730967789888382,
+        "safety_shutdown": 0.060001498088240623
+      }
+    },
+    {
+      "id": "hard-sol-a-multi_hop-09",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "require_steward",
+      "n_options": 4,
+      "probs": {
+        "confirm_l3": 0.2641359902918339,
+        "reject_capacity": 0.0944047849625349,
+        "require_steward": 0.6184558123350143,
+        "switch_l4": 0.023003451991826296
+      },
+      "latency_s": 0.4618755470146425,
+      "margin": 0.35431982204318047,
+      "epistemic": 0.1492722742573978,
+      "input_tokens": 2194,
+      "harness_probs": {
+        "confirm_l3": 0.2641359902918339,
+        "reject_capacity": 0.0944047849625349,
+        "require_steward": 0.6184558123350143,
+        "switch_l4": 0.023003451991826296
+      }
+    },
+    {
+      "id": "hard-sol-a-multi_hop-10",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "approve_45_days",
+      "n_options": 4,
+      "probs": {
+        "approve_45_days": 0.2906513027846813,
+        "deny_sensitive": 0.10807453095912933,
+        "needs_field_review": 0.10039278864860535,
+        "reduce_to_30_days": 0.5008813589811325
+      },
+      "latency_s": 0.472931967000477,
+      "margin": 0.2102300561964512,
+      "epistemic": 0.07710180363240185,
+      "input_tokens": 2246,
+      "harness_probs": {
+        "approve_45_days": 0.2906513027846813,
+        "deny_sensitive": 0.10807453095912933,
+        "needs_field_review": 0.10039278864860535,
+        "reduce_to_30_days": 0.5008813589811325
+      }
+    },
+    {
+      "id": "hard-sol-a-multi_hop-12",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "needs_authentication",
+      "n_options": 4,
+      "probs": {
+        "covered_recurrence": 0.4511238560080528,
+        "expired": 0.17161754705011845,
+        "needs_authentication": 0.31997013464570045,
+        "wrong_issue_class": 0.05728843808174133
+      },
+      "latency_s": 0.47268718003761023,
+      "margin": 0.13115372136235237,
+      "epistemic": 0.22928061427741286,
+      "input_tokens": 2208,
+      "harness_probs": {
+        "covered_recurrence": 0.4511238560080528,
+        "expired": 0.17161754705011845,
+        "needs_authentication": 0.31997013464570045,
+        "wrong_issue_class": 0.05728843808174133
+      }
+    },
+    {
+      "id": "hard-sol-a-trap-02",
+      "tier": "hard",
+      "family": "trap",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.13362505659461021,
+        "false": 0.8663748800754547
+      },
+      "latency_s": 0.11562984099145979,
+      "margin": 0.7327498234808445,
+      "epistemic": 0.00129821340137993,
+      "input_tokens": 231,
+      "harness_probs": {
+        "yes": 0.13362505659461021,
+        "no": 0.8663748800754547
+      }
+    },
+    {
+      "id": "hard-sol-a-trap-04",
+      "tier": "hard",
+      "family": "trap",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.18214543163776398,
+        "false": 0.8178545534610748
+      },
+      "latency_s": 0.11486587498802692,
+      "margin": 0.6357091218233109,
+      "epistemic": 0.037738295246696765,
+      "input_tokens": 141,
+      "harness_probs": {
+        "yes": 0.18214543163776398,
+        "no": 0.8178545534610748
+      }
+    },
+    {
+      "id": "hard-sol-a-trap-05",
+      "tier": "hard",
+      "family": "trap",
+      "kind": "score",
+      "expected": "0",
+      "n_options": 4,
+      "probs": {
+        "0": 0.36532460153102875,
+        "1": 0.09823974221944809,
+        "2": 0.2845150828361511,
+        "3": 0.2519206032156944
+      },
+      "latency_s": 0.1163281420012936,
+      "margin": 0.08080951869487762,
+      "epistemic": 0.03963946356696303,
+      "input_tokens": 273,
+      "harness_probs": {
+        "0": 0.36532460153102875,
+        "1": 0.09823974221944809,
+        "2": 0.2845150828361511,
+        "3": 0.2519206032156944
+      }
+    },
+    {
+      "id": "hard-sol-a-trap-06",
+      "tier": "hard",
+      "family": "trap",
+      "kind": "choice",
+      "expected": "keep_open_unresolved",
+      "n_options": 4,
+      "probs": {
+        "await_internal_metrics": 0.013363801408559084,
+        "close_agent_verified": 0.015486436896026134,
+        "close_confirmed": 0.02035785699263215,
+        "keep_open_unresolved": 0.9507918953895569
+      },
+      "latency_s": 0.11633486696518958,
+      "margin": 0.9304340383969247,
+      "epistemic": 0.0009799252697385722,
+      "input_tokens": 255,
+      "harness_probs": {
+        "await_internal_metrics": 0.013363801408559084,
+        "close_agent_verified": 0.015486436896026134,
+        "close_confirmed": 0.02035785699263215,
+        "keep_open_unresolved": 0.9507918953895569
+      }
+    },
+    {
+      "id": "hard-sol-a-trap-08",
+      "tier": "hard",
+      "family": "trap",
+      "kind": "choice",
+      "expected": "late",
+      "n_options": 4,
+      "probs": {
+        "canceled": 0.009725345764309168,
+        "indeterminate": 0.009327196050435305,
+        "late": 0.8108432590961456,
+        "on_time": 0.17010420560836792
+      },
+      "latency_s": 0.11541027197381482,
+      "margin": 0.6407390534877777,
+      "epistemic": 0.0014496597736031024,
+      "input_tokens": 185,
+      "harness_probs": {
+        "canceled": 0.009725345764309168,
+        "indeterminate": 0.009327196050435305,
+        "late": 0.8108432590961456,
+        "on_time": 0.17010420560836792
+      }
+    },
+    {
+      "id": "hard-sol-a-trap-10",
+      "tier": "hard",
+      "family": "trap",
+      "kind": "choice",
+      "expected": "blocked_second_review",
+      "n_options": 4,
+      "probs": {
+        "blocked_failed_test": 0.04834410734474659,
+        "blocked_second_review": 0.6291389465332031,
+        "ready_one_review": 0.020991049706935883,
+        "ready_two_reviews": 0.30152593553066254
+      },
+      "latency_s": 0.11440636799670756,
+      "margin": 0.3276130110025406,
+      "epistemic": 0.0329852360979296,
+      "input_tokens": 114,
+      "harness_probs": {
+        "blocked_failed_test": 0.04834410734474659,
+        "blocked_second_review": 0.6291389465332031,
+        "ready_one_review": 0.020991049706935883,
+        "ready_two_reviews": 0.30152593553066254
+      }
+    },
+    {
+      "id": "hard-sol-a-trap-13",
+      "tier": "hard",
+      "family": "trap",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.30353379622101784,
+        "false": 0.6964662373065948
+      },
+      "latency_s": 0.11479503702139482,
+      "margin": 0.392932441085577,
+      "epistemic": 0.1932667128271468,
+      "input_tokens": 143,
+      "harness_probs": {
+        "yes": 0.30353379622101784,
+        "no": 0.6964662373065948
+      }
+    },
+    {
+      "id": "hard-sol-a-trap-15",
+      "tier": "hard",
+      "family": "trap",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.40244244039058685,
+        "false": 0.5975575894117355
+      },
+      "latency_s": 0.11589101701974869,
+      "margin": 0.19511514902114868,
+      "epistemic": 0.15154087429943167,
+      "input_tokens": 243,
+      "harness_probs": {
+        "yes": 0.40244244039058685,
+        "no": 0.5975575894117355
+      }
+    },
+    {
+      "id": "hard-sol-b-judge_hard-01",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5612296760082245,
+        "false": 0.4387703388929367
+      },
+      "latency_s": 0.11540646402863786,
+      "margin": 0.12245933711528778,
+      "epistemic": 0.011011995228017801,
+      "input_tokens": 214,
+      "harness_probs": {
+        "yes": 0.5612296760082245,
+        "no": 0.4387703388929367
+      }
+    },
+    {
+      "id": "hard-sol-b-judge_hard-02",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5923179388046265,
+        "false": 0.40768207609653473
+      },
+      "latency_s": 0.11381639598403126,
+      "margin": 0.18463586270809174,
+      "epistemic": 0.0027158530182188165,
+      "input_tokens": 138,
+      "harness_probs": {
+        "yes": 0.5923179388046265,
+        "no": 0.40768207609653473
+      }
+    },
+    {
+      "id": "hard-sol-b-judge_hard-05",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5619380176067352,
+        "false": 0.43806204199790955
+      },
+      "latency_s": 0.11423644097521901,
+      "margin": 0.12387597560882568,
+      "epistemic": 0.002768864352160138,
+      "input_tokens": 157,
+      "harness_probs": {
+        "yes": 0.5619380176067352,
+        "no": 0.43806204199790955
+      }
+    },
+    {
+      "id": "hard-sol-b-judge_hard-08",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6075629889965057,
+        "false": 0.39243705570697784
+      },
+      "latency_s": 0.11430500698043033,
+      "margin": 0.2151259332895279,
+      "epistemic": 0.0006714671027944825,
+      "input_tokens": 140,
+      "harness_probs": {
+        "yes": 0.6075629889965057,
+        "no": 0.39243705570697784
+      }
+    },
+    {
+      "id": "hard-sol-b-judge_hard-10",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.4073334336280823,
+        "false": 0.5926666259765625
+      },
+      "latency_s": 0.11405388597631827,
+      "margin": 0.18533319234848022,
+      "epistemic": 0.0,
+      "input_tokens": 159,
+      "harness_probs": {
+        "yes": 0.4073334336280823,
+        "no": 0.5926666259765625
+      }
+    },
+    {
+      "id": "hard-sol-b-judge_hard-14",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.1646953709423542,
+        "false": 0.8353046476840973
+      },
+      "latency_s": 0.11459729203488678,
+      "margin": 0.6706092767417431,
+      "epistemic": 0.017965105548112547,
+      "input_tokens": 176,
+      "harness_probs": {
+        "yes": 0.1646953709423542,
+        "no": 0.8353046476840973
+      }
+    },
+    {
+      "id": "hard-sol-b-judge_hard-15",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6359226703643799,
+        "false": 0.3640773594379425
+      },
+      "latency_s": 0.11352262902073562,
+      "margin": 0.2718453109264374,
+      "epistemic": 0.00584003526345707,
+      "input_tokens": 132,
+      "harness_probs": {
+        "yes": 0.6359226703643799,
+        "no": 0.3640773594379425
+      }
+    },
+    {
+      "id": "hard-sol-b-judge_hard-18",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.33587782084941864,
+        "false": 0.6641221940517426
+      },
+      "latency_s": 0.11411930702161044,
+      "margin": 0.3282443732023239,
+      "epistemic": 0.005624092581655176,
+      "input_tokens": 99,
+      "harness_probs": {
+        "yes": 0.33587782084941864,
+        "no": 0.6641221940517426
+      }
+    },
+    {
+      "id": "hard-sol-b-long_policy-01",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "reject_entire_claim",
+      "n_options": 4,
+      "probs": {
+        "approve_all": 0.23382748663425446,
+        "approve_lodging_only": 0.20963745564222336,
+        "approve_meals_only": 0.10776893049478531,
+        "reject_entire_claim": 0.4487661123275757
+      },
+      "latency_s": 0.5211849320330657,
+      "margin": 0.21493862569332123,
+      "epistemic": 0.022199346076388494,
+      "input_tokens": 2626,
+      "harness_probs": {
+        "approve_all": 0.23382748663425446,
+        "approve_lodging_only": 0.20963745564222336,
+        "approve_meals_only": 0.10776893049478531,
+        "reject_entire_claim": 0.4487661123275757
+      }
+    },
+    {
+      "id": "hard-sol-b-long_policy-02",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "deny_current_export",
+      "n_options": 4,
+      "probs": {
+        "analytics_owner_only": 0.1019922811537981,
+        "deny_current_export": 0.30509837716817856,
+        "privacy_and_security": 0.4519241899251938,
+        "privacy_only": 0.14098520576953888
+      },
+      "latency_s": 0.511760372959543,
+      "margin": 0.14682581275701523,
+      "epistemic": 0.06072101420500015,
+      "input_tokens": 2481,
+      "harness_probs": {
+        "analytics_owner_only": 0.1019922811537981,
+        "deny_current_export": 0.30509837716817856,
+        "privacy_and_security": 0.4519241899251938,
+        "privacy_only": 0.14098520576953888
+      }
+    },
+    {
+      "id": "hard-sol-b-long_policy-05",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "delete_profile_omar_april_and_table",
+      "n_options": 4,
+      "probs": {
+        "delete_everything": 0.29145728051662445,
+        "delete_nothing": 0.15713725984096527,
+        "delete_only_profile": 0.19006427377462387,
+        "delete_profile_omar_april_and_table": 0.3613412231206894
+      },
+      "latency_s": 0.5186708879773505,
+      "margin": 0.06988394260406494,
+      "epistemic": 0.04069026309620891,
+      "input_tokens": 2433,
+      "harness_probs": {
+        "delete_everything": 0.29145728051662445,
+        "delete_nothing": 0.15713725984096527,
+        "delete_only_profile": 0.19006427377462387,
+        "delete_profile_omar_april_and_table": 0.3613412231206894
+      }
+    },
+    {
+      "id": "hard-sol-b-long_policy-06",
+      "tier": "hard",
+      "family": "long_policy",
+      "kind": "choice",
+      "expected": "east_ward",
+      "n_options": 4,
+      "probs": {
+        "east_ward": 0.20317517966032028,
+        "harbor_neighbors": 0.22799116745591164,
+        "no_award": 0.36371008306741714,
+        "river_arts": 0.205123633146286
+      },
+      "latency_s": 0.5126219849917106,
+      "margin": 0.1357189156115055,
+      "epistemic": 0.053135043486508486,
+      "input_tokens": 2528,
+      "harness_probs": {
+        "east_ward": 0.20317517966032028,
+        "harbor_neighbors": 0.22799116745591164,
+        "no_award": 0.36371008306741714,
+        "river_arts": 0.205123633146286
+      }
+    },
+    {
+      "id": "hard-sol-b-routing_hard-01",
+      "tier": "hard",
+      "family": "routing_hard",
+      "kind": "choice",
+      "expected": "office_file_repair",
+      "n_options": 5,
+      "probs": {
+        "data_pipeline": 0.00805967254564166,
+        "desktop_support": 0.0051775145111605525,
+        "finance_review": 0.004238316789269447,
+        "office_file_repair": 0.9609577357769012,
+        "spreadsheet_formula": 0.021566711366176605
+      },
+      "latency_s": 0.11607714701676741,
+      "margin": 0.9393910244107246,
+      "epistemic": 0.001253104386784885,
+      "input_tokens": 171,
+      "harness_probs": {
+        "data_pipeline": 0.00805967254564166,
+        "desktop_support": 0.0051775145111605525,
+        "finance_review": 0.004238316789269447,
+        "office_file_repair": 0.9609577357769012,
+        "spreadsheet_formula": 0.021566711366176605
+      }
+    },
+    {
+      "id": "hard-sol-b-routing_hard-02",
+      "tier": "hard",
+      "family": "routing_hard",
+      "kind": "choice",
+      "expected": "ledger_reconciliation",
+      "n_options": 5,
+      "probs": {
+        "customer_support": 0.016336385160684586,
+        "fraud_review": 0.007534651318565011,
+        "ledger_reconciliation": 0.9459562301635742,
+        "mobile_app": 0.004963922780007124,
+        "payment_disputes": 0.025208880193531513
+      },
+      "latency_s": 0.11557054199511185,
+      "margin": 0.9207473499700427,
+      "epistemic": 0.0007098488878430521,
+      "input_tokens": 169,
+      "harness_probs": {
+        "customer_support": 0.016336385160684586,
+        "fraud_review": 0.007534651318565011,
+        "ledger_reconciliation": 0.9459562301635742,
+        "mobile_app": 0.004963922780007124,
+        "payment_disputes": 0.025208880193531513
+      }
+    },
+    {
+      "id": "hard-sol-b-routing_hard-03",
+      "tier": "hard",
+      "family": "routing_hard",
+      "kind": "choice",
+      "expected": "network_dns",
+      "n_options": 5,
+      "probs": {
+        "api_platform": 0.006669380469247699,
+        "authoritative_dns": 0.008377724094316363,
+        "endpoint_devices": 0.13915644586086273,
+        "network_dns": 0.8434924483299255,
+        "tls_certificates": 0.0023040291853249073
+      },
+      "latency_s": 0.11735775403212756,
+      "margin": 0.7043360024690628,
+      "epistemic": 0.017972709195047714,
+      "input_tokens": 169,
+      "harness_probs": {
+        "api_platform": 0.006669380469247699,
+        "authoritative_dns": 0.008377724094316363,
+        "endpoint_devices": 0.13915644586086273,
+        "network_dns": 0.8434924483299255,
+        "tls_certificates": 0.0023040291853249073
+      }
+    },
+    {
+      "id": "hard-sol-b-routing_hard-07",
+      "tier": "hard",
+      "family": "routing_hard",
+      "kind": "choice",
+      "expected": "release_notarization",
+      "n_options": 5,
+      "probs": {
+        "ci_infrastructure": 0.006867348914965987,
+        "code_signing": 0.022229358553886414,
+        "endpoint_security": 0.00882417056709528,
+        "macos_runtime": 0.004803163814358413,
+        "release_notarization": 0.9572759866714478
+      },
+      "latency_s": 0.11648811702616513,
+      "margin": 0.9350466281175613,
+      "epistemic": 0.002583776638535688,
+      "input_tokens": 154,
+      "harness_probs": {
+        "ci_infrastructure": 0.006867348914965987,
+        "code_signing": 0.022229358553886414,
+        "endpoint_security": 0.00882417056709528,
+        "macos_runtime": 0.004803163814358413,
+        "release_notarization": 0.9572759866714478
+      }
+    },
+    {
+      "id": "hard-sol-b-routing_hard-09",
+      "tier": "hard",
+      "family": "routing_hard",
+      "kind": "choice",
+      "expected": "source_access",
+      "n_options": 5,
+      "probs": {
+        "git_client": 0.02217852370813489,
+        "identity_login": 0.006376048782840371,
+        "repository_admin": 0.02724495716392994,
+        "source_access": 0.9165995121002197,
+        "vpn_network": 0.027600978035479784
+      },
+      "latency_s": 0.11601339298067614,
+      "margin": 0.8889985340647399,
+      "epistemic": 0.003887820850682693,
+      "input_tokens": 157,
+      "harness_probs": {
+        "git_client": 0.02217852370813489,
+        "identity_login": 0.006376048782840371,
+        "repository_admin": 0.02724495716392994,
+        "source_access": 0.9165995121002197,
+        "vpn_network": 0.027600978035479784
+      }
+    },
+    {
+      "id": "hard-sol-b-temporal_numeric-01",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "late_by_under_2h",
+      "n_options": 4,
+      "probs": {
+        "before_open": 0.21610821038484573,
+        "late_by_2h_or_more": 0.16493046283721924,
+        "late_by_under_2h": 0.2698035389184952,
+        "within_window": 0.34915779531002045
+      },
+      "latency_s": 0.11564955301582813,
+      "margin": 0.07935425639152527,
+      "epistemic": 0.0169014959930603,
+      "input_tokens": 175,
+      "harness_probs": {
+        "before_open": 0.21610821038484573,
+        "late_by_2h_or_more": 0.16493046283721924,
+        "late_by_under_2h": 0.2698035389184952,
+        "within_window": 0.34915779531002045
+      }
+    },
+    {
+      "id": "hard-sol-b-temporal_numeric-02",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "over_limit",
+      "n_options": 4,
+      "probs": {
+        "at_least_100gb_below": 0.13840636052191257,
+        "exactly_equal": 0.04722887650132179,
+        "over_limit": 0.6147761940956116,
+        "under_100gb_below": 0.1995885893702507
+      },
+      "latency_s": 0.11602717702044174,
+      "margin": 0.41518760472536087,
+      "epistemic": 0.026147019630968788,
+      "input_tokens": 180,
+      "harness_probs": {
+        "at_least_100gb_below": 0.13840636052191257,
+        "exactly_equal": 0.04722887650132179,
+        "over_limit": 0.6147761940956116,
+        "under_100gb_below": 0.1995885893702507
+      }
+    },
+    {
+      "id": "hard-sol-b-temporal_numeric-03",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "9_credits",
+      "n_options": 4,
+      "probs": {
+        "12_credits": 0.334587037563324,
+        "15_credits": 0.1493750438094139,
+        "6_credits": 0.21429912745952606,
+        "9_credits": 0.30173879116773605
+      },
+      "latency_s": 0.1144502279930748,
+      "margin": 0.03284824639558792,
+      "epistemic": 0.02757142649796218,
+      "input_tokens": 128,
+      "harness_probs": {
+        "12_credits": 0.334587037563324,
+        "15_credits": 0.1493750438094139,
+        "6_credits": 0.21429912745952606,
+        "9_credits": 0.30173879116773605
+      }
+    },
+    {
+      "id": "hard-sol-b-temporal_numeric-04",
+      "tier": "hard",
+      "family": "temporal_numeric",
+      "kind": "choice",
+      "expected": "pass",
+      "n_options": 3,
+      "probs": {
+        "clear_fail": 0.24682138115167618,
+        "narrow_fail": 0.49672091007232666,
+        "pass": 0.25645771622657776
+      },
+      "latency_s": 0.11547413701191545,
+      "margin": 0.2402631938457489,
+      "epistemic": 0.014443843094297979,
+      "input_tokens": 170,
+      "harness_probs": {
+        "clear_fail": 0.24682138115167618,
+        "narrow_fail": 0.49672091007232666,
+        "pass": 0.25645771622657776
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-03",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.4543750435113907,
+        "false": 0.5456250011920929
+      },
+      "latency_s": 0.11638360895449296,
+      "margin": 0.09124995768070221,
+      "epistemic": 0.017248164551464894,
+      "input_tokens": 310,
+      "harness_probs": {
+        "yes": 0.4543750435113907,
+        "no": 0.5456250011920929
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-05",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.3262092173099518,
+        "false": 0.6737908124923706
+      },
+      "latency_s": 0.11592607799684629,
+      "margin": 0.3475815951824188,
+      "epistemic": 0.021769494601830273,
+      "input_tokens": 272,
+      "harness_probs": {
+        "yes": 0.3262092173099518,
+        "no": 0.6737908124923706
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-07",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.33587782084941864,
+        "false": 0.6641221940517426
+      },
+      "latency_s": 0.11618852301035076,
+      "margin": 0.3282443732023239,
+      "epistemic": 0.005624092581655176,
+      "input_tokens": 236,
+      "harness_probs": {
+        "yes": 0.33587782084941864,
+        "no": 0.6641221940517426
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-08",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.39243705570697784,
+        "false": 0.6075629889965057
+      },
+      "latency_s": 0.11603910999838263,
+      "margin": 0.2151259332895279,
+      "epistemic": 0.0006714671027944825,
+      "input_tokens": 230,
+      "harness_probs": {
+        "yes": 0.39243705570697784,
+        "no": 0.6075629889965057
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-09",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.5,
+        "false": 0.5
+      },
+      "latency_s": 0.11637529102154076,
+      "margin": 0.0,
+      "epistemic": 0.011183616260318222,
+      "input_tokens": 261,
+      "harness_probs": {
+        "yes": 0.5,
+        "no": 0.5
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-10",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6359226703643799,
+        "false": 0.3640773594379425
+      },
+      "latency_s": 0.11679669900331646,
+      "margin": 0.2718453109264374,
+      "epistemic": 0.00584003526345707,
+      "input_tokens": 290,
+      "harness_probs": {
+        "yes": 0.6359226703643799,
+        "no": 0.3640773594379425
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-11",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.07138766720890999,
+        "false": 0.9286123216152191
+      },
+      "latency_s": 0.11642258398933336,
+      "margin": 0.8572246544063091,
+      "epistemic": 0.006361999627071099,
+      "input_tokens": 260,
+      "harness_probs": {
+        "yes": 0.07138766720890999,
+        "no": 0.9286123216152191
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-13",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "false",
+      "n_options": 2,
+      "probs": {
+        "true": 0.45541082322597504,
+        "false": 0.5445891916751862
+      },
+      "latency_s": 0.11527832300635055,
+      "margin": 0.08917836844921112,
+      "epistemic": 0.03342136196176077,
+      "input_tokens": 251,
+      "harness_probs": {
+        "yes": 0.45541082322597504,
+        "no": 0.5445891916751862
+      }
+    },
+    {
+      "id": "hard-sol-c-judge_hard-15",
+      "tier": "hard",
+      "family": "judge_hard",
+      "kind": "noul",
+      "expected": "true",
+      "n_options": 2,
+      "probs": {
+        "true": 0.6206776201725006,
+        "false": 0.3793223798274994
+      },
+      "latency_s": 0.11522451200289652,
+      "margin": 0.24135524034500122,
+      "epistemic": 0.010517672231599521,
+      "input_tokens": 205,
+      "harness_probs": {
+        "yes": 0.6206776201725006,
+        "no": 0.3793223798274994
+      }
+    },
+    {
+      "id": "hard-sol-c-multi_hop-07",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "programme_review",
+      "n_options": 4,
+      "probs": {
+        "partial_release": 0.07165430299937725,
+        "programme_review": 0.1797112077474594,
+        "reject_draw": 0.6004683673381805,
+        "release_draw": 0.14816612377762794
+      },
+      "latency_s": 0.5051211970276199,
+      "margin": 0.42075715959072113,
+      "epistemic": 0.036674267278198135,
+      "input_tokens": 2430,
+      "harness_probs": {
+        "partial_release": 0.07165430299937725,
+        "programme_review": 0.1797112077474594,
+        "reject_draw": 0.6004683673381805,
+        "release_draw": 0.14816612377762794
+      }
+    },
+    {
+      "id": "hard-sol-c-multi_hop-09",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "bus_substitution",
+      "n_options": 4,
+      "probs": {
+        "bus_substitution": 0.6328355073928833,
+        "call_fen_cross": 0.06751897372305393,
+        "pass_fen_cross": 0.1278095655143261,
+        "terminate_oakmere": 0.1718359813094139
+      },
+      "latency_s": 0.5276558579644188,
+      "margin": 0.4609995260834694,
+      "epistemic": 0.028689581073162933,
+      "input_tokens": 2439,
+      "harness_probs": {
+        "bus_substitution": 0.6328355073928833,
+        "call_fen_cross": 0.06751897372305393,
+        "pass_fen_cross": 0.1278095655143261,
+        "terminate_oakmere": 0.1718359813094139
+      }
+    },
+    {
+      "id": "hard-sol-c-multi_hop-11",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "coverage_excluded",
+      "n_options": 4,
+      "probs": {
+        "adjuster_referral": 0.10610600747168064,
+        "coverage_confirmed": 0.06652308441698551,
+        "coverage_excluded": 0.5496791303157806,
+        "documentation_needed": 0.2776917740702629
+      },
+      "latency_s": 0.5072921250248328,
+      "margin": 0.27198735624551773,
+      "epistemic": 0.017375151362761927,
+      "input_tokens": 2520,
+      "harness_probs": {
+        "adjuster_referral": 0.10610600747168064,
+        "coverage_confirmed": 0.06652308441698551,
+        "coverage_excluded": 0.5496791303157806,
+        "documentation_needed": 0.2776917740702629
+      }
+    },
+    {
+      "id": "hard-sol-c-multi_hop-12",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "conservation_hold",
+      "n_options": 4,
+      "probs": {
+        "conservation_hold": 0.12073966860771179,
+        "deny_request": 0.08994174189865589,
+        "digital_copy_only": 0.1322801224887371,
+        "supervised_delivery": 0.6570384800434113
+      },
+      "latency_s": 0.11798567703226581,
+      "margin": 0.5247583575546741,
+      "epistemic": 0.015308157066248235,
+      "input_tokens": 442,
+      "harness_probs": {
+        "conservation_hold": 0.12073966860771179,
+        "deny_request": 0.08994174189865589,
+        "digital_copy_only": 0.1322801224887371,
+        "supervised_delivery": 0.6570384800434113
+      }
+    },
+    {
+      "id": "hard-sol-c-multi_hop-13",
+      "tier": "hard",
+      "family": "multi_hop",
+      "kind": "choice",
+      "expected": "normal_release",
+      "n_options": 4,
+      "probs": {
+        "engineering_review": 0.04398683551698923,
+        "normal_release": 0.8426243364810944,
+        "rework": 0.02977134846150875,
+        "scrap_lot": 0.08361746370792389
+      },
+      "latency_s": 0.5085056080133654,
+      "margin": 0.7590068727731705,
+      "epistemic": 0.003182668146467338,
+      "input_tokens": 2498,
+      "harness_probs": {
+        "engineering_review": 0.04398683551698923,
+        "normal_release": 0.8426243364810944,
+        "rework": 0.02977134846150875,
+        "scrap_lot": 0.08361746370792389
+      }
+    }
+  ]
+}
