@@ -31,6 +31,16 @@ QUIRE_SYSTEM = (
 STYLES = ("quire", "plain")
 
 
+def render_state(state) -> str:
+    """The state as prompt text. The System One format allows a string, a JSON
+    object or a JSON array; non-strings are rendered as JSON, never as a
+    language-specific repr."""
+    if isinstance(state, str):
+        return state
+    import json
+    return json.dumps(state, ensure_ascii=False, indent=2)
+
+
 def first_token_style(style: str) -> bool:
     """Styles whose answer is the first assistant token, scored as a bare letter."""
     return style == "quire"
@@ -46,7 +56,7 @@ def _quire_frame(tokenizer) -> tuple[str, str]:
     return head, tail
 
 
-def state_prefix(tokenizer, state: str, single_turn: bool = False, style: str = "quire") -> str:
+def state_prefix(tokenizer, state, single_turn: bool = False, style: str = "quire") -> str:
     """The shared, expensive part of the prompt. Prefilled once per request.
 
     `single_turn=False` (the original) renders a COMPLETE user turn, so the
@@ -56,6 +66,7 @@ def state_prefix(tokenizer, state: str, single_turn: bool = False, style: str = 
     suffix to close, which keeps the state as a shared prefix (so the fan-out
     still works) while producing a well-formed conversation.
     """
+    state = render_state(state)
     if style == "quire":
         head, _ = _quire_frame(tokenizer)
         return f"{head}<state>\n{state}\n</state>\n"

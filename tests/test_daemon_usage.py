@@ -21,3 +21,20 @@ def test_usage_counts_state_once_plus_suffixes():
     body["questions"]["q2"] = body["questions"]["q"]
     r2 = client.post("/v1/systemone", json=body).json()
     assert used < r2["usage"]["input_tokens"] < 2 * used
+
+
+def test_object_states_are_accepted_and_rendered_as_json():
+    """JevBench sends some states as JSON objects; the server must accept them."""
+    engine = Engine(model_repo=MODEL, n_permutations=1)
+    client = TestClient(build_app(engine))
+    body = {"state": {"request": "Return [3] as JSON.", "response": "{\"value\": 3}"},
+            "questions": {"q": {"type": "noul", "instructions": "Does the response satisfy the request?"}}}
+    r = client.post("/v1/systemone", json=body)
+    assert r.status_code == 200, r.text
+    assert 0.0 <= r.json()["answers"]["q"]["noul"] <= 1.0
+
+
+def test_render_state_uses_json_not_a_python_repr():
+    from quire.prompt import render_state
+    text = render_state({"a": ["x", "y"], "b": None})
+    assert '"a"' in text and "null" in text and "None" not in text

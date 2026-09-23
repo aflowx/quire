@@ -28,7 +28,8 @@ class QuestionBody(BaseModel):
 
 
 class DecideRequest(BaseModel):
-    state: str
+    # a string, a JSON object or a JSON array, as in the System One format
+    state: str | dict | list
     questions: list[QuestionBody]
 
 
@@ -40,7 +41,8 @@ class SystemOneQuestion(BaseModel):
 
 
 class SystemOneRequest(BaseModel):
-    state: str
+    # a string, a JSON object or a JSON array, as in the System One format
+    state: str | dict | list
     questions: dict[str, SystemOneQuestion]
     model: str | None = None
 
