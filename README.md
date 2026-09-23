@@ -13,14 +13,14 @@ Quire is independent and not affiliated with TypeSafe AI.
 - **One read, many questions.** The state is prefilled once, and every question, plus every ordering of its options, is a short suffix batched over that prefilled cache. On a 1,431-token document with 40 questions that is 0.64 s, **20.7× faster** than asking the questions one at a time (MLX, M5 Max). The more questions share a state, the bigger the win.
 - **Any number of options, none refused.** Choices with more options than the 26-letter label pool are answered by asking one yes/no sub-question per option in the same fan-out and normalising the answers into one distribution, a two-stage "score independently, then choose" design. Nothing is truncated or filtered. Where both paths apply they are equally accurate (dbpedia14, 14 options: 0.905 letter readout vs 0.897, p = 1.0); above 26 options the letter readout has no answer at all.
 - **A frozen model, deliberately.** The released configuration trains nothing. An adapter fine-tuned on short classification data gained binary-judgement items but lost 13 of JevBench's hard items and tripled its calibration error. The details are in [`docs/RESULTS.md`](docs/RESULTS.md).
-- **Order-averaged probabilities.** Each question is read with its options in two orders and the distributions are averaged. That cuts JevBench's hard-tier calibration error from 0.118 to 0.073 without changing a single answer, and without fitting a temperature. (Fitted temperatures made held-out calibration worse.)
+- **Order-averaged probabilities.** Each question is read with its options in two orders and the distributions are averaged. On JevBench's hard tier that lowers calibration error from 0.113 to 0.090 without fitting a temperature. (Fitted temperatures made held-out calibration worse.)
 
 ## How it compares
 
 The released configuration is `Qwen/Qwen3.5-4B`, unmodified, with Quire's own prompt: a system instruction that frames each question as a test run against the state. On JevBench's 231 public items, paired against the per-item outcomes JevBench publishes for other systems:
 
-- **Jev 1.13** (TypeSafe, closed): Quire is behind, 12 items better and 29 worse (p = 0.012).
-- **SemIf** (the same frozen 4B, a different prompt and readout): not distinguishable in total (13 better / 17 worse, p = 0.58). Quire is 7 items behind on binary policy and adequacy judgements and 3 ahead on the hard tier.
+- **Jev 1.13** (TypeSafe, closed): Quire is behind, 12 items better and 26 worse (p = 0.034).
+- **SemIf** (the same frozen 4B, a different prompt and readout): not distinguishable in total (13 better / 14 worse, p = 1.0). Quire is 6 items behind on binary policy and adequacy judgements and 5 ahead on the hard tier.
 
 ## Quick start
 
@@ -63,8 +63,8 @@ answers[0].probabilities   # e.g. {'true': 0.90, 'false': 0.10}
 
 | benchmark | what | Quire |
 |---|---|---|
-| JevBench v1.3, 231 public items | easy / standard / hard accuracy | 1.000 / 0.889 / 0.640 |
-| JevBench, endpoint on 1 × L40 | serial p50 latency, 2 orderings | 124 ms (Speed axis 88.0) |
+| JevBench v1.3, 231 public items | easy / standard / hard accuracy | 1.000 / 0.903 / 0.658 |
+| JevBench, endpoint on 1 × L40 | serial p50 latency, 2 orderings | 122 ms (Speed axis 88.1) |
 | TypeSafe public 102-row subset | agreement with the released models' consensus answer | 0.799 [0.713, 0.880] (Jev: 0.883) |
 | Decision Index 0.1 | index | pending |
 

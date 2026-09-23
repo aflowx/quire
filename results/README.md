@@ -1,6 +1,6 @@
 # Results
 
-Every file here was produced before this repository existed, in the private working repository where Quire was developed. The code that produced them is the code in `src/quire` and `bench/`, under earlier module names. In those files the `quire` prompt style is recorded under its development name, `r2-test`; `tests/test_prompt.py` pins the rendering. Each row gives the working-repo commit, the configuration, and the hardware. Re-running the command shown with this repository should reproduce the numbers. If it doesn't, please report it.
+The released-configuration JevBench files (`quire-p2`, `quire-p1`, `harness-typesafe-adapter`) were produced by this repository's own code at commit `8819722`. The other files were produced earlier, in the private working repository where Quire was developed, with the same code under earlier module names; there the `quire` prompt style is recorded under its development name `r2-test`, and `tests/test_prompt.py` pins the rendering. Files produced before commit `d3a3157` rendered JSON-object states (35 of the public hard items) with Python's default formatting rather than as JSON. Each row gives the commit, the configuration, and the hardware. Re-running the command shown with this repository should reproduce the numbers. If it doesn't, please report it.
 
 ## JevBench v1.3, 231 public items (`results/jevbench/`)
 
@@ -8,15 +8,17 @@ Every file here was produced before this repository existed, in the private work
 
 | directory | configuration | easy /48 | standard /72 | hard /111 | hard ECE | commit |
 |---|---|---|---|---|---|---|
-| `quire-p2/` | **released**: quire prompt, 2 orderings | 48 | 64 | 71 | 0.073 | `b84c351` |
-| `quire-p1/` | quire prompt, 1 ordering | 48 | 64 | 71 | 0.118 | `b84c351` |
+| `quire-p2/` | **released**: quire prompt, 2 orderings | 48 | 65 | 73 | 0.090 | `8819722` |
+| `quire-p1/` | quire prompt, 1 ordering | 48 | 64 | 70 | 0.113 | `8819722` |
 | `control-plain-prompt-p2/` | plain prompt, 2 orderings | 48 | 63 | 72 | 0.102 | `eecbe37` |
 | `adapters/kev-a1.0/` | plain prompt, 2 orderings + kev LoRA | 48 | 68 | 59 | 0.342 | `eecbe37` |
 | `adapters/kev-a0.25/` | plain prompt, 1 ordering + kev LoRA at 0.25 | 48 | 69 | 71 | 0.120 | `eecbe37` |
 
+`harness-typesafe-adapter/` holds the same released configuration measured through JevBench's own harness (`jevbench.cli run --adapter typesafe`, commit `f79a1ca`) against `quire-serve --backend torch`: 231/231 valid, easy 48, standard 65, hard 73, identical to `quire-p2`.
+
 Reproduce: `python bench/jevbench/run_public.py --jevbench <checkout> --backend torch [--permutations 1] [--style plain] [--adapter DIR --adapter-scale A] --out runs/<name>`.
 
-`input_tokens` counts the state once plus every suffix in the `b84c351` files. The `eecbe37` files predate that fix and count the state only, so don't use them for pricing.
+`input_tokens` counts the state once plus every suffix in the `8819722` files (mean 789 per decision across the 231 items, as reported by the endpoint). The `eecbe37` files predate that fix and count the state only, so don't use them for pricing.
 
 ## Endpoint speed
 
@@ -24,10 +26,10 @@ Reproduce: `python bench/jevbench/run_public.py --jevbench <checkout> --backend 
 
 | configuration | p50 | p95 | Speed axis (×2 + 0.15 s) | mean input tokens |
 |---|---|---|---|---|
-| 2 orderings, batched over the prefix cache | 124 ms | 125 ms | 88.0 | 236 |
+| 2 orderings, batched over the prefix cache | 122 ms | 124 ms | 88.1 | 236 |
 | 1 ordering | 58 ms | 58 ms | 91.5 | 152 |
 
-Through the server the standard tier scores 65/72, against 64/72 for the run above. The server batches both orderings over a cached prefix while the runner reads each full prompt, and the resulting numerical difference moves one item. JevBench measures Speed on its own GPU, so these latencies don't transfer.
+Measured with commit `8819722`. JevBench measures Speed on its own GPU, so these latencies don't transfer.
 
 ## kev transfer-v4 development split (`results/transfer-v4/`)
 

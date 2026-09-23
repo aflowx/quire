@@ -44,7 +44,7 @@ A small model's letter probabilities depend on which letter an option gets. Ever
 - `epistemic`: disagreement between orderings (the model is unsure *which* answer, not just how sure)
 - `aleatoric`: the normalised entropy of the mean distribution
 
-On JevBench's public hard tier, two orderings reduced calibration error from 0.118 to 0.073 without changing a single answer. We fitted temperatures on held-out splits too. They made calibration worse on the other half, so none is applied.
+On JevBench's public hard tier, two orderings reduced calibration error from 0.113 to 0.090 and added 3 items (9 better / 6 worse, not significant). We fitted temperatures on held-out splits too. They made calibration worse on the other half, so none is applied.
 
 ## More options than labels (`wide.py`)
 

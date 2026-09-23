@@ -11,10 +11,10 @@ JevBench scores 534 decisions on four axes (Intelligence, Calibration, Speed, Co
 | configuration (Qwen3.5-4B, frozen, BF16) | easy /48 | standard /72 | hard /111 | hard ECE | fidelity TVD |
 |---|---|---|---|---|---|
 | plain prompt, 2 orderings | 48 | 63 | 72 | 0.102 | 0.376 |
-| quire prompt, 1 ordering | 48 | 64 | 71 | 0.118 | 0.377 |
-| **quire prompt, 2 orderings (released)** | **48** | **64** | **71** | **0.073** | **0.342** |
+| quire prompt, 1 ordering | 48 | 64 | 70 | 0.113 | 0.377 |
+| **quire prompt, 2 orderings (released)** | **48** | **65** | **73** | **0.090** | **0.343** |
 
-The quire prompt and the plain prompt are within one item of each other on every tier. What the released configuration gains over both alternatives is calibration: hard-tier calibration error falls from 0.102–0.118 to 0.073, and fidelity to the gold distributions of the probability items improves. Order averaging accounts for most of that. It changes no answer here (7 better / 7 worse on hard) but halves the error between confidence and accuracy.
+The released configuration measured the same way through JevBench's own harness gives identical results (`results/jevbench/harness-typesafe-adapter/`). Against one ordering, averaging two lowers hard-tier calibration error from 0.113 to 0.090 and adds 3 hard items (9 better / 6 worse, p = 0.61). Against the plain prompt the differences are within two items per tier. (The plain-prompt row was measured before non-string states were rendered as JSON, so it isn't an exact control on the 35 hard items with object states.)
 
 The quire prompt was chosen from three candidate wordings using held-out synthetic policy and adequacy items (`quire`: 381/482, the others 375 and 369), not JevBench items.
 
@@ -24,25 +24,25 @@ JevBench publishes each system's per-item outcomes on the public items, from the
 
 | system (*published* outcomes) | weights | standard /72 | hard /111 | total /231 | Quire vs it, paired |
 |---|---|---|---|---|---|
-| Jev 1.13 (TypeSafe) | closed | 71 | 81 | 200 | 12 better / 29 worse, p = 0.012 |
-| SemIf | Qwen3.5-4B, frozen | 71 | 68 | 187 | 13 better / 17 worse, p = 0.58 |
-| **Quire (released)** | Qwen3.5-4B, frozen | 64 | 71 | 183 | — |
+| Jev 1.13 (TypeSafe) | closed | 71 | 81 | 200 | 12 better / 26 worse, p = 0.034 |
+| SemIf | Qwen3.5-4B, frozen | 71 | 68 | 187 | 13 better / 14 worse, p = 1.0 |
+| **Quire (released)** | Qwen3.5-4B, frozen | 65 | 73 | 186 | — |
 
-SemIf is the closest comparison: the same frozen model with a different prompt and readout. Per tier, Quire is 7 items behind on standard (0 better / 7 worse, p = 0.016) and 3 ahead on hard (13 better / 10 worse, p = 0.68). The standard-tier gap is binary policy and answer-adequacy judgements. That is also what the hidden judge tier tests, so Quire's judge-tier accuracy is probably below SemIf's.
+SemIf is the closest comparison: the same frozen model with a different prompt and readout. Per tier, Quire is 6 items behind on standard (0 better / 6 worse, p = 0.031) and 5 ahead on hard (13 better / 8 worse, p = 0.38). The standard-tier gap is binary policy and answer-adequacy judgements. That is also what the hidden judge tier tests, so Quire's judge-tier accuracy is probably below SemIf's.
 
 ### Projection
 
-`bench/jevbench/project.py` applies JevBench's own `composite_v13` formulas: Calibration as the harness computes it (hard-tier ECE plus fidelity on the 10 public probability items), Speed from the measured endpoint (88.0), and Cost from measured tokens (775 per decision at $0.03 per million). The judge tier can't be measured, so the projection is a range over assumed judge accuracy:
+`bench/jevbench/project.py` applies JevBench's own `composite_v13` formulas: Calibration as the harness computes it (hard-tier ECE plus fidelity on the 10 public probability items), Speed from the measured endpoint (88.1), and Cost from the tokens the endpoint reports (789 per decision at $0.03 per million). The judge tier can't be measured, so the projection is a range over assumed judge accuracy:
 
 | configuration | at judge = 0.85 | at judge = 0.95 |
 |---|---|---|
-| released | 73.2 | 74.2 |
+| released | 73.1 | 74.0 |
 
 For reference, on 22 Sep 2026 the published v1.3 scores were Jev 74.4, SemIf 73.1 and djev 73.0. This is a projection from public items, not a score.
 
 ### What did not help
 
-**Temperature scaling.** Fitted on one random half of the public hard items and scored on the other, over 10 splits (`bench/jevbench/fit_hard_temperature.py`), held-out calibration got worse: 72.7 → 69.9 for the released configuration. The best temperature for all 111 items at once is 1.5, but that fits the test set itself. None is applied.
+**Temperature scaling.** Fitted on one random half of the public hard items and scored on the other, over 10 splits (`bench/jevbench/fit_hard_temperature.py`), held-out calibration got worse: 71.3 → 68.4 for the released configuration. The best temperature for all 111 items at once is 1.1, but that fits the test set itself. None is applied.
 
 **Thinking before answering.** Qwen3.5-4B never closed its thought within 256, 512 or 1,024 tokens on the probability items (0 of 10 at every budget). It works through the evidence row by row. Accuracy went 5 → 3 → 3 → 5 of 10.
 

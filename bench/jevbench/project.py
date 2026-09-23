@@ -68,7 +68,7 @@ def main() -> None:
     tvds = [cv.tvd(r["probs"], gold[r["id"]], list(gold[r["id"]])) for r in hard if r["id"] in gold]
     mean_tvd = sum(tvds) / len(tvds)
     calib = cv.calibration(e, mean_tvd)
-    print(f"run {run['_provenance']['label']}: easy {tiers['easy']:.3f}  standard {tiers['standard']:.3f}  "
+    print(f"run {run['_provenance'].get('label') or run['_provenance'].get('system', 'run')}: easy {tiers['easy']:.3f}  standard {tiers['standard']:.3f}  "
           f"hard {tiers['hard']:.3f}  (public items only)")
     print(f"calibration: ECE {e:.4f} -> {100 * (1 - e / 0.5):.1f};  fidelity on {len(tvds)} probability items: "
           f"mean TVD {mean_tvd:.3f} -> {100 * (1 - mean_tvd):.1f};  axis = {calib:.1f}")
