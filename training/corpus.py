@@ -35,6 +35,8 @@ SUITES = {
     "synth-v1": (SYNTH_DATA, "synth-v1"),
     "synth-v2-easy": (SYNTH_DATA, "synth-v2-easy"),
     "synth-v2-medium": (SYNTH_DATA, "synth-v2-medium"),
+    # written by training/helpsteer2.py from nvidia/HelpSteer2 (CC BY 4.0)
+    "helpsteer2": (SYNTH_DATA, "helpsteer2"),
 }
 
 

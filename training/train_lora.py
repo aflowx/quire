@@ -100,6 +100,11 @@ def main():
     p.add_argument("--teacher", action="append", default=None,
                    help="teacher_label.py output; agreement-gated soft targets for items it covers")
     p.add_argument("--soft-weight", type=float, default=1.0, help="weight of the soft-target CE term")
+    p.add_argument("--soft-only", action="store_true",
+                   help="items with an exact gold distribution train on it alone, with no hard-label term")
+    p.add_argument("--anchor-weight", type=float, default=0.0,
+                   help="weight of KL(frozen || adapted) over the option letters; keeps the adapter from "
+                        "sharpening away from the frozen model's distribution")
     p.add_argument("--max-tokens", type=int, default=8192, help="skip longer prompts")
     p.add_argument("--no-checkpointing", action="store_true")
     p.add_argument("--resume", action="store_true", help="continue from <out>/ckpt if present")
@@ -149,6 +154,9 @@ def main():
             parts = spec.split(":")
             suite, split = parts[0], parts[1]
             picked = [i for i in corpus.load(suite, split) if len(i.option_ids) <= len(pool)]
+            if len(parts) > 3 and parts[3]:  # suite:split:limit:source1,source2
+                keep = set(parts[3].split(","))
+                picked = [i for i in picked if i.source in keep]
             if len(parts) > 2 and parts[2]:
                 rng0 = np.random.default_rng(args.seed)
                 picked = [picked[j] for j in sorted(rng0.permutation(len(picked))[: int(parts[2])])]
@@ -230,7 +238,8 @@ def main():
                 skipped_long += 1
                 continue
             logits = logits_for(ids, positions, label_tokens)
-            loss = F.cross_entropy(logits[None, :].float(), torch.tensor([gold], device="cuda"))
+            hard = F.cross_entropy(logits[None, :].float(), torch.tensor([gold], device="cuda"))
+            loss = hard * (0.0 if (args.soft_only and item.soft is not None) else 1.0)
             # Soft target: the exact gold distribution where the item has one
             # (probability family), else the teacher's distribution where it
             # agreed with gold (Winnow's gate). Never on items the teacher got wrong.
@@ -242,6 +251,12 @@ def main():
                 target = torch.tensor(soft, device="cuda").float()
                 target = target / target.sum()
                 loss = loss + args.soft_weight * F.cross_entropy(logits[None, :].float(), target[None, :])
+            if args.anchor_weight > 0:
+                with torch.no_grad(), model.disable_adapter():
+                    frozen = logits_for(ids, positions, label_tokens, grad=False)
+                loss = loss + args.anchor_weight * F.kl_div(
+                    F.log_softmax(logits.float(), -1), F.log_softmax(frozen.float(), -1),
+                    reduction="sum", log_target=True)
             loss = loss / args.accum
             loss.backward()
             seen += 1
@@ -281,7 +296,8 @@ def main():
                         "lora_targets": targets, "trainable_params": trainable,
                         "n_train": len(train), "device": torch.cuda.get_device_name(0),
                         "style": args.style, "suites": args.suite, "dev_suites": args.dev_suite,
-                        "teacher": args.teacher, "soft_weight": args.soft_weight, "max_tokens": args.max_tokens,
+                        "teacher": args.teacher, "soft_weight": args.soft_weight, "soft_only": args.soft_only,
+                        "anchor_weight": args.anchor_weight, "max_tokens": args.max_tokens,
                         "skipped_long": skipped_long,
                         "dev_by_source": by_source,
                         "train_seconds": time.perf_counter() - started,
